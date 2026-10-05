@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP (html5up.net | @ajlkn) · CCA 3.0
+	项目详情页：2D 像素 RPG
+-->
+<html lang="zh-CN">
+	<head>
+		<title>2D 像素 RPG · 叙事与结局设计 — Yannis 作品集</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="《2D 像素 RPG》：立意「偏见」的 2D 横板动作游戏——叙事反转架构、血条叙事工具、神像×隐藏房间的 2×2 结局矩阵设计。" />
+		<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23181512'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%2318b28a'/%3E%3C/svg%3E" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<div id="wrapper" class="fade-in">
+
+			<div class="bg"></div>
+
+			<header id="header">
+				<a href="index.html" class="logo">YANNIS_DEV</a>
+			</header>
+
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html">全部项目</a></li>
+					<li><a href="ripple.html">涟漪</a></li>
+					<li><a href="goodkid.html">Good Kid</a></li>
+					<li><a href="greed.html">贪婪</a></li>
+					<li><a href="daoge.html">刀歌</a></li>
+					<li class="active"><a href="rpg.html">2D RPG</a></li>
+				</ul>
+			</nav>
+
+			<div id="main">
+
+				<article class="post featured">
+					<header class="major">
+						<span class="date">Unity 6 · 2D 横板动作 · 叙事驱动</span>
+						<h1>2D 像素 RPG<br />
+						暂定名</h1>
+						<p>立意「偏见」：印象中的好人不一定是好人，坏人也不一定是坏人，不要以貌取人。受神赐福的勇者开局碾压魔物，中途<strong>视角反转成魔物求生</strong>，最终揭露神才是幕后黑手。</p>
+					</header>
+					<a class="image main"><img src="images/rpg.jpg" alt="勇者与魔王对峙的像素场景" /></a>
+				</article>
+
+				<article class="post">
+
+					<h2>立意与叙事架构</h2>
+					<p>整个项目有一条统一的评判标准：<strong>「这个设计是否服务偏见立意」</strong>。主线结构从这条标准推导出来：</p>
+					<blockquote>勇者受神赐福 → 碾压式屠杀魔物 → 勇者失去控制，视角切到魔物 → 以魔物视角逃亡 / 寻找同伴 / 与冒险者战斗 → 再遇勇者 → 逃到魔王 → 神是真反派 → 多结局</blockquote>
+					<p>明确否决的两个替代方案：传统勇者打魔王的直线叙事（无法表达偏见反转）；双主角自由切换（失去「被赐福方堕入真相」的进程感）——最终采用<strong>剧本强制的单次视角反转</strong>。</p>
+
+					<h2>血条作为叙事工具</h2>
+					<p>本作最有代表性的一处机制叙事：<strong>同一手法，相反含义</strong>。</p>
+					<ul>
+						<li>开局打魔物不显示血条——魔物「不配被当对手」，碾压感由 UI 缺席表达</li>
+						<li>终局打魔王也不显示血条——但这次是「打不死」的绝望，UI 缺席表达的是自己的渺小</li>
+						<li>数值同理：玩家初始数值极高 = 神的赐福（也是神的枷锁）；赐福被收走后，同一套数值变成了「硬仗」</li>
+					</ul>
+
+					<h2>机制服务立意</h2>
+					<ul>
+						<li>怪物伤害其次、特殊效果为主：击退、控制、地形击杀（被撞下悬崖）——「打赢」不是唯一语言</li>
+						<li>宝箱只出交互能力道具（二段跳），不出攻击强化——重逻辑轻战斗</li>
+						<li>数值基准清晰量化：跳远 6 格 / 跳高 4 格 / 摔落 10 格摔死——关卡设计有共同的度量衡</li>
+					</ul>
+
+					<h2>结局体系：神像 × 隐藏房间的 2×2 矩阵</h2>
+					<p>结局由两个收集旗标 + 魔王战胜负决定，两个旗标各司其职：</p>
+					<ul>
+						<li><strong>神像（神殿）= 实力线</strong>：砸神像 → 赐福被收走，属性大幅下降，之后全程打怪变难；但赐福本质是神的压制标记，没了它终局打神反而轻松。第一次砸时神会出声警告，砸下不可反悔，并可获得隐藏武器</li>
+						<li><strong>隐藏房间（城堡石盘）= 真相线</strong>：找到 → 知道神的真相 → 解锁「与魔王和解」剧情</li>
+					</ul>
+					<table>
+						<thead>
+							<tr><th>神像</th><th>隐藏房间</th><th>流程体验</th><th>终局</th></tr>
+						</thead>
+						<tbody>
+							<tr><td>没毁</td><td>没找</td><td>全程碾压，蒙在鼓里</td><td>获得神的奖励（虚假好结局，奖励演出埋「不对劲」细节驱动二周目）</td></tr>
+							<tr><td>没毁</td><td>找到</td><td>碾压 + 知道真相</td><td>和解 → 与魔王共同打神（赐福仍是神的压制，此线最难）</td></tr>
+							<tr><td>毁了</td><td>没找</td><td>全程硬仗</td><td>无和解剧情，直接打神</td></tr>
+							<tr><td>毁了</td><td>找到</td><td>硬仗 + 知道真相</td><td>和解 → 共同打神（最轻松，全收集奖励）</td></tr>
+						</tbody>
+					</table>
+					<p>共同打神：胜 → 世界和平（真结局）；败 → 重播开场动画（轮回结局，暗示神的循环操控）。没打败魔王则切魔王视角打神：胜 → 魔王给勇者上坟；败 → 重播开场。合计 <strong>5 个独立结局</strong>。</p>
+					<p>时序设计上还有一处刻意的不对称：神像在地图 1 的神殿，而「切回勇者线」不可回头——<strong>毁神像的机会只在第一次流程存在</strong>，选择有真实的时效重量。</p>
+
+					<h2>关卡与场景表</h2>
+					<p>8 张地图各带一个独有机制，服务对应的剧情段落：</p>
+					<ul>
+						<li><strong>神殿 + 草原</strong>：新手引导——祭坛（与神对话）、可破坏神像（暗线入口）</li>
+						<li><strong>山坡</strong>：小型 BOSS 战 · <strong>地下城</strong>：黑暗探索与单侧解锁门</li>
+						<li><strong>森林</strong>：救同伴战斗（笼子可被攻击损坏的动态救援）</li>
+						<li><strong>平原</strong>：潜行——魔物视角偷东西不能被发现（玩法随立场反转而反转）</li>
+						<li><strong>城堡</strong>：石盘隐藏房间（真相线）· <strong>BOSS 房</strong>：不显示血条的魔王 · <strong>天堂</strong>：终局竞技场</li>
+					</ul>
+
+					<h2>系统实现</h2>
+					<ul>
+						<li>完整动作平台框架：角色控制器 + 8 状态动画机，8 类怪物 AI（巡逻 / 追击 / 攻击）</li>
+						<li><strong>AnimationEvent 驱动的命中判定</strong>：攻击剪辑 60% 处事件结算——判定精度对齐动画帧而非定时器</li>
+						<li>摔死系统：落地结算 + 传送 / 重生 2 秒豁免窗 + 贴坡滑坠累计；着地检测取最大向上法线并排除触发器</li>
+						<li>像素级水陷阱：水面与中层零碰撞，仅每列最底水格像素精确致命——沉底才死</li>
+						<li>BOSS 门通用封锁（场景级门禁挂三关）与视角反转三关触发（勇者坠虚空接管狼 / HP 归零接管魔王 / 终局开局即魔王）</li>
+						<li>全套幂等编辑器工具（相机跟随 / 死亡 UI / 宝箱 / 尖刺 / 怪物动画机生成）支撑快速迭代</li>
+					</ul>
+
+					<h2>关键设计决策（ADR 节选）</h2>
+					<ul>
+						<li>ADR-001 立意与叙事反转架构——偏见</li>
+						<li>ADR-006 攻击判定绑定动画帧</li>
+						<li>ADR-009 BOSS 门通用封锁</li>
+						<li>ADR-010 视角反转三关触发</li>
+						<li>ADR-011 水陷阱沉底判死与像素对齐</li>
+						<li>ADR-012 结局体系与赐福对赌</li>
+					</ul>
+
+					<ul class="actions special">
+						<li><a href="index.html" class="button large">← 返回全部项目</a></li>
+					</ul>
+				</article>
+
+			</div>
+
+			<div id="copyright">
+				<ul><li>&copy; 2026 Yannis</li><li>设计模板: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+			</div>
+
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP (html5up.net | @ajlkn) · CCA 3.0
+	项目详情页：贪婪 GREED — UE5 第一人称生存射击
+-->
+<html lang="zh-CN">
+	<head>
+		<title>贪婪 GREED · 关卡设计 — Yannis 作品集</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="《贪婪》：UE5 第一人称丧尸生存射击——灰烬高塔关卡设计：贪婪负担机制、单向门禁动线、光照反转与 BOSS 房设计。" />
+		<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23181512'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%2318b28a'/%3E%3C/svg%3E" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<div id="wrapper" class="fade-in">
+
+			<div class="bg"></div>
+
+			<header id="header">
+				<a href="index.html" class="logo">YANNIS_DEV</a>
+			</header>
+
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html">全部项目</a></li>
+					<li><a href="ripple.html">涟漪</a></li>
+					<li><a href="goodkid.html">Good Kid</a></li>
+					<li class="active"><a href="greed.html">贪婪</a></li>
+					<li><a href="daoge.html">刀歌</a></li>
+					<li><a href="rpg.html">2D RPG</a></li>
+				</ul>
+			</nav>
+
+			<div id="main">
+
+				<article class="post featured">
+					<header class="major">
+						<span class="date">UE 5.8 · 第一人称丧尸生存射击 · 关卡设计</span>
+						<h1>贪婪<br />
+						GREED</h1>
+						<p>末日因人类对永生的贪婪而起——「永生药剂」临床失控引发尸变。玩家是末日拾荒者，核心机制<strong>「贪婪负担」</strong>：搜集的物资越多，移速与射速的负面效果越重；而最终 BOSS，会对高贪婪的玩家索取额外伤害。</p>
+					</header>
+					<a class="image main"><img src="images/greed.jpg" alt="《贪婪》灰烬高塔实验室概念图" /></a>
+				</article>
+
+				<article class="post">
+
+					<h2>机制与主题互证</h2>
+					<p>「贪婪」不是贴在世界观上的标签，而是写进每一次按键的机制：<strong>拿，还是不拿</strong>——每件物资都立刻变成移速与机动的代价，而 BOSS 的「贪婪索取」技能让这笔账在关卡终点一次性清算。玩家在关卡里的每一步，都在为进 BOSS 房时的自己做出选择。</p>
+					<ul>
+						<li>轻装速通流：满机动风筝走位，放弃收益换生存</li>
+						<li>贪婪搜刮流：高收益低机动，用走位压力换装备优势</li>
+					</ul>
+
+					<h2>关卡设计：灰烬高塔</h2>
+					<p>当前关卡「灰烬高塔」是一座三层实验室 + 地下 BOSS 房的全封闭室内关卡，我独立完成从 LDD 设计文档、灰盒搭建到动线验证的全流程。</p>
+
+					<h3>动线结构（全区域串联）</h3>
+					<blockquote>2F 出生区 → 主廊 → 房间1 → 楼梯↓ 1F 房间2 → 精英房①「肿胀巨尸」→ 电梯↑ → 3F 房间3 + 三侧屋 → 走廊桥 → 精英房②「腐蚀喷吐者」（掉落「电梯电源核心」）→ 大电梯↓ 26m → BOSS「守库巨兽」→ 金库撤离</blockquote>
+					<ul>
+						<li>所有命名区域都在主路径上，不做支线化——关卡的每一米都被玩家走过</li>
+						<li>BOSS 房唯一入口是大型货运电梯：击败 3F 精英拿到电源核心才能启动，下降 26 米的 12 秒是一段刻意为之的压迫段落</li>
+					</ul>
+
+					<h3>单向门禁：让空间自己引导玩家</h3>
+					<ul>
+						<li>出生点旁通往 1F 的电梯门、通往 3F 的东侧楼梯门均不可从 2F 侧打开——玩家被迫走完整个垂直循环，无法跳关</li>
+						<li>东侧楼梯仅 3F 侧可开，构成 3F→2F 的单向撤回捷径</li>
+						<li>设计意图：<strong>把「必须走完全程」从人为限制变成空间叙事</strong>——出生点被锁死本身就是关卡引导</li>
+					</ul>
+
+					<h3>贪婪值锚点</h3>
+					<p>贪婪机制绑定在 6 个具体拾取点上，让抽象数值变成一次次可感知的赌博：</p>
+					<ul>
+						<li>A 初始装备 = 第一笔贪婪值入门</li>
+						<li>E 房间2 物资堆 = 第一次真正的抉择</li>
+						<li>F 战后 AKM 必拿，但立刻加重负担</li>
+						<li>I 侧屋 = 贪婪值暴涨的诱惑点</li>
+						<li>J 走廊桥 = 高贪婪直接兑换成风险（移速慢、无掩体暴露）</li>
+						<li>M 落地前电梯口 = 最后的卸货权衡</li>
+					</ul>
+
+					<h3>光照反转：最深处最亮</h3>
+					<ul>
+						<li>2F 冷白均匀 → 走廊半明半暗 → BOSS 房过曝纯白——刻意打破「越深越暗」的恐怖关卡惯式</li>
+						<li>压抑感来自无菌般的纯净（药企「纯化舱」意象），而非黑暗</li>
+						<li>电梯门开启的瞬间 = 光照与空间的双重反转，是整座塔的 Hook 时刻</li>
+						<li>BOSS 房空旷无掩体：风筝走位是唯一「掩体」，战斗压力直接由玩家此前的搜刮决策决定</li>
+					</ul>
+
+					<h2>实现状态</h2>
+					<ul>
+						<li>239 件建造件全封闭灰盒：1m 网格稠密审计 + 射线复验全部 HIT，白名单外的洞口为零</li>
+						<li>三座折返楼梯 + 两部电梯（G 电梯轿厢 + 滑门传送蓝图；L 大电梯 10 段折返坡道）立体动线全部可通行</li>
+						<li>丧尸 AI 行为树（随机移动 / 发现玩家 / 追击至最后位置）、武器（AKM / SCAR）与拾取系统就绪</li>
+						<li>36+ 盏动态点灯全 Movable，配合 Lumen 不烘焙</li>
+					</ul>
+
+					<h2>开发过程：文档驱动的关卡管线</h2>
+					<ul>
+						<li><strong>LDD 设计文档先行</strong>：9 页成品（总览图 / 剖面图 / 流程图 / Note / Flow 表 / Hooks），美学、节奏、机制锚点全部成文后才动工</li>
+						<li><strong>数据驱动重建</strong>：权威建造清单（build_all.json：205 件建造件的名称 / 位置 / 尺寸 / 俯仰 / 材质）——场景损坏时可按清单精确重建，关卡即数据</li>
+						<li><strong>灰盒验证优先</strong>：封闭性 / 连通性 / 灯光节奏先于美术资产验证，几何确认后才进入道具与布光阶段</li>
+					</ul>
+
+					<h2>关键设计决策（ADR 节选）</h2>
+					<ul>
+						<li>ADR-001 LDD 文档生产管线</li>
+						<li>ADR-002 灰烬高塔关卡核心结构与贪婪机制绑定</li>
+						<li>ADR-003 Tripo 会员资产管线</li>
+					</ul>
+
+					<ul class="actions special">
+						<li><a href="index.html" class="button large">← 返回全部项目</a></li>
+					</ul>
+				</article>
+
+			</div>
+
+			<div id="copyright">
+				<ul><li>&copy; 2026 Yannis</li><li>设计模板: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+			</div>
+
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

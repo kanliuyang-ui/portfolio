@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP (html5up.net | @ajlkn) · CCA 3.0
+	项目详情页：Good Kid — VR 弃屋探险
+-->
+<html lang="zh-CN">
+	<head>
+		<title>Good Kid · VR 弃屋探险 — Yannis 作品集</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="《Good Kid》：VR 第一人称恐怖叙事游戏——规则违规系统、日夜循环、敲门追捕事件与全物理交互设计。" />
+		<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23181512'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%2318b28a'/%3E%3C/svg%3E" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<div id="wrapper" class="fade-in">
+
+			<div class="bg"></div>
+
+			<header id="header">
+				<a href="index.html" class="logo">YANNIS_DEV</a>
+			</header>
+
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html">全部项目</a></li>
+					<li><a href="ripple.html">涟漪</a></li>
+					<li class="active"><a href="goodkid.html">Good Kid</a></li>
+					<li><a href="greed.html">贪婪</a></li>
+					<li><a href="daoge.html">刀歌</a></li>
+					<li><a href="rpg.html">2D RPG</a></li>
+				</ul>
+			</nav>
+
+			<div id="main">
+
+				<article class="post featured">
+					<header class="major">
+						<span class="date">Unity 2022 · VR · XR Interaction Toolkit · 恐怖叙事</span>
+						<h1>Good Kid<br />
+						VR 弃屋探险</h1>
+						<p>VR 第一人称恐怖叙事：玩家在废弃房屋中探索，操作门、抽屉、灯具与日常物品，在看似平常的家庭规则下度过一晚又一晚——<strong>有些规则是假的</strong>。</p>
+					</header>
+					<a class="image main"><img src="images/goodkid.jpg" alt="《Good Kid》弃屋走廊主视觉" /></a>
+				</article>
+
+				<article class="post">
+
+					<h2>设计概念</h2>
+					<p>恐怖不来自 Jump Scare 的堆砌，而来自<strong>「家庭规则的错位感」</strong>：童年房间的日常物件——门、抽屉、时钟、糖果、垃圾桶——承载一套看似合理的行为规则。玩家以孩子的身份执行这些规则，逐渐察觉规则本身的异常。</p>
+					<p>规则系统同时是叙事装置：<strong>4 条家庭规则中混有 1 条假规则</strong>（「不要进妈妈的房间」）。当玩家违返假规则时世界毫无反应——规则会撒谎，而发现这一点的瞬间，故事真正开始。</p>
+
+					<h2>核心系统设计</h2>
+
+					<h3>规则违规系统</h3>
+					<ul>
+						<li>RuleID 枚举定义 4 条规则（3 真 1 假），ViolationSystem 统一调度违规反应</li>
+						<li>真规则违规触发递进的演出：灯光闪烁 → 黑雾侵蚀</li>
+						<li>假规则区域（妈妈的房间）特殊处理：进入后零反应——「异常」本身就是叙事信息</li>
+					</ul>
+
+					<h3>日夜循环与节奏</h3>
+					<ul>
+						<li>120 秒倒计时 + 日循环管理器，跨天状态重置（糖果未扔跨天判定违规）</li>
+						<li>床睡眠交互：射线点床 → 黑屏过渡 → 传送至 BedSpawnPoint → 天数 +1</li>
+						<li>21:00 睡眠检查：到点不睡 → 违规判定</li>
+					</ul>
+
+					<h3>敲门事件与追捕</h3>
+					<ul>
+						<li>随机敲门 + 限时躲藏：玩家必须进入躲藏安全区</li>
+						<li>超时未躲 → 怪物出现并追捕（3D 空间音频吼叫定位），抓到即重置当天</li>
+						<li>躲过敲门 → 「什么都没发生」——用日常化的平安夜晚反衬规则的不可知</li>
+					</ul>
+
+					<h3>纸页收集叙事</h3>
+					<ul>
+						<li>9 页纸片散布场景，射线拾起即阅读（世界空间 Canvas，9 页共享）</li>
+						<li>碎片化文本逐页拼出家庭往事，与规则系统互文</li>
+					</ul>
+
+					<h3>全物理交互</h3>
+					<ul>
+						<li>9 扇手动门、抽屉（滑轨约束 + 卡扣 + 音效）、柜门、灯具触摸开关，全部基于 XR Interaction Toolkit 的抓取与射线交互</li>
+						<li>VR 手感细节：射线落点视觉反馈、抓取时停止射线延伸、物理门铰链驱动</li>
+					</ul>
+
+					<h2>场景与氛围</h2>
+					<ul>
+						<li>三个场景：开始菜单（巨幕 + 按钮 + 音乐）→ 主场景弃屋 → 结局演出（纯黑相机 + 巨幕）</li>
+						<li>夜空 HDRI 天空盒 + 邻居剪影街道 + 暗蓝灰草地，构建「从屋里看出去」的封闭视角</li>
+						<li>URP 三套渲染管线（Balanced / HighFidelity / Performant）适配不同 VR 一体机性能档位</li>
+					</ul>
+
+					<h2>技术要点</h2>
+					<ul>
+						<li>XR Interaction Toolkit 2.6 + OpenXR 1.14，New Input System</li>
+						<li>相机高度锁 1.6m（儿童视角）——视角本身是叙事的一部分</li>
+						<li>编辑器内 VR Simulator 工作流（Ctrl+Shift+WASD 模拟移动）支持无头显快速迭代</li>
+						<li>游戏事件总线（GameEventBus）解耦规则判定与演出反应</li>
+					</ul>
+
+					<h2>关键设计决策（ADR 节选）</h2>
+					<ul>
+						<li>ADR-001 门 / 钥匙 / 投掷解锁交互链路</li>
+						<li>ADR-003 / 004 固定相机高度与物理身体的处理</li>
+						<li>ADR-005 结局独立场景架构</li>
+						<li>ADR-006 窗外夜景设计</li>
+						<li>ADR-007 日间室外场景的压暗方案</li>
+					</ul>
+
+					<ul class="actions special">
+						<li><a href="index.html" class="button large">← 返回全部项目</a></li>
+					</ul>
+				</article>
+
+			</div>
+
+			<div id="copyright">
+				<ul><li>&copy; 2026 Yannis</li><li>设计模板: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+			</div>
+
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

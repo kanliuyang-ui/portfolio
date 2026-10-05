@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP (html5up.net | @ajlkn) · CCA 3.0
+	项目详情页：刀歌 MANAGE & FIGHT
+-->
+<html lang="zh-CN">
+	<head>
+		<title>刀歌 MANAGE &amp; FIGHT · 系统设计 — Yannis 作品集</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="《刀歌》：铁匠铺经营×回合制战斗×地图探索三合一——锻造三工位、回合制状态机与 7×7 地图探索的系统设计。" />
+		<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23181512'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%2318b28a'/%3E%3C/svg%3E" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<div id="wrapper" class="fade-in">
+
+			<div class="bg"></div>
+
+			<header id="header">
+				<a href="index.html" class="logo">YANNIS_DEV</a>
+			</header>
+
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html">全部项目</a></li>
+					<li><a href="ripple.html">涟漪</a></li>
+					<li><a href="goodkid.html">Good Kid</a></li>
+					<li><a href="greed.html">贪婪</a></li>
+					<li class="active"><a href="daoge.html">刀歌</a></li>
+					<li><a href="rpg.html">2D RPG</a></li>
+				</ul>
+			</nav>
+
+			<div id="main">
+
+				<article class="post featured">
+					<header class="major">
+						<span class="date">Unity 2022 · 2D 像素 · 经营 + 战斗 + 探索</span>
+						<h1>刀歌<br />
+						MANAGE &amp; FIGHT</h1>
+						<p>铁匠铺经营 × 回合制战斗 × 地图探索三合一——白天在铺子里打铁卖武器，攒够装备出门讨伐。玩家扮演铁匠，在<strong>锻造、售卖、冒险</strong>三条线之间循环推进。</p>
+					</header>
+					<a class="image main"><img src="images/daoge.jpg" alt="《刀歌》锻造火盆美术" /></a>
+				</article>
+
+				<article class="post">
+
+					<h2>游戏循环</h2>
+					<blockquote>经营（卖武器接订单）→ 锻造（加热 / 锻打 / 组装）→ 地图（限时探索）→ 战斗（回合制讨伐）→ 带着战利品回铺子</blockquote>
+					<p>时间、金币、HP 三项全局状态跨场景持久化：经营里攒下的每一枚金币、地图上受的每一处伤，都会在下一个场景如实延续——三条系统线不是三个小游戏，而是同一份账本。</p>
+
+					<h2>锻造系统：三工位流水线</h2>
+					<p>锻造是本作的核心玩法差异点，设计成一条有物理感的流水线，每个工位是一个独立状态机：</p>
+					<ul>
+						<li><strong>加热台</strong>：Empty → Heating → Max → Cooling 四态——材料有「火候」概念，热力值实时写入材料数据，过热会进入冷却</li>
+						<li><strong>锻造台</strong>：Empty → Ready → Forging → Paused → Complete——热力 ≥ 50 才允许锻打，玩家点击锻打推进度：火候与手速双重门槛</li>
+						<li><strong>组装台</strong>：双槽位提交，匹配顾客任务需求判定成品</li>
+						<li><strong>全链路拖拽</strong>：仓库 → 加热台 → 锻造台 → 组装台支持任意回转搬运，操作流贴近真实打铁的物料周转</li>
+						<li>顾客任务由 ScriptableObject 数据库驱动（5 个默认任务 + 特殊顾客随机分配），新任务零代码扩展</li>
+					</ul>
+
+					<h2>经营系统</h2>
+					<ul>
+						<li><strong>顾客流</strong>：2D 移动的顾客进出店门，所有参数（速度 / 范围 / 出入口 / 付款位）Inspector 可调并配 Scene 视图可视化手柄</li>
+						<li><strong>特殊顾客</strong>：首单延迟 10 秒入场，场上同时仅一位，离开 30 秒重生——生成即分配锻造任务，把「接单」变成经营与锻造的枢纽</li>
+						<li><strong>库存与定价</strong>：3 柜 × 4 格共 12 格仓储；材料按稀有度定价（Common 50 / Uncommon 100 / Rare 200 / Legendary 400）</li>
+						<li><strong>一键上架</strong>：补满全部非锁空格；仓库空或格子满时按钮变灰并给 Tooltip——状态反馈优先于操作</li>
+					</ul>
+
+					<h2>战斗系统：严格回合制状态机</h2>
+					<p>战斗被设计成<strong>单线程、严格轮流</strong>的状态机，规则透明、无隐藏变量：</p>
+					<blockquote>PlayerTurn ⇄ EnemyTurn → Victory / Defeat</blockquote>
+					<ul>
+						<li><strong>技能目标类型三分</strong>：Self（治疗 / 防御，直接执行）、AllEnemies（AOE 全体结算）、SingleEnemy（进入选目标模式，高亮存活敌人，点选才结算）——交互流程由数据驱动</li>
+						<li><strong>敌人队列行动</strong>：按顺序依次动作，0.8 秒间隔，节奏可读</li>
+						<li><strong>只有三种结果</strong>：全灭敌人、玩家死亡、逃跑（按 Defeat 处理）——没有平局与超时，规则极简</li>
+						<li><strong>与经营互通</strong>：战斗中 HP 从全局 PlayerStats 读取，受伤同步回写；胜利标记地图格子已讨伐，失败记录死亡格、次日复活</li>
+					</ul>
+
+					<h2>地图探索：时间制的大地图</h2>
+					<ul>
+						<li>7×7 网格固定种子生成，跨天继承已探索状态</li>
+						<li><strong>时间代替步数</strong>：每移动一格流逝 2 小时，默认 12 小时探索上限——路线规划是资源规划</li>
+						<li>四类地块：事件（多选一奖励）/ 战斗（跳转战斗场景）/ 村庄（休整 + 补给）/ 商店（购买）</li>
+						<li>时间耗尽弹窗强制收束，带返回按钮——每一天都有明确的边界感</li>
+					</ul>
+
+					<h2>工程方法：编辑器工具链</h2>
+					<p>本项目沉淀了一条「UI 由工具生成」的管线：14 个 <code>Tools &gt; Build *</code> 幂等编辑器菜单一键搭建战斗界面、地图界面、锻造页面、弹窗等全部 UI——场景操作走工具而非手拼，参数全部 SerializeField 暴露。跑过一次的开发流程，直接复用进了后续项目。</p>
+
+					<h2>关键设计决策（ADR 节选）</h2>
+					<ul>
+						<li>ADR-001 UI 编辑器化生成——运行时不重建</li>
+						<li>ADR-002 / 005 单例 DontDestroyOnLoad 与主从模式的全局状态管理</li>
+						<li>ADR-006 锻造台动态生成</li>
+						<li>ADR-008 技能数据动态装配</li>
+					</ul>
+
+					<ul class="actions special">
+						<li><a href="index.html" class="button large">← 返回全部项目</a></li>
+					</ul>
+				</article>
+
+			</div>
+
+			<div id="copyright">
+				<ul><li>&copy; 2026 Yannis</li><li>设计模板: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+			</div>
+
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

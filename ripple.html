@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP (html5up.net | @ajlkn) · CCA 3.0
+	项目详情页：涟漪 RIPPLE
+-->
+<html lang="zh-CN">
+	<head>
+		<title>涟漪 RIPPLE · 设计文档 — Yannis 作品集</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="《涟漪》：网络暴力题材第一人称桌面模拟叙事游戏——设计文档、核心机制、章节结构与实现验证。" />
+		<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23181512'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%2318b28a'/%3E%3C/svg%3E" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<div id="wrapper" class="fade-in">
+
+			<div class="bg"></div>
+
+			<header id="header">
+				<a href="index.html" class="logo">YANNIS_DEV</a>
+			</header>
+
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html">全部项目</a></li>
+					<li class="active"><a href="ripple.html">涟漪</a></li>
+					<li><a href="goodkid.html">Good Kid</a></li>
+					<li><a href="greed.html">贪婪</a></li>
+					<li><a href="daoge.html">刀歌</a></li>
+					<li><a href="rpg.html">2D RPG</a></li>
+				</ul>
+			</nav>
+
+			<div id="main">
+
+				<article class="post featured">
+					<header class="major">
+						<span class="date">旗舰项目 · UE 5.8 全蓝图 · 桌面模拟叙事</span>
+						<h1>涟漪<br />
+						RIPPLE</h1>
+						<p>"Every word you type lands on someone else's screen."<br />
+						网络暴力题材第一人称桌面模拟叙事游戏：玩家面对一台电脑搜集线索、发表言论，用 ←/→ 键切换到被网暴者 / 施暴者 / 中立者的设备——<strong>亲眼看到你的每一句话，落在别人屏幕上是什么样子</strong>。</p>
+					</header>
+					<a class="image main"><img src="images/ripple-feed.jpg" alt="《涟漪》实机画面：玩家电脑上的社交应用「泡泡」与热榜" /></a>
+				</article>
+
+				<article class="post">
+
+					<h2>设计概念</h2>
+					<p>网暴的道德重量来自「发言者看不到受害者的屏幕」。传统叙事游戏（Orwell、全网公敌）让玩家当监控者或旁观者；《涟漪》把这种信息不对称直接翻转成交互机制——<strong>玩家必须是参与者</strong>。每一次发言都是博弈：热度、立场、证据、措辞，全部会被对面的屏幕如实接收。</p>
+					<p>由此闭环出本作的核心循环：</p>
+					<blockquote>侦查（搜集证据）→ 发言（唯一武器）→ 切屏看涟漪（←/→ 切换设备）→ 世界更新（旧发言继续发酵）</blockquote>
+
+					<h2>设计支柱</h2>
+					<ul>
+						<li><strong>每个字都有重量</strong>——发言是唯一的武器，也是唯一的责任来源</li>
+						<li><strong>屏幕即人物</strong>——全作无角色立绘，壁纸 / 图标 / 通知音就是人物侧写</li>
+						<li><strong>无人是纯粹的恶人</strong>——施暴者也在自己的生活里，立场由处境而非标签决定</li>
+						<li><strong>不可撤回</strong>——删评无效，截图早已扩散；互联网没有橡皮擦</li>
+						<li><strong>不适但克制</strong>——语义施压写法，无脏话、无真实人脸，用不适感而非猎奇</li>
+					</ul>
+
+					<h2>核心机制：设备切换</h2>
+					<p>设备切换是核心机制而非装饰。5 台设备按章节阶梯解锁——玩家笔记本 → 被网暴者晓雨的手机 → 施暴者刀哥的电脑 → 旁观者陈同学的手机 → 方女士的平板，5 个平台级 App（泡泡 / 微语 / 聚点+知料 / 云屉 / Maila）内容互通。</p>
+					<ul>
+						<li>解锁条件绑定玩家行为：发出第一条评论才解锁晓雨的屏幕，溯源追查才解锁刀哥的电脑——<strong>新视角是你动作的直接后果</strong></li>
+						<li>第 4 章网暴反噬直接落在玩家自己的笔记本上：玩家只有一块屏幕，反噬来临时无处可躲——封闭感即压迫感</li>
+					</ul>
+					<a class="image main"><img src="images/ripple-victim.jpg" alt="《涟漪》：切换到被网暴者晓雨的手机屏幕" /></a>
+
+					<h2>叙事结构：章节钉子</h2>
+					<p>6 章 × 3 波次的两级结构：章内波次是软触发（热度阈值释放内容），章节钉子是硬触发——每章一个「必然发生、不可跳过」的世界状态改变（停职 / 完整截图流出 / 回应视频 / 被扒 / 热度归零）。</p>
+					<ul>
+						<li>玩家行为不决定钉子是否发生，只决定其形态（A / B / C）——节奏可控，选择仍有重量</li>
+						<li>沉默也是一种被记录的形态</li>
+						<li>玩家全部历史发言跨章继承，旧发言在后续章节继续变形发酵</li>
+						<li>立场定调采用确定性分级：「未知全貌不予置评」做底色，「沉默即共谋」降级为特例——只有握证不发才被审判</li>
+					</ul>
+
+					<h2>伦理红线（设计硬约束）</h2>
+					<ul>
+						<li>不复刻真实仇恨话术；不做说教</li>
+						<li>无真实人脸；贴图零烘焙文字，词库集中在可替换的数据表中</li>
+						<li>第 4 章（玩家被扒）可跳过；结尾提供真实求助资源</li>
+					</ul>
+
+					<h2>实现与验证</h2>
+					<p> Unreal Engine 5.8 全蓝图实现（零 C++），已达成：</p>
+					<ul>
+						<li><strong>第一章完整可玩</strong>：正式节奏 30–35 分钟——开场、三波次推进、附图选择与逐条打码、发言四维度结算（证据门槛 / 打码 / 对人 / 真实热度）、强制阅读演出、数字结算全部落地</li>
+						<li><strong>32 项 PIE 自动化回归通过</strong>，另有章节跳转 16 项、主菜单与设置 37 项回归；每次改动跑脚本验收、截图留档</li>
+						<li><strong>数据管线</strong>：章节文案 JSON → GameInstance Map 键值，运行时 504+ 键；策划数据与蓝图逻辑解耦</li>
+						<li><strong>AI 美术管线</strong>：Tripo 生成 + 人工修型的「玩具剧场」低模风格，47 条可复制提示词库 + 设备比例锁规范</li>
+						<li>主菜单 / 设置（音量 / 分辨率 / 窗口模式持久化）与第 1–6 章跳转框架完成，后续章节内容开发中</li>
+					</ul>
+					<a class="image main"><img src="images/ripple-suspension.jpg" alt="《涟漪》：停职通知的强制阅读演出" /></a>
+
+					<h2>关键设计决策（ADR 节选）</h2>
+					<p>项目全程用 Architecture Decision Record 留档，共 27+ 篇，摘录：</p>
+					<ul>
+						<li>ADR-001 左右键切换设备的多视角叙事架构——核心机制地位的确立与「偷窥式」方案的否决</li>
+						<li>ADR-003 立场定调：确定性分级——从「沉默即共谋」到「未知全貌不予置评」的修订</li>
+						<li>ADR-004 章节钉子结构——拒绝把叙事游戏降级成 checklist 的任务驱动</li>
+						<li>ADR-006 美术方向：玩具剧场与 Tripo 管线</li>
+						<li>ADR-010 数据层 Map 键值与全脚本蓝图生成</li>
+						<li>ADR-020 世界内文本规范与「去上帝视角」修订——48 处文案修正</li>
+						<li>ADR-022 发言四维度生效与按帖措辞</li>
+					</ul>
+
+					<ul class="actions special">
+						<li><a href="index.html" class="button large">← 返回全部项目</a></li>
+					</ul>
+				</article>
+
+			</div>
+
+			<div id="copyright">
+				<ul><li>&copy; 2026 Yannis</li><li>设计模板: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+			</div>
+
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
