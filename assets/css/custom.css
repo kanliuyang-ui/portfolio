@@ -1,0 +1,27 @@
+/*
+	作品集内容定制（覆盖 Massively 默认）
+	1. 列表左对齐：模板默认居中，中文条目读起来别扭
+	2. 章节内的 h3 间距微调
+*/
+
+#main article ul {
+	text-align: left;
+	padding-left: 1.6rem;
+	margin: 0 0 1.6rem 0;
+}
+
+	#main article ul li {
+		text-align: left;
+		padding-left: 0.2rem;
+		margin-bottom: 0.45rem;
+	}
+
+	#main article ul.actions,
+	#main article ul.actions li {
+		text-align: center;
+		padding-left: 0;
+	}
+
+#main article h3 {
+	margin: 1.4rem 0 0.7rem 0;
+}
