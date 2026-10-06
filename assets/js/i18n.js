@@ -29,21 +29,21 @@
 			`Game developer · Unity / Unreal Engine / AI-assisted workflows<br> I make games about serious topics — online harassment, prejudice, and greed.`,
 		'<a href="#header" class="button icon solid solo fa-arrow-down scrolly">继续</a>':
 			`<a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a>`,
-		'旗舰项目 · UE 5.8 全蓝图': `Flagship · UE 5.8 Blueprint-only`,
+		'UE 5.8 · 桌面模拟叙事': `UE 5.8 · Desktop-simulation narrative`,
 		'<a href="ripple.html">涟漪<br> RIPPLE</a>': `<a href="ripple.html">Ripple<br> RIPPLE</a>`,
 		'"Every word you type lands on someone else\'s screen."<br> 网络暴力题材第一人称桌面模拟叙事游戏：玩家在电脑前搜集线索、发表言论，随时切换到被网暴者 / 施暴者 / 旁观者的屏幕 —— 亲眼看到你打下的每一个字，落在别人屏幕上是什么样子。':
 			`"Every word you type lands on someone else's screen."<br> A first-person desktop-simulation narrative game about cyberbullying: from your own computer you gather clues and post comments — then flip to the screens of the victim, the harassers, and the bystanders, and watch exactly how every word you typed lands on someone else.`,
-		'第一章完整可玩：正式节奏 30–35 分钟，开场、三波次推进、发言四维度结算、强制阅读演出与数字结算全部落地，32 项 PIE 自动化回归通过':
-			`Chapter 1 fully playable: a 30–35 minute experience — opening, three narrative waves, four-dimension comment scoring, a forced-reading scene, and numeric settlement, all verified by 32 automated PIE regression checks`,
-		'五设备叙事结构：玩家笔记本 → 被网暴者手机 → 施暴者电脑 → 旁观者手机与平板，5 个平台级 App 内容互通':
-			`Five-device narrative: your laptop → the victim's phone → the harasser's PC → bystanders' phone and tablet, with 5 platform-level apps sharing one content universe`,
-		'全蓝图实现（零 C++）：JSON → GameInstance Map 数据管线驱动 504+ 运行时键值':
-			`Blueprint-only implementation (zero C++): a JSON → GameInstance Map pipeline drives 504+ runtime keys`,
+		'网络暴力题材第一人称桌面模拟叙事游戏：在你自己的电脑前搜集线索、发表言论，用 ←/→ 键切换到其他人的屏幕——亲眼看到你的每一句话，落在别人屏幕上是什么样子。':
+			`A first-person desktop-simulation narrative game about cyberbullying: from your own computer you gather clues and post comments — then flip to other people's screens and watch exactly how every sentence you send lands on someone else.`,
+		'第一章完整可玩（30–35 分钟）：开场、三波次推进、发言结算、强制阅读演出与数字结算，32 项 PIE 自动化回归通过':
+			`Chapter 1 fully playable (30–35 minutes): opening, three waves, comment scoring, a forced-reading scene, and numeric settlement — verified by 32 automated PIE regression checks`,
+		'五设备叙事：←/→ 切换被网暴者 / 施暴者 / 旁观者的屏幕，5 个平台级 App 内容互通':
+			`Five-device narrative: ←/→ switches to the victim's, harassers', and bystanders' screens; 5 platform-level apps share one content universe`,
 		'设计支柱：每个字都有重量 · 屏幕即人物 · 无人是纯粹的恶人 · 不可撤回':
 			`Design pillars: every word carries weight · the screen is the character · no one is purely evil · nothing can be unsaid`,
 		'美术采用 Tripo AI 生成 + 人工修型的「玩具剧场」低模风格；场景、蓝图、UI 与数据管线全部由本人独立完成，开发全程用 ADR 决策记录与自动化回归管理质量。':
 			`Art direction: a "toy theatre" low-poly style generated with Tripo AI and hand-retouched. Scenes, blueprints, UI, and the data pipeline were all built by myself, with ADR decision records and automated regression testing governing quality throughout development.`,
-		'<a href="ripple.html" class="button large">阅读完整设计文档</a>': `<a href="ripple.html" class="button large">Read the full design document</a>`,
+		'<a href="ripple.html" class="button">查看详情</a>': `<a href="ripple.html" class="button">Details</a>`,
 		'Unity 2022 · 2D 像素': `Unity 2022 · 2D Pixel`,
 		'Unity 6 · 2D 横板': `Unity 6 · 2D Side-scroller`,
 		'<a href="goodkid.html">Good Kid<br> VR 弃屋探险</a>': `<a href="goodkid.html">Good Kid<br> VR Abandoned-House Adventure</a>`,
