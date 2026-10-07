@@ -11,19 +11,16 @@
 	var DICT = {
 
 		/* ---------- 全站导航 / 页脚 ---------- */
-		'<a href="index.html">全部项目</a>': `<a href="index.html">All Projects</a>`,
-		'<a href="ripple.html">涟漪</a>': `<a href="ripple.html">Ripple</a>`,
-		'<a href="goodkid.html">Good Kid</a>': `<a href="goodkid.html">Good Kid</a>`,
-		'<a href="greed.html">贪婪</a>': `<a href="greed.html">Greed</a>`,
-		'<a href="daoge.html">刀歌</a>': `<a href="daoge.html">Blade Song</a>`,
-		'<a href="rpg.html">2D RPG</a>': `<a href="rpg.html">2D RPG</a>`,
+		'全部项目': `All Projects`,
+		'涟漪': `Ripple`,
+		'贪婪': `Greed`,
+		'刀歌': `Blade Song`,
 		'设计模板: <a href="https://html5up.net">HTML5 UP</a>': `Template: <a href="https://html5up.net">HTML5 UP</a>`,
 
 		/* ---------- 首页 index.html ---------- */
-		'<a href="#main" class="scrolly">精选项目</a>': `<a href="#main" class="scrolly">Projects</a>`,
-		'<a href="#about" class="scrolly">关于我</a>': `<a href="#about" class="scrolly">About</a>`,
-		'<a href="#skills" class="scrolly">技能</a>': `<a href="#skills" class="scrolly">Skills</a>`,
-		'<a href="#contact" class="scrolly">联系</a>': `<a href="#contact" class="scrolly">Contact</a>`,
+		'精选项目': `Projects`,
+		'技能': `Skills`,
+		'联系': `Contact`,
 		'你好，<br> 我是 Yannis': `Hi, I'm<br> Yannis`,
 		'游戏开发者 · Unity / Unreal Engine / AI 辅助开发<br> 用游戏探讨严肃议题 —— 网络暴力、偏见与贪婪。':
 			`Game developer · Unity / Unreal Engine / AI-assisted workflows<br> I make games about serious topics — online harassment, prejudice, and greed.`,
@@ -463,6 +460,29 @@
 	var savedTitle = null;
 	var toggle = null;
 
+	function buildSwitcher() {
+		if (document.getElementById('langSwitch')) return;
+		var div = document.createElement('div');
+		div.id = 'langSwitch';
+		div.setAttribute('role', 'group');
+		div.setAttribute('aria-label', 'Language / 语言');
+		div.innerHTML =
+			'<button type="button" data-lang="zh" title="切换到中文">中文</button>' +
+			'<button type="button" data-lang="en" title="Switch to English">EN</button>';
+		document.body.appendChild(div);
+	}
+
+	function syncSwitcher() {
+		var box = document.getElementById('langSwitch');
+		if (!box) return;
+		var btns = box.querySelectorAll('button');
+		for (var i = 0; i < btns.length; i++) {
+			var b = btns[i];
+			var isActive = (b.getAttribute('data-lang') === 'en') === en;
+			b.className = isActive ? 'active' : '';
+		}
+	}
+
 	function apply() {
 		var nodes = document.querySelectorAll(SELECTOR);
 		for (var i = 0; i < nodes.length; i++) {
@@ -483,20 +503,40 @@
 			document.title = DICT[tKey];
 		}
 		document.documentElement.lang = en ? 'en' : 'zh-CN';
-		if (toggle) toggle.textContent = en ? '中文' : 'EN';
+		syncSwitcher();
 		localStorage.setItem('lang', en ? 'en' : 'zh');
 	}
 
-	function init() {
-		toggle = document.getElementById('langToggle');
+	function setLang(isEn) {
+		en = isEn;
 		apply();
+	}
+
+	function init() {
+		// 首次访问：按浏览器语言选择初始语言；之后以用户手选为准
+		if (localStorage.getItem('lang') === null) {
+			var nav = (navigator.language || navigator.userLanguage || 'zh');
+			en = !/^zh/i.test(nav);
+			localStorage.setItem('lang', en ? 'en' : 'zh');
+		}
+		buildSwitcher();
+		var box = document.getElementById('langSwitch');
+		if (box) {
+			box.addEventListener('click', function (e) {
+				var btn = e.target.closest('button[data-lang]');
+				if (!btn) return;
+				e.preventDefault();
+				setLang(btn.getAttribute('data-lang') === 'en');
+			});
+		}
+		toggle = document.getElementById('langToggle');
 		if (toggle) {
 			toggle.addEventListener('click', function (e) {
 				e.preventDefault();
-				en = !en;
-				apply();
+				setLang(!en);
 			});
 		}
+		apply();
 	}
 
 	if (document.readyState === 'loading') {

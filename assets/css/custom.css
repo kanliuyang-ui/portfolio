@@ -25,3 +25,61 @@
 #main article h3 {
 	margin: 1.4rem 0 0.7rem 0;
 }
+
+/* ---------------- 语言切换器 ----------------
+	固定在视口右上角，任何滚动位置都可见；
+	移动端挪到左上角，避开模板的汉堡菜单按钮。 */
+#langSwitch {
+	position: fixed;
+	top: 1rem;
+	right: 1.25rem;
+	z-index: 10010;
+	display: flex;
+	align-items: stretch;
+	background: rgba(30, 37, 45, 0.82);
+	border: 1px solid rgba(255, 255, 255, 0.28);
+	border-radius: 999px;
+	padding: 3px;
+	-webkit-backdrop-filter: blur(6px);
+	backdrop-filter: blur(6px);
+	box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+}
+	#langSwitch button {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		border: 0;
+		background: transparent;
+		color: #ffffff;
+		opacity: 0.55;
+		font-family: inherit;
+		font-size: 0.72rem;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		padding: 0.32rem 0.75rem;
+		border-radius: 999px;
+		cursor: pointer;
+		transition: opacity 0.2s ease, background-color 0.2s ease;
+	}
+		#langSwitch button:hover {
+			opacity: 1;
+		}
+		#langSwitch button.active {
+			opacity: 1;
+			background: #18bfef;
+			color: #ffffff;
+			cursor: default;
+		}
+
+@media screen and (max-width: 736px) {
+	#langSwitch {
+		top: 0.75rem;
+		right: auto;
+		left: 0.75rem;
+	}
+	#langSwitch button {
+		font-size: 0.65rem;
+		padding: 0.26rem 0.6rem;
+	}
+}
