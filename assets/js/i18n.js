@@ -11,7 +11,7 @@
 	var DICT = {
 
 		/* ---------- 全站导航 / 页脚 ---------- */
-		'全部项目': `All Projects`,
+		'作品集': `Portfolio`,
 		'涟漪': `Ripple`,
 		'贪婪': `Greed`,
 		'刀歌': `Blade Song`,
@@ -19,6 +19,15 @@
 
 		/* ---------- 首页 index.html ---------- */
 		'精选项目': `Projects`,
+		'作品集 · 5 个游戏项目': `Portfolio · 5 game projects`,
+		'<a href="projects.html">作品集<br> PORTFOLIO</a>': `<a href="projects.html">Portfolio<br> SELECTED WORKS</a>`,
+		'从 VR 恐怖叙事到 UE5 桌面模拟，五个独立完成的完整游戏项目——每个项目均附完整设计文档。':
+			`From VR horror narrative to a UE5 desktop simulation — five complete, independently built game projects, each with a full design document.`,
+		'<a href="projects.html" class="button large">进入作品集</a>': `<a href="projects.html" class="button large">View portfolio</a>`,
+		'PORTFOLIO · 五个独立项目': `PORTFOLIO · five independent projects`,
+		'作品集<br> PORTFOLIO': `Portfolio<br> SELECTED WORKS`,
+		'五个独立完成的游戏项目——从叙事驱动到系统驱动，覆盖 VR、2D、3D 与桌面模拟。每个项目均可查看完整设计文档。':
+			`Five complete, independently built game projects — from narrative-driven to systems-driven, spanning VR, 2D, 3D, and desktop simulation. Every project opens with a full design document.`,
 		'技能': `Skills`,
 		'联系': `Contact`,
 		'你好，<br> 我是 Yannis': `Hi, I'm<br> Yannis`,
@@ -433,6 +442,7 @@
 
 		/* ---------- 页面标题 ---------- */
 		'__title__Yannis · 游戏开发作品集': `Yannis · Game Development Portfolio`,
+		'__title__Yannis · 作品集 PORTFOLIO': `Yannis · Portfolio`,
 		'__title__涟漪 RIPPLE · 设计文档 — Yannis 作品集': `Ripple RIPPLE · Design Document — Yannis Portfolio`,
 		'__title__Good Kid · VR 弃屋探险 — Yannis 作品集': `Good Kid · VR Adventure — Yannis Portfolio`,
 		'__title__贪婪 GREED · 关卡设计 — Yannis 作品集': `Greed GREED · Level Design — Yannis Portfolio`,
