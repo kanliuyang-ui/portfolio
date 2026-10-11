@@ -44,6 +44,7 @@
 						<ul class="links">
 							<li><a href="projects.html">作品集</a></li>
 							<li><a href="#about" class="scrolly">关于我</a></li>
+							<li><a href="#experience" class="scrolly">经历</a></li>
 							<li><a href="#skills" class="scrolly">技能</a></li>
 							<li><a href="#contact" class="scrolly">联系</a></li>
 						</ul>
@@ -82,7 +83,34 @@
 								<p>同时深度实践 AI 协作开发工作流：以「需求 → ADR 决策记录 → 实现 → 自动化回归验证」的流程与 AI 结对开发，并使用 ComfyUI 与 Tripo 构建 AI 美术管线。所有项目的设计文档、决策记录与开发日志全程留档、可追溯。</p>
 							</article>
 
-						<!-- 技能 -->
+						<!-- 比赛与实习 -->
+						<article class="post" id="experience">
+							<header class="major">
+								<span class="date">比赛与实习</span>
+								<h2>赛场与职场<br />
+								COMPETITIONS &amp; EXPERIENCE</h2>
+							</header>
+
+							<h3>比赛作品</h3>
+							<p><strong>明朝断案录 · 断案评分引擎</strong>（比赛名称 / 奖项待补充）</p>
+							<p>面向明代断案游戏的通用判词评分引擎：玩家阅读案件、提交判词，引擎完成断言提取与确定性评分，返回稳定 JSON——一次 LLM 应用工程化与安全设计的完整实践。</p>
+							<ul>
+								<li>防泄题设计：真相与评分细则永不回传；AI 只提取 claims 不决定总分，quote 子串校验防幻觉</li>
+								<li>无 API Key 时全本地确定性评分兜底，可离线运行</li>
+								<li>案件即数据：新增案件只需 4 个 JSON 文件，核心代码零改动</li>
+								<li>Express + React + Ajv 校验 + 结构化测试与 Eval</li>
+							</ul>
+
+							<h3>实习经历</h3>
+							<p><strong>公司名称（待补充） · 游戏开发实习生</strong></p>
+							<p>时间段（待补充）</p>
+							<ul>
+								<li>参与的项目与职责（待补充）</li>
+								<li>主要产出与成果（待补充）</li>
+							</ul>
+						</article>
+
+					<!-- 技能 -->
 							<article class="post" id="skills">
 								<header class="major">
 									<span class="date">技能栈</span>
@@ -168,7 +196,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/i18n.js?v=3"></script>
+			<script src="assets/js/i18n.js?v=4"></script>
 
 	</body>
 </html>

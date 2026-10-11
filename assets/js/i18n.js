@@ -19,6 +19,24 @@
 
 		/* ---------- 首页 index.html ---------- */
 		'精选项目': `Projects`,
+		'经历': `Experience`,
+		'比赛与实习': `Competitions & Experience`,
+		'赛场与职场<br> COMPETITIONS & EXPERIENCE': `Competitions &<br> Internships`,
+		'比赛作品': `Competitions`,
+		'实习经历': `Internships`,
+		'<strong>明朝断案录 · 断案评分引擎</strong>（比赛名称 / 奖项待补充）':
+			`<strong>Ming Dynasty Case Records · case-scoring engine</strong> (competition & award TBA)`,
+		'面向明代断案游戏的通用判词评分引擎：玩家阅读案件、提交判词，引擎完成断言提取与确定性评分，返回稳定 JSON——一次 LLM 应用工程化与安全设计的完整实践。':
+			`A universal verdict-scoring engine for a Ming-dynasty detective game: players read a case and submit a verdict; the engine extracts claims, scores them deterministically, and returns stable JSON — a complete exercise in LLM engineering and security design.`,
+		'防泄题设计：真相与评分细则永不回传；AI 只提取 claims 不决定总分，quote 子串校验防幻觉':
+			`Anti-leak design: ground truth and rubrics never leave the server; the AI only extracts claims and never decides the score, with quote-substring validation against hallucination`,
+		'无 API Key 时全本地确定性评分兜底，可离线运行': `Falls back to fully local deterministic scoring without an API key — works offline`,
+		'案件即数据：新增案件只需 4 个 JSON 文件，核心代码零改动': `Cases as data: adding a case takes only 4 JSON files, zero changes to core code`,
+		'Express + React + Ajv 校验 + 结构化测试与 Eval': `Express + React + Ajv validation, plus structured tests and evals`,
+		'<strong>公司名称（待补充） · 游戏开发实习生</strong>': `<strong>Company name (TBA) · Game Development Intern</strong>`,
+		'时间段（待补充）': `Period (TBA)`,
+		'参与的项目与职责（待补充）': `Projects involved & responsibilities (TBA)`,
+		'主要产出与成果（待补充）': `Deliverables & achievements (TBA)`,
 		'作品集 · 5 个游戏项目': `Portfolio · 5 game projects`,
 		'<a href="projects.html">作品集<br> PORTFOLIO</a>': `<a href="projects.html">Portfolio<br> SELECTED WORKS</a>`,
 		'从 VR 恐怖叙事到 UE5 桌面模拟，五个独立完成的完整游戏项目——每个项目均附完整设计文档。':
