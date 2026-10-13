@@ -10,6 +10,71 @@
 
 	var DICT = {
 
+		/* ---------- V3 定制设计系统：英雄区 / 数据带 / 板块 ---------- */
+		'独立游戏开发者 · PORTFOLIO 2026': `Indie game developer · PORTFOLIO 2026`,
+		'用游戏探讨<br> 严肃议题': `Games that take on<br> serious topics`,
+		'我是 Yannis——Unity / Unreal Engine 双引擎独立开发者，相信机制本身即叙事。作品聚焦网络暴力、偏见与贪婪的游戏化表达。':
+			`I'm Yannis — an indie developer working across Unity and Unreal Engine, with the belief that mechanics themselves can be narrative. My work turns online harassment, prejudice, and greed into playable form.`,
+		'<a href="projects.html" class="button solid">查看作品集 <span class="arr">→</span></a>': `<a href="projects.html" class="button solid">View portfolio <span class="arr">→</span></a>`,
+		'<span class="dot"></span>可参与 2027 春季入学': `<span class="dot"></span>Available for Spring 2027 intake`,
+		'独立游戏项目': `Indie projects`,
+		'主流引擎': `Engines`,
+		'完整可玩章节': `Playable chapter`,
+		'ADR 决策留档': `ADR decisions logged`,
+		'<span class="idx">01</span>作品集': `<span class="idx">01</span>Portfolio`,
+		'<span class="idx">02</span>关于我': `<span class="idx">02</span>About`,
+		'<span class="idx">03</span>经历': `<span class="idx">03</span>Experience`,
+		'<span class="idx">04</span>工作流': `<span class="idx">04</span>Process`,
+		'<span class="idx">05</span>技能栈': `<span class="idx">05</span>Skills`,
+		'<span class="idx">06</span>联系': `<span class="idx">06</span>Contact`,
+		'五个世界，<br> 每一份决策都可追溯。': `Five worlds,<br> every decision traceable.`,
+		'从 VR 恐怖叙事到 UE5 桌面模拟——五个独立完成的游戏项目，每一个都附完整设计文档与开发留档。':
+			`From VR horror narrative to a UE5 desktop simulation — five complete, independently built game projects, each with a full design document and a development paper trail.`,
+		'进入作品集 <span class="arr">→</span>': `Enter portfolio <span class="arr">→</span>`,
+		'机制即叙事。': `Mechanics as narrative.`,
+		'叙事驱动的设计与文案': `Narrative-driven design & writing`,
+		'Unity / UE5 双引擎开发': `Unity / UE5 dual-engine development`,
+		'AI 结对开发与美术管线': `AI pair development & art pipeline`,
+		'自动化回归验证（PIE 验收）': `Automated regression (PIE acceptance)`,
+		'赛场与职场。': `Competitions & internships.`,
+		'2026 · 比赛': `2026 · Competition`,
+		'明朝断案录 · 断案评分引擎 <span class="tag">比赛名称 / 奖项待补充</span>':
+			`Ming Dynasty Case Records · case-scoring engine <span class="tag">competition & award TBA</span>`,
+		'防泄题设计：真相与评分细则永不回传；AI 只提取 claims 不决定总分': `Anti-leak design: ground truth and rubrics never leave the server; the AI only extracts claims and never decides the score`,
+		'无 API Key 时全本地确定性评分兜底；新增案件只需 4 个 JSON 文件': `Falls back to fully local deterministic scoring without an API key; adding a case takes only 4 JSON files`,
+		'时间待补充 · 实习': `Dates TBA · Internship`,
+		'公司名称待补充 <span class="tag">游戏开发实习生</span>': `Company TBA <span class="tag">Game Development Intern</span>`,
+		'参与的项目与职责待补充。': `Projects & responsibilities TBA.`,
+		'每一份决策<br> 都有档案。': `Every decision<br> has a paper trail.`,
+		'区别于「想到哪做到哪」，我的每个项目都跑在一条完整的工程化流程上——这也是设计可以被检阅的原因。':
+			`Unlike "figuring it out as I go", every project runs on a full engineering pipeline — which is exactly what makes the design reviewable.`,
+		'需求成文': `Written requirements`,
+		'每个系统先有成文需求与 UI 规范，再动工。': `Every system starts as a written spec and UI standard before any implementation.`,
+		'ADR 决策留档': `ADR decision log`,
+		'关键技术决策全部记录，40+ 篇随时可回溯。': `Key technical decisions all documented — 40+ entries, reviewable at any time.`,
+		'实现 + 自动化回归': `Build + automated regression`,
+		'PIE 测试脚本、截图留档、验收报告。': `PIE test scripts, screenshot archives, acceptance reports.`,
+		'知识库沉淀': `Knowledge base`,
+		'Obsidian 260+ 篇笔记：踩坑、日志、工作流。': `260+ Obsidian notes: pitfalls, dev logs, workflows.`,
+		'工具箱。': `Toolbox.`,
+		'URP 渲染管线': `URP render pipeline`,
+		'来聊聊游戏。': `Let's talk games.`,
+		'正在寻找研究生阶段继续深耕游戏设计与开发的机会。如果我的作品让你感兴趣，欢迎来信。':
+			`I'm looking for a graduate program to keep deepening my work in game design and development. If my work resonates, drop me a line.`,
+		'© 2026 YANNIS · 游戏开发作品集': `© 2026 YANNIS · Game development portfolio`,
+		'返回首页 →': `Back to home →`,
+		'返回作品集 →': `Back to portfolio →`,
+		'全部': `All`,
+		'<a href="ripple.html">涟漪<span class="en">RIPPLE</span></a>': `<a href="ripple.html">Ripple<span class="en">RIPPLE</span></a>`,
+		'<a href="goodkid.html">Good Kid<span class="en">VR 弃屋探险</span></a>': `<a href="goodkid.html">Good Kid<span class="en">VR abandoned-house adventure</span></a>`,
+		'<a href="greed.html">贪婪<span class="en">GREED</span></a>': `<a href="greed.html">Greed<span class="en">GREED</span></a>`,
+		'<a href="daoge.html">刀歌<span class="en">MANAGE &amp; FIGHT</span></a>': `<a href="daoge.html">Blade Song<span class="en">MANAGE &amp; FIGHT</span></a>`,
+		'<a href="rpg.html">2D 像素 RPG<span class="en">暂定名</span></a>': `<a href="rpg.html">2D Pixel RPG<span class="en">untitled</span></a>`,
+		'查看设计文档 <span class="arr">→</span>': `Design doc <span class="arr">→</span>`,
+		'查看详情 <span class="arr">→</span>': `Details <span class="arr">→</span>`,
+		'查看作品集': `View portfolio`,
+		'进入作品集': `Enter portfolio`,
+
 		/* ---------- 全站导航 / 页脚 ---------- */
 		'作品集': `Portfolio`,
 		'涟漪': `Ripple`,
@@ -473,13 +538,18 @@
 	}
 
 	var SELECTOR = [
-		'#nav ul.links li a',
-		'#intro h1', '#intro p', '#intro ul li',
+		'#nav ul.links li a', '.nav-links li a:not(.button)',
+		'.hero-kicker', '.hero h1', '.hero-sub',
+		'.hero-cta a.button', '.badge-avail',
 		'#main h1', '#main h2', '#main h3',
 		'#main p', '#main ul li', '#main blockquote',
 		'#main table th', '#main table td',
-		'#main span.date',
+		'#main span.date', '#main .kicker',
+		'#main .filters button',
+		'#main .post-card .more',
+		'#main article ul li',
 		'#footer h3', '#footer section p',
+		'.foot-bar-inner p', '.foot-bar-inner a',
 		'#copyright ul li'
 	].join(', ');
 

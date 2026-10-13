@@ -1,8 +1,7 @@
 <!DOCTYPE HTML>
 <!--
-	Massively by HTML5 UP (html5up.net | @ajlkn)
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-	内容：Yannis 游戏开发作品集
+	Yannis · 游戏开发作品集
+	定制设计系统 V3（深色电影感 · 暖铜点缀）
 -->
 <html lang="zh-CN">
 	<head>
@@ -10,198 +9,221 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="独立游戏开发者：Unity / Unreal Engine / VR / 2D 像素 / 叙事设计 / AI 辅助开发工作流。" />
-		<meta name="theme-color" content="#1e252d" />
-		<meta name="color-scheme" content="light" />
-		<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23181512'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%2318b28a'/%3E%3C/svg%3E" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/custom.css?v=4" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<meta name="theme-color" content="#0b0c0f" />
+		<meta name="color-scheme" content="dark" />
+		<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0c0f'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23c8a96a'/%3E%3C/svg%3E" />
+		<link rel="preload" as="font" type="font/woff2" href="assets/fonts/space-grotesk-700.woff2" crossorigin />
+		<link rel="stylesheet" href="assets/css/style.css?v=1" />
 	</head>
-	<body class="is-preload">
+	<body>
 
 		<a class="skip-link" href="#main">跳到主要内容</a>
 
+		<!-- 导航 -->
+		<nav id="nav">
+			<div class="nav-inner">
+				<a class="logo" href="index.html">YANNIS<span class="accent">_</span>DEV</a>
+				<ul class="nav-links mono">
+					<li><a href="projects.html">作品集</a></li>
+					<li class="hide-m"><a href="#about">关于我</a></li>
+					<li class="hide-m"><a href="#experience">经历</a></li>
+					<li class="hide-m"><a href="#skills">技能</a></li>
+					<li><a href="#contact">联系</a></li>
+				</ul>
+			</div>
+		</nav>
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+		<!-- 英雄区 -->
+		<header class="hero">
+			<div class="hero-bg" aria-hidden="true"></div>
+			<div class="hero-inner">
+				<p class="hero-kicker">独立游戏开发者 · PORTFOLIO 2026</p>
+				<h1>用游戏探讨<br />严肃议题</h1>
+				<p class="hero-sub">我是 Yannis——Unity / Unreal Engine 双引擎独立开发者，相信机制本身即叙事。作品聚焦网络暴力、偏见与贪婪的游戏化表达。</p>
+				<div class="hero-cta">
+					<a class="button solid" href="projects.html">查看作品集 <span class="arr">→</span></a>
+					<span class="badge-avail"><span class="dot"></span>可参与 2027 春季入学</span>
+				</div>
+				<div class="hero-meta">
+					<span>UNITY 2022–6</span>
+					<span>UNREAL ENGINE 5.8</span>
+					<span>VR / 2D / 3D</span>
+					<span>AI 工作流</span>
+				</div>
+			</div>
+			<div class="hero-scroll mono">SCROLL</div>
+		</header>
 
-				<!-- BG -->
-					<div class="bg"></div>
+		<div id="main">
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>你好，<br />
-						我是 Yannis</h1>
-						<p>游戏开发者 · Unity / Unreal Engine / AI 辅助开发<br />
-						用游戏探讨严肃议题 —— 网络暴力、偏见与贪婪。</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">继续</a></li>
+			<!-- 数据带 -->
+			<section class="stats">
+				<div class="container stats-grid">
+					<div class="stat reveal"><span class="num">5</span><span class="lbl">独立游戏项目</span></div>
+					<div class="stat reveal" style="--d:.08s"><span class="num">2</span><span class="lbl">主流引擎</span></div>
+					<div class="stat reveal" style="--d:.16s"><span class="num">35<span class="unit">min</span></span><span class="lbl">完整可玩章节</span></div>
+					<div class="stat reveal" style="--d:.24s"><span class="num">40<span class="unit">+</span></span><span class="lbl">ADR 决策留档</span></div>
+				</div>
+			</section>
+
+			<!-- 作品集入口 -->
+			<section class="section" id="portfolio">
+				<div class="container">
+					<header class="section-head reveal">
+						<p class="kicker"><span class="idx">01</span>作品集</p>
+						<h2 class="section-title">五个世界，<br />每一份决策都可追溯。</h2>
+					</header>
+					<a class="gateway reveal" href="projects.html">
+						<div class="gateway-media"><img src="images/collage.jpg" alt="五个游戏项目封面拼贴" width="1600" height="1000" /></div>
+						<div class="gateway-body">
+							<p class="kicker">SELECTED WORKS · 2024–2026</p>
+							<h3 class="section-title">作品集</h3>
+							<p>从 VR 恐怖叙事到 UE5 桌面模拟——五个独立完成的游戏项目，每一个都附完整设计文档与开发留档。</p>
+							<span class="button">进入作品集 <span class="arr">→</span></span>
+						</div>
+					</a>
+				</div>
+			</section>
+
+			<!-- 关于我 -->
+			<section class="section" id="about">
+				<div class="container">
+					<header class="section-head reveal">
+						<p class="kicker"><span class="idx">02</span>关于我</p>
+						<h2 class="section-title">机制即叙事。</h2>
+					</header>
+					<div class="about-grid">
+						<div class="about-copy reveal">
+							<p>我是一名专注于<strong>叙事与机制设计</strong>的独立游戏开发者。独立完成多个 Unity 与 Unreal Engine 项目，覆盖 VR 探险、2D 像素 RPG、第一人称 3D 与桌面模拟叙事；作品聚焦严肃议题的游戏化表达——网络暴力、偏见、贪婪——相信机制本身就可以是叙事。</p>
+							<p>同时深度实践 AI 协作开发工作流：以「需求 → ADR 决策记录 → 实现 → 自动化回归验证」的流程与 AI 结对开发，并使用 ComfyUI 与 Tripo 构建 AI 美术管线。所有项目的设计文档、决策记录与开发日志全程留档、可追溯。</p>
+						</div>
+						<ul class="cap-list reveal" style="--d:.12s">
+							<li><span class="no">01</span>叙事驱动的设计与文案</li>
+							<li><span class="no">02</span>Unity / UE5 双引擎开发</li>
+							<li><span class="no">03</span>VR：XR Interaction Toolkit + OpenXR</li>
+							<li><span class="no">04</span>关卡设计（LDD / 灰盒 / 光照节奏）</li>
+							<li><span class="no">05</span>AI 结对开发与美术管线</li>
+							<li><span class="no">06</span>自动化回归验证（PIE 验收）</li>
 						</ul>
 					</div>
+				</div>
+			</section>
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">YANNIS_DEV</a>
+			<!-- 比赛与实习 -->
+			<section class="section" id="experience">
+				<div class="container">
+					<header class="section-head reveal">
+						<p class="kicker"><span class="idx">03</span>经历</p>
+						<h2 class="section-title">赛场与职场。</h2>
 					</header>
-
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li><a href="projects.html">作品集</a></li>
-							<li><a href="#about" class="scrolly">关于我</a></li>
-							<li><a href="#experience" class="scrolly">经历</a></li>
-							<li><a href="#skills" class="scrolly">技能</a></li>
-							<li><a href="#contact" class="scrolly">联系</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">邮箱</span></a></li>
-						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Portfolio Gateway -->
-						<article class="post featured" id="portfolio">
-							<header class="major">
-								<span class="date">作品集 · 5 个游戏项目</span>
-								<h2><a href="projects.html">作品集<br />
-								PORTFOLIO</a></h2>
-								<p>从 VR 恐怖叙事到 UE5 桌面模拟，五个独立完成的完整游戏项目——每个项目均附完整设计文档。</p>
-							</header>
-							<a href="projects.html" class="image main"><img src="images/collage.jpg" alt="五个游戏项目封面拼贴"  width="1600" height="1000" /></a>
-							<ul class="actions special">
-								<li><a href="projects.html" class="button large">进入作品集</a></li>
-							</ul>
-						</article>
-
-
-						<!-- 关于我 -->
-							<article class="post" id="about">
-								<header class="major">
-									<span class="date">关于我</span>
-									<h2>机制即叙事<br />
-									DESIGN PHILOSOPHY</h2>
-								</header>
-								<p>我是一名专注于<strong>叙事与机制设计</strong>的独立游戏开发者。独立完成多个 Unity 与 Unreal Engine 项目，覆盖 VR 探险、2D 像素 RPG、第一人称 3D 与桌面模拟叙事等多种形态；作品聚焦严肃议题的游戏化表达 —— 网络暴力、偏见、贪婪 —— 相信机制本身就可以是叙事。</p>
-								<p>同时深度实践 AI 协作开发工作流：以「需求 → ADR 决策记录 → 实现 → 自动化回归验证」的流程与 AI 结对开发，并使用 ComfyUI 与 Tripo 构建 AI 美术管线。所有项目的设计文档、决策记录与开发日志全程留档、可追溯。</p>
-							</article>
-
-						<!-- 比赛与实习 -->
-						<article class="post" id="experience">
-							<header class="major">
-								<span class="date">比赛与实习</span>
-								<h2>赛场与职场<br />
-								COMPETITIONS &amp; EXPERIENCE</h2>
-							</header>
-
-							<h3>比赛作品</h3>
-							<p><strong>明朝断案录 · 断案评分引擎</strong>（比赛名称 / 奖项待补充）</p>
+					<ul class="timeline">
+						<li class="reveal">
+							<span class="when">2026 · 比赛</span>
+							<h3>明朝断案录 · 断案评分引擎 <span class="tag">比赛名称 / 奖项待补充</span></h3>
 							<p>面向明代断案游戏的通用判词评分引擎：玩家阅读案件、提交判词，引擎完成断言提取与确定性评分，返回稳定 JSON——一次 LLM 应用工程化与安全设计的完整实践。</p>
 							<ul>
-								<li>防泄题设计：真相与评分细则永不回传；AI 只提取 claims 不决定总分，quote 子串校验防幻觉</li>
-								<li>无 API Key 时全本地确定性评分兜底，可离线运行</li>
-								<li>案件即数据：新增案件只需 4 个 JSON 文件，核心代码零改动</li>
-								<li>Express + React + Ajv 校验 + 结构化测试与 Eval</li>
+								<li>防泄题设计：真相与评分细则永不回传；AI 只提取 claims 不决定总分</li>
+								<li>无 API Key 时全本地确定性评分兜底；新增案件只需 4 个 JSON 文件</li>
 							</ul>
+						</li>
+						<li class="reveal" style="--d:.1s">
+							<span class="when">时间待补充 · 实习</span>
+							<h3>公司名称待补充 <span class="tag">游戏开发实习生</span></h3>
+							<p>参与的项目与职责待补充。</p>
+						</li>
+					</ul>
+				</div>
+			</section>
 
-							<h3>实习经历</h3>
-							<p><strong>公司名称（待补充） · 游戏开发实习生</strong></p>
-							<p>时间段（待补充）</p>
+			<!-- 工作流 -->
+			<section class="section" id="process">
+				<div class="container">
+					<header class="section-head reveal">
+						<p class="kicker"><span class="idx">04</span>工作流</p>
+						<h2 class="section-title">每一份决策<br />都有档案。</h2>
+						<p class="section-desc">区别于「想到哪做到哪」，我的每个项目都跑在一条完整的工程化流程上——这也是设计可以被检阅的原因。</p>
+					</header>
+					<div class="flow-grid">
+						<div class="flow-step reveal"><span class="no">01</span><h3>需求成文</h3><p>每个系统先有成文需求与 UI 规范，再动工。</p></div>
+						<div class="flow-step reveal" style="--d:.08s"><span class="no">02</span><h3>ADR 决策留档</h3><p>关键技术决策全部记录，40+ 篇随时可回溯。</p></div>
+						<div class="flow-step reveal" style="--d:.16s"><span class="no">03</span><h3>实现 + 自动化回归</h3><p>PIE 测试脚本、截图留档、验收报告。</p></div>
+						<div class="flow-step reveal" style="--d:.24s"><span class="no">04</span><h3>知识库沉淀</h3><p>Obsidian 260+ 篇笔记：踩坑、日志、工作流。</p></div>
+					</div>
+				</div>
+			</section>
+
+			<!-- 技能 -->
+			<section class="section" id="skills">
+				<div class="container">
+					<header class="section-head reveal">
+						<p class="kicker"><span class="idx">05</span>技能栈</p>
+						<h2 class="section-title">工具箱。</h2>
+					</header>
+					<div class="skills-grid">
+						<div class="skill-group reveal">
+							<h3>引擎与平台</h3>
 							<ul>
-								<li>参与的项目与职责（待补充）</li>
-								<li>主要产出与成果（待补充）</li>
+								<li>Unity（2022 LTS · Unity 6）</li>
+								<li>Unreal Engine 5.8</li>
+								<li>VR：XR Interaction Toolkit + OpenXR</li>
+								<li>URP 渲染管线</li>
 							</ul>
-						</article>
-
-					<!-- 技能 -->
-							<article class="post" id="skills">
-								<header class="major">
-									<span class="date">技能栈</span>
-									<h2>工具箱<br />
-									TOOLBOX</h2>
-								</header>
-								<div class="row">
-									<div class="col-6 col-12-small">
-										<h3>引擎与平台</h3>
-										<ul>
-											<li>Unity（2022 LTS · Unity 6）</li>
-											<li>Unreal Engine 5.8</li>
-											<li>VR：XR Interaction Toolkit + OpenXR</li>
-											<li>URP 渲染管线</li>
-										</ul>
-										<h3>AI 工具链</h3>
-										<ul>
-											<li>ComfyUI 图像工作流</li>
-											<li>Tripo 3D 生成与人工修型</li>
-											<li>AI 结对开发（需求 → ADR → 实现 → 回归）</li>
-										</ul>
-									</div>
-									<div class="col-6 col-12-small">
-										<h3>编程语言</h3>
-										<ul>
-											<li>C#</li>
-											<li>UE 蓝图（全蓝图项目实践）</li>
-											<li>JavaScript / Node.js</li>
-											<li>Python（引擎编辑器自动化）</li>
-										</ul>
-										<h3>设计能力</h3>
-										<ul>
-											<li>叙事与文案设计</li>
-											<li>关卡设计（LDD / 灰盒 / 光照节奏）</li>
-											<li>系统与数值设计</li>
-											<li>自动化回归测试（PIE 验收）</li>
-										</ul>
-									</div>
-								</div>
-							</article>
-
+						</div>
+						<div class="skill-group reveal" style="--d:.08s">
+							<h3>编程语言</h3>
+							<ul>
+								<li>C#</li>
+								<li>UE 蓝图（全蓝图项目实践）</li>
+								<li>JavaScript / Node.js</li>
+								<li>Python（引擎编辑器自动化）</li>
+							</ul>
+						</div>
+						<div class="skill-group reveal" style="--d:.16s">
+							<h3>AI 工具链</h3>
+							<ul>
+								<li>ComfyUI 图像工作流</li>
+								<li>Tripo 3D 生成与人工修型</li>
+								<li>AI 结对开发（需求 → ADR → 实现 → 回归）</li>
+							</ul>
+						</div>
+						<div class="skill-group reveal" style="--d:.24s">
+							<h3>设计能力</h3>
+							<ul>
+								<li>叙事与文案设计</li>
+								<li>关卡设计（LDD / 灰盒 / 光照节奏）</li>
+								<li>系统与数值设计</li>
+								<li>自动化回归测试（PIE 验收）</li>
+							</ul>
+						</div>
 					</div>
+				</div>
+			</section>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<section class="split contact" id="contact">
-							<section class="alt">
-								<h3>关于</h3>
-								<p>正在寻找研究生阶段继续深耕游戏设计与开发的机会。<br />
-								如果我的作品让你感兴趣，欢迎联系。</p>
-							</section>
-							<section>
-								<h3>邮箱</h3>
-								<p><a href="mailto:hello@example.com">hello@example.com</a></p>
-							</section>
-							<section>
-								<h3>GitHub</h3>
-								<p><a href="#">github.com/username</a></p>
-							</section>
-							<section>
-								<h3>社交</h3>
-								<ul class="icons alt">
-									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon brands alt fa-itch-io"><span class="label">itch.io</span></a></li>
-									<li><a href="#" class="icon solid alt fa-envelope"><span class="label">邮箱</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
-
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; 2026 Yannis</li><li>设计模板: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+			<!-- 联系 -->
+			<section class="contact" id="contact">
+				<div class="container">
+					<p class="kicker reveal"><span class="idx">06</span>联系</p>
+					<h2 class="section-title reveal">来聊聊游戏。</h2>
+					<p class="lead reveal">正在寻找研究生阶段继续深耕游戏设计与开发的机会。如果我的作品让你感兴趣，欢迎来信。</p>
+					<div class="contact-lines reveal">
+						<a class="button solid" href="mailto:hello@example.com">hello@example.com</a>
+						<a class="button ghost" href="#">GitHub <span class="arr">↗</span></a>
 					</div>
+				</div>
+			</section>
 
+		</div>
+
+		<!-- 底栏 -->
+		<div class="foot-bar">
+			<div class="container foot-bar-inner">
+				<p>© 2026 YANNIS · 游戏开发作品集</p>
+				<p>DESIGNED &amp; BUILT BY MYSELF</p>
 			</div>
+		</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="assets/js/i18n.js?v=4"></script>
+		<script src="assets/js/site.js?v=1"></script>
+		<script src="assets/js/i18n.js?v=5"></script>
 
 	</body>
 </html>
