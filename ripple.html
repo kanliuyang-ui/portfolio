@@ -9,12 +9,17 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="《涟漪》：网络暴力题材第一人称桌面模拟叙事游戏——设计文档、核心机制、章节结构与实现验证。" />
+		<meta name="theme-color" content="#1e252d" />
+		<meta name="color-scheme" content="light" />
 		<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23181512'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%2318b28a'/%3E%3C/svg%3E" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/custom.css?v=3" />
+		<link rel="stylesheet" href="assets/css/custom.css?v=4" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
+
+		<a class="skip-link" href="#main">跳到主要内容</a>
+
 
 		<div id="wrapper" class="fade-in">
 
@@ -45,7 +50,7 @@
 						<p>"Every word you type lands on someone else's screen."<br />
 						网络暴力题材第一人称桌面模拟叙事游戏：玩家面对一台电脑搜集线索、发表言论，用 ←/→ 键切换到被网暴者 / 施暴者 / 中立者的设备——<strong>亲眼看到你的每一句话，落在别人屏幕上是什么样子</strong>。</p>
 					</header>
-					<a class="image main"><img src="images/ripple-feed.jpg" alt="《涟漪》实机画面：玩家电脑上的社交应用「泡泡」与热榜" /></a>
+					<a class="image main"><img src="images/ripple-feed.jpg" alt="《涟漪》实机画面：玩家电脑上的社交应用「泡泡」与热榜"  width="735" height="510" /></a>
 				</article>
 
 				<article class="post">
@@ -70,7 +75,7 @@
 						<li>解锁条件绑定玩家行为：发出第一条评论才解锁晓雨的屏幕，溯源追查才解锁刀哥的电脑——<strong>新视角是你动作的直接后果</strong></li>
 						<li>第 4 章网暴反噬直接落在玩家自己的笔记本上：玩家只有一块屏幕，反噬来临时无处可躲——封闭感即压迫感</li>
 					</ul>
-					<a class="image main"><img src="images/ripple-victim.jpg" alt="《涟漪》：切换到被网暴者晓雨的手机屏幕" /></a>
+					<a class="image main"><img src="images/ripple-victim.jpg" alt="《涟漪》：切换到被网暴者晓雨的手机屏幕"  width="735" height="510" loading="lazy" /></a>
 
 					<h2>叙事结构：章节钉子</h2>
 					<p>6 章 × 3 波次的两级结构：章内波次是软触发（热度阈值释放内容），章节钉子是硬触发——每章一个「必然发生、不可跳过」的世界状态改变（停职 / 完整截图流出 / 回应视频 / 被扒 / 热度归零）。</p>
@@ -97,7 +102,7 @@
 						<li><strong>AI 美术管线</strong>：Tripo 生成 + 人工修型的「玩具剧场」低模风格，47 条可复制提示词库 + 设备比例锁规范</li>
 						<li>主菜单 / 设置（音量 / 分辨率 / 窗口模式持久化）与第 1–6 章跳转框架完成，后续章节内容开发中</li>
 					</ul>
-					<a class="image main"><img src="images/ripple-suspension.jpg" alt="《涟漪》：停职通知的强制阅读演出" /></a>
+					<a class="image main"><img src="images/ripple-suspension.jpg" alt="《涟漪》：停职通知的强制阅读演出"  width="735" height="510" loading="lazy" /></a>
 
 					<h2>关键设计决策（ADR 节选）</h2>
 					<p>项目全程用 Architecture Decision Record 留档，共 27+ 篇，摘录：</p>
@@ -131,7 +136,7 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
-		<script src="assets/js/i18n.js?v=3"></script>
+		<script src="assets/js/i18n.js?v=4"></script>
 
 	</body>
 </html>

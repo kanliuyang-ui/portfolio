@@ -1,9 +1,30 @@
 /*
 	作品集内容定制（覆盖 Massively 默认）
-	1. 列表左对齐：模板默认居中，中文条目读起来别扭
-	2. 章节内的 h3 间距微调
+	V2：依据 Vercel Web Interface Guidelines 做可读性与交互质量升级
 */
 
+/* 中文正文可读性：左对齐 + 加大行高（模板默认居中，中文居中极难读） */
+#main article p {
+	text-align: left;
+	line-height: 1.95;
+	text-wrap: pretty;
+}
+
+	#main article p:last-child {
+		margin-bottom: 0;
+	}
+
+/* 引语块：左对齐 + 主题色竖线 + 底纹 */
+#main blockquote {
+	text-align: left;
+	margin: 0 0 1.6rem 0;
+	padding: 0.9rem 1.4rem;
+	border-left: 4px solid #18bfef;
+	background: rgba(24, 191, 239, 0.06);
+	border-radius: 0 8px 8px 0;
+}
+
+/* 列表左对齐：模板默认居中 */
 #main article ul {
 	text-align: left;
 	padding-left: 1.6rem;
@@ -24,6 +45,106 @@
 
 #main article h3 {
 	margin: 1.4rem 0 0.7rem 0;
+	text-align: left;
+}
+
+/* 标题防孤字 */
+h1, h2, h3 {
+	text-wrap: balance;
+}
+
+/* 项目卡封面：统一 16:10 裁切 + 悬停轻微放大 */
+#main .posts .image.fit {
+	aspect-ratio: 16 / 10;
+	overflow: hidden;
+	border: 1px solid rgba(0, 0, 0, 0.08);
+	border-radius: 6px;
+}
+
+	#main .posts .image.fit img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.6s ease;
+	}
+
+	#main .posts article:hover .image.fit img {
+		transform: scale(1.03);
+	}
+
+/* 特稿大图：圆角 + 描边，更利落 */
+#main .image.main {
+	border-radius: 8px;
+	overflow: hidden;
+	border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* 表格微调：斑马纹行距更松 */
+#main table tbody tr {
+	transition: background-color 0.2s ease;
+}
+
+	#main table tbody tr:hover {
+		background-color: rgba(24, 191, 239, 0.05);
+	}
+
+/* 选中文字用主题色 */
+::selection {
+	background: #18bfef;
+	color: #ffffff;
+}
+
+/* 交互质量（Web Interface Guidelines） */
+button, a {
+	touch-action: manipulation;
+	-webkit-tap-highlight-color: transparent;
+}
+
+/* 语言切换器按钮的可见焦点态 */
+#langSwitch button:focus-visible {
+	outline: 2px solid #18bfef;
+	outline-offset: 2px;
+	opacity: 1;
+}
+
+/* 查看详情按钮焦点态 */
+#main a.button:focus-visible {
+	outline: 2px solid #18bfef;
+	outline-offset: 3px;
+}
+
+/* 锚点定位留出固定元素的空间 */
+#main article {
+	scroll-margin-top: 5rem;
+}
+
+/* 跳转正文链接：仅键盘聚焦时可见 */
+.skip-link {
+	position: absolute;
+	left: -9999px;
+	top: 0;
+	z-index: 10011;
+	background: #18bfef;
+	color: #ffffff;
+	padding: 0.6rem 1.2rem;
+	border-radius: 0 0 6px 0;
+	font-weight: 700;
+}
+
+	.skip-link:focus-visible {
+		left: 0;
+	}
+
+/* 尊重减弱动态偏好 */
+@media (prefers-reduced-motion: reduce) {
+	#main .posts .image.fit img,
+	#main table tbody tr {
+		transition: none;
+	}
+
+	#main .posts article:hover .image.fit img {
+		transform: none;
+	}
 }
 
 /* ---------------- 语言切换器 ----------------
