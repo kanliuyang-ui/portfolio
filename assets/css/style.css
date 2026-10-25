@@ -1133,6 +1133,84 @@ article { scroll-margin-top: calc(var(--nav-h) + 24px); }
 		.foot-bar a:hover { color: var(--accent); }
 
 /* ==========================================================================
+   平台账号
+   ========================================================================== */
+.platforms {
+	margin-top: 72px;
+	padding-top: 48px;
+	border-top: 1px solid var(--line);
+}
+
+	.platforms-title {
+		font-size: 12px;
+		font-weight: 700;
+		letter-spacing: 0.24em;
+		color: var(--muted);
+		margin-bottom: 26px;
+	}
+
+	.platforms-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1px;
+		background: var(--line);
+		border: 1px solid var(--line);
+		border-radius: var(--radius);
+		overflow: hidden;
+	}
+
+	.platform-row {
+		display: flex;
+		align-items: center;
+		gap: 18px;
+		background: var(--surface);
+		padding: 18px 24px;
+		transition: background-color 0.25s ease;
+	}
+
+		a.platform-row:hover { background: var(--surface-2); }
+
+		.platform-row .p-name {
+			font-family: var(--font-display);
+			font-weight: 700;
+			font-size: 15px;
+			color: var(--text);
+			min-width: 96px;
+		}
+
+		.platform-row .p-handle {
+			font-size: 12.5px;
+			color: var(--muted);
+			flex: 1;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
+		a.platform-row:hover .p-handle { color: var(--accent); }
+
+		.platform-row .arr {
+			color: var(--accent);
+			font-size: 13px;
+			transition: transform 0.25s var(--ease);
+		}
+
+		a.platform-row:hover .arr { transform: translate(3px, -3px); }
+
+	.platforms-note {
+		margin-top: 18px;
+		font-size: 11.5px;
+		letter-spacing: 0.08em;
+		color: var(--muted);
+		text-align: center;
+	}
+
+@media (max-width: 760px) {
+	.platforms-grid { grid-template-columns: 1fr; }
+	.platform-row .p-name { min-width: 72px; }
+}
+
+/* ==========================================================================
    语言切换器
    ========================================================================== */
 #langSwitch {
