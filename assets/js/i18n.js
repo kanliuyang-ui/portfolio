@@ -12,10 +12,10 @@
 
 		/* ---------- V3 定制设计系统：英雄区 / 数据带 / 板块 ---------- */
 		'独立游戏开发者 · PORTFOLIO 2026': `Indie game developer · PORTFOLIO 2026`,
-		'用游戏探讨<br> 严肃议题': `Games that take on<br> serious topics`,
+		'用游戏探讨<br>严肃议题': `Games that take on<br>serious topics`,
 		'我是 Yannis——Unity / Unreal Engine 双引擎独立开发者，相信机制本身即叙事。作品聚焦网络暴力、偏见与贪婪的游戏化表达。':
 			`I'm Yannis — an indie developer working across Unity and Unreal Engine, with the belief that mechanics themselves can be narrative. My work turns online harassment, prejudice, and greed into playable form.`,
-		'<a href="projects.html" class="button solid">查看作品集 <span class="arr">→</span></a>': `<a href="projects.html" class="button solid">View portfolio <span class="arr">→</span></a>`,
+		'查看作品集 <span class="arr">→</span>': `View portfolio <span class="arr">→</span>`,
 		'<span class="dot"></span>可参与 2027 春季入学': `<span class="dot"></span>Available for Spring 2027 intake`,
 		'独立游戏项目': `Indie projects`,
 		'主流引擎': `Engines`,
@@ -27,7 +27,7 @@
 		'<span class="idx">04</span>工作流': `<span class="idx">04</span>Process`,
 		'<span class="idx">05</span>技能栈': `<span class="idx">05</span>Skills`,
 		'<span class="idx">06</span>联系': `<span class="idx">06</span>Contact`,
-		'五个世界，<br> 每一份决策都可追溯。': `Five worlds,<br> every decision traceable.`,
+		'五个世界，<br>每一份决策都可追溯。': `Five worlds,<br>every decision traceable.`,
 		'从 VR 恐怖叙事到 UE5 桌面模拟——五个独立完成的游戏项目，每一个都附完整设计文档与开发留档。':
 			`From VR horror narrative to a UE5 desktop simulation — five complete, independently built game projects, each with a full design document and a development paper trail.`,
 		'进入作品集 <span class="arr">→</span>': `Enter portfolio <span class="arr">→</span>`,
@@ -45,7 +45,9 @@
 		'时间待补充 · 实习': `Dates TBA · Internship`,
 		'公司名称待补充 <span class="tag">游戏开发实习生</span>': `Company TBA <span class="tag">Game Development Intern</span>`,
 		'参与的项目与职责待补充。': `Projects & responsibilities TBA.`,
-		'每一份决策<br> 都有档案。': `Every decision<br> has a paper trail.`,
+		'AI 工作流': `AI workflows`,
+		'跳到主要内容': `Skip to content`,
+		'每一份决策<br>都有档案。': `Every decision<br>has a paper trail.`,
 		'区别于「想到哪做到哪」，我的每个项目都跑在一条完整的工程化流程上——这也是设计可以被检阅的原因。':
 			`Unlike "figuring it out as I go", every project runs on a full engineering pipeline — which is exactly what makes the design reviewable.`,
 		'需求成文': `Written requirements`,
@@ -64,6 +66,7 @@
 		'© 2026 YANNIS · 游戏开发作品集': `© 2026 YANNIS · Game development portfolio`,
 		'返回首页 →': `Back to home →`,
 		'返回作品集 →': `Back to portfolio →`,
+		'返回作品集 <span class="arr">→</span>': `Back to portfolio <span class="arr">→</span>`,
 		'全部': `All`,
 		'<a href="ripple.html">涟漪<span class="en">RIPPLE</span></a>': `<a href="ripple.html">Ripple<span class="en">RIPPLE</span></a>`,
 		'<a href="goodkid.html">Good Kid<span class="en">VR 弃屋探险</span></a>': `<a href="goodkid.html">Good Kid<span class="en">VR abandoned-house adventure</span></a>`,
@@ -73,6 +76,25 @@
 		'查看设计文档 <span class="arr">→</span>': `Design doc <span class="arr">→</span>`,
 		'查看详情 <span class="arr">→</span>': `Details <span class="arr">→</span>`,
 		'查看作品集': `View portfolio`,
+		/* 能力清单（含编号前缀） */
+		'<span class="no">01</span>叙事驱动的设计与文案': `<span class="no">01</span>Narrative-driven design & writing`,
+		'<span class="no">02</span>Unity / UE5 双引擎开发': `<span class="no">02</span>Unity / UE5 dual-engine development`,
+		'<span class="no">03</span>VR：XR Interaction Toolkit + OpenXR': `<span class="no">03</span>VR: XR Interaction Toolkit + OpenXR`,
+		'<span class="no">04</span>关卡设计（LDD / 灰盒 / 光照节奏）': `<span class="no">04</span>Level design (LDD / grey-box / lighting rhythm)`,
+		'<span class="no">05</span>AI 结对开发与美术管线': `<span class="no">05</span>AI pair development & art pipeline`,
+		'<span class="no">06</span>自动化回归验证（PIE 验收）': `<span class="no">06</span>Automated regression testing (PIE acceptance)`,
+		/* 时间线日期 */
+		'2026 · 比赛': `2026 · Competition`,
+		'时间待补充 · 实习': `Dates TBA · Internship`,
+		/* 详情页 h1 */
+		'涟漪<br>RIPPLE': `Ripple<br>RIPPLE`,
+		'Good Kid<br>VR 弃屋探险': `Good Kid<br>VR abandoned-house adventure`,
+		'贪婪<br>GREED': `Greed<br>GREED`,
+		'刀歌<br>MANAGE &amp; FIGHT': `Blade Song<br>MANAGE &amp; FIGHT`,
+		'2D 像素 RPG<br>暂定名': `2D Pixel RPG<br>untitled`,
+		/* 涟漪详情引言 */
+		'网络暴力题材第一人称桌面模拟叙事游戏：玩家面对一台电脑搜集线索、发表言论，用 ←/→ 键切换到被网暴者 / 施暴者 / 中立者的设备——<strong>亲眼看到你的每一句话，落在别人屏幕上是什么样子</strong>。':
+			`A first-person desktop-simulation narrative game about cyberbullying: you sit at one computer, gather clues, post comments — and with the ←/→ keys you switch to the devices of the victim, the harassers, and the bystanders, <strong>watching exactly how every sentence you send lands on someone else's screen</strong>.`,
 		'进入作品集': `Enter portfolio`,
 
 		/* ---------- 全站导航 / 页脚 ---------- */
@@ -86,7 +108,7 @@
 		'精选项目': `Projects`,
 		'经历': `Experience`,
 		'比赛与实习': `Competitions & Experience`,
-		'赛场与职场<br> COMPETITIONS & EXPERIENCE': `Competitions &<br> Internships`,
+		'赛场与职场<br>COMPETITIONS & EXPERIENCE': `Competitions &<br>Internships`,
 		'比赛作品': `Competitions`,
 		'实习经历': `Internships`,
 		'<strong>明朝断案录 · 断案评分引擎</strong>（比赛名称 / 奖项待补充）':
@@ -103,25 +125,25 @@
 		'参与的项目与职责（待补充）': `Projects involved & responsibilities (TBA)`,
 		'主要产出与成果（待补充）': `Deliverables & achievements (TBA)`,
 		'作品集 · 5 个游戏项目': `Portfolio · 5 game projects`,
-		'<a href="projects.html">作品集<br> PORTFOLIO</a>': `<a href="projects.html">Portfolio<br> SELECTED WORKS</a>`,
+		'<a href="projects.html">作品集<br>PORTFOLIO</a>': `<a href="projects.html">Portfolio<br>SELECTED WORKS</a>`,
 		'从 VR 恐怖叙事到 UE5 桌面模拟，五个独立完成的完整游戏项目——每个项目均附完整设计文档。':
 			`From VR horror narrative to a UE5 desktop simulation — five complete, independently built game projects, each with a full design document.`,
 		'<a href="projects.html" class="button large">进入作品集</a>': `<a href="projects.html" class="button large">View portfolio</a>`,
 		'PORTFOLIO · 五个独立项目': `PORTFOLIO · five independent projects`,
-		'作品集<br> PORTFOLIO': `Portfolio<br> SELECTED WORKS`,
+		'作品集<br>PORTFOLIO': `Portfolio<br>SELECTED WORKS`,
 		'五个独立完成的游戏项目——从叙事驱动到系统驱动，覆盖 VR、2D、3D 与桌面模拟。每个项目均可查看完整设计文档。':
 			`Five complete, independently built game projects — from narrative-driven to systems-driven, spanning VR, 2D, 3D, and desktop simulation. Every project opens with a full design document.`,
 		'技能': `Skills`,
 		'联系': `Contact`,
-		'你好，<br> 我是 Yannis': `Hi, I'm<br> Yannis`,
-		'游戏开发者 · Unity / Unreal Engine / AI 辅助开发<br> 用游戏探讨严肃议题 —— 网络暴力、偏见与贪婪。':
-			`Game developer · Unity / Unreal Engine / AI-assisted workflows<br> I make games about serious topics — online harassment, prejudice, and greed.`,
+		'你好，<br>我是 Yannis': `Hi, I'm<br>Yannis`,
+		'游戏开发者 · Unity / Unreal Engine / AI 辅助开发<br>用游戏探讨严肃议题 —— 网络暴力、偏见与贪婪。':
+			`Game developer · Unity / Unreal Engine / AI-assisted workflows<br>I make games about serious topics — online harassment, prejudice, and greed.`,
 		'<a href="#header" class="button icon solid solo fa-arrow-down scrolly">继续</a>':
 			`<a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a>`,
 		'UE 5.8 · 桌面模拟叙事': `UE 5.8 · Desktop-simulation narrative`,
-		'<a href="ripple.html">涟漪<br> RIPPLE</a>': `<a href="ripple.html">Ripple<br> RIPPLE</a>`,
-		'"Every word you type lands on someone else\'s screen."<br> 网络暴力题材第一人称桌面模拟叙事游戏：玩家在电脑前搜集线索、发表言论，随时切换到被网暴者 / 施暴者 / 旁观者的屏幕 —— 亲眼看到你打下的每一个字，落在别人屏幕上是什么样子。':
-			`"Every word you type lands on someone else's screen."<br> A first-person desktop-simulation narrative game about cyberbullying: from your own computer you gather clues and post comments — then flip to the screens of the victim, the harassers, and the bystanders, and watch exactly how every word you typed lands on someone else.`,
+		'<a href="ripple.html">涟漪<br>RIPPLE</a>': `<a href="ripple.html">Ripple<br>RIPPLE</a>`,
+		'"Every word you type lands on someone else\'s screen."<br>网络暴力题材第一人称桌面模拟叙事游戏：玩家在电脑前搜集线索、发表言论，随时切换到被网暴者 / 施暴者 / 旁观者的屏幕 —— 亲眼看到你打下的每一个字，落在别人屏幕上是什么样子。':
+			`"Every word you type lands on someone else's screen."<br>A first-person desktop-simulation narrative game about cyberbullying: from your own computer you gather clues and post comments — then flip to the screens of the victim, the harassers, and the bystanders, and watch exactly how every word you typed lands on someone else.`,
 		'网络暴力题材第一人称桌面模拟叙事游戏：在你自己的电脑前搜集线索、发表言论，用 ←/→ 键切换到其他人的屏幕——亲眼看到你的每一句话，落在别人屏幕上是什么样子。':
 			`A first-person desktop-simulation narrative game about cyberbullying: from your own computer you gather clues and post comments — then flip to other people's screens and watch exactly how every sentence you send lands on someone else.`,
 		'第一章完整可玩（30–35 分钟）：开场、三波次推进、发言结算、强制阅读演出与数字结算，32 项 PIE 自动化回归通过':
@@ -135,10 +157,10 @@
 		'<a href="ripple.html" class="button">查看详情</a>': `<a href="ripple.html" class="button">Details</a>`,
 		'Unity 2022 · 2D 像素': `Unity 2022 · 2D Pixel`,
 		'Unity 6 · 2D 横板': `Unity 6 · 2D Side-scroller`,
-		'<a href="goodkid.html">Good Kid<br> VR 弃屋探险</a>': `<a href="goodkid.html">Good Kid<br> VR Abandoned-House Adventure</a>`,
-		'<a href="greed.html">贪婪<br> GREED</a>': `<a href="greed.html">Greed<br> GREED</a>`,
-		'<a href="daoge.html">刀歌<br> MANAGE &amp; FIGHT</a>': `<a href="daoge.html">Blade Song<br> MANAGE &amp; FIGHT</a>`,
-		'<a href="rpg.html">2D 像素 RPG<br> 暂定名</a>': `<a href="rpg.html">2D Pixel RPG<br> untitled</a>`,
+		'<a href="goodkid.html">Good Kid<br>VR 弃屋探险</a>': `<a href="goodkid.html">Good Kid<br>VR Abandoned-House Adventure</a>`,
+		'<a href="greed.html">贪婪<br>GREED</a>': `<a href="greed.html">Greed<br>GREED</a>`,
+		'<a href="daoge.html">刀歌<br>MANAGE &amp; FIGHT</a>': `<a href="daoge.html">Blade Song<br>MANAGE &amp; FIGHT</a>`,
+		'<a href="rpg.html">2D 像素 RPG<br>暂定名</a>': `<a href="rpg.html">2D Pixel RPG<br>untitled</a>`,
 		'第一人称 VR 恐怖叙事：在废弃房屋中探索，操作门、抽屉、灯具与日常物品，在看似平常的家庭规则下度过一晚又一晚 —— 有些规则是假的。':
 			`First-person VR horror narrative: explore an abandoned house, operating doors, drawers, lamps, and everyday objects — and live through night after night under seemingly ordinary family rules. Some of those rules are lies.`,
 		'规则违规系统：4 条家庭规则中混有 1 条假规则，违规触发灯闪、黑雾演出': `Rule-violation system: 4 family rules with 1 fake mixed in; violations trigger flickering lights and fog events`,
@@ -170,13 +192,13 @@
 			`Complete action-platformer framework: character controller, 8 monster AI types, fall-damage resolution, pixel-precise water hazards`,
 		'<a href="rpg.html" class="button">查看详情</a>': `<a href="rpg.html" class="button">Details</a>`,
 		'关于我': `About me`,
-		'机制即叙事<br> DESIGN PHILOSOPHY': `Mechanics as Narrative<br> DESIGN PHILOSOPHY`,
-		'我是一名专注于<strong>叙事与机制设计</strong>的独立游戏开发者。独立完成多个 Unity 与 Unreal Engine 项目，覆盖 VR 探险、2D 像素 RPG、第一人称 3D 与桌面模拟叙事等多种形态；作品聚焦严肃议题的游戏化表达 —— 网络暴力、偏见、贪婪 —— 相信机制本身就可以是叙事。':
-			`I am an indie game developer focused on <strong>narrative and mechanics design</strong>. I have independently shipped multiple Unity and Unreal Engine projects spanning VR adventure, 2D pixel RPG, first-person 3D, and desktop-simulation narrative. My work explores serious topics through gameplay — online harassment, prejudice, greed — out of the belief that mechanics themselves can be narrative.`,
+		'机制即叙事<br>DESIGN PHILOSOPHY': `Mechanics as Narrative<br>DESIGN PHILOSOPHY`,
+		'我是一名专注于<strong>叙事与机制设计</strong>的独立游戏开发者。独立完成多个 Unity 与 Unreal Engine 项目，覆盖 VR 探险、2D 像素 RPG、第一人称 3D 与桌面模拟叙事；作品聚焦严肃议题的游戏化表达——网络暴力、偏见、贪婪——相信机制本身就可以是叙事。':
+			`I am an indie game developer focused on <strong>narrative and mechanics design</strong>. I have independently built multiple Unity and Unreal Engine projects spanning VR adventure, 2D pixel RPG, first-person 3D, and desktop-simulation narrative; my work turns serious topics — online harassment, prejudice, greed — into playable form, out of the belief that mechanics themselves can be narrative.`,
 		'同时深度实践 AI 协作开发工作流：以「需求 → ADR 决策记录 → 实现 → 自动化回归验证」的流程与 AI 结对开发，并使用 ComfyUI 与 Tripo 构建 AI 美术管线。所有项目的设计文档、决策记录与开发日志全程留档、可追溯。':
 			`I also work deeply with AI-assisted development: pairing with AI through a "requirements → ADR decision record → implementation → automated regression" workflow, and building AI art pipelines with ComfyUI and Tripo. Every project keeps its design documents, decision records, and dev logs on file — fully traceable.`,
 		'技能栈': `Skills`,
-		'工具箱<br> TOOLBOX': `Toolbox<br> TOOLBOX`,
+		'工具箱<br>TOOLBOX': `Toolbox<br>TOOLBOX`,
 		'引擎与平台': `Engines & Platforms`,
 		'编程语言': `Languages`,
 		'AI 工具链': `AI Toolchain`,
@@ -194,16 +216,16 @@
 		'系统与数值设计': `Systems & numerical design`,
 		'自动化回归测试（PIE 验收）': `Automated regression testing (PIE acceptance)`,
 		'关于': `About`,
-		'正在寻找研究生阶段继续深耕游戏设计与开发的机会。<br> 如果我的作品让你感兴趣，欢迎联系。':
-			`I am looking for a graduate program to keep deepening my work in game design and development.<br> If my work interests you, please get in touch.`,
+		'正在寻找研究生阶段继续深耕游戏设计与开发的机会。<br>如果我的作品让你感兴趣，欢迎联系。':
+			`I am looking for a graduate program to keep deepening my work in game design and development.<br>If my work interests you, please get in touch.`,
 		'邮箱': `Email`,
 		'社交': `Social`,
 
 		/* ---------- 涟漪 ripple.html ---------- */
 		'旗舰项目 · UE 5.8 全蓝图 · 桌面模拟叙事': `Flagship · UE 5.8 Blueprint-only · Desktop-simulation narrative`,
-		'涟漪<br> RIPPLE': `Ripple<br> RIPPLE`,
-		'"Every word you type lands on someone else\'s screen."<br> 网络暴力题材第一人称桌面模拟叙事游戏：玩家面对一台电脑搜集线索、发表言论，用 ←/→ 键切换到被网暴者 / 施暴者 / 中立者的设备——<strong>亲眼看到你的每一句话，落在别人屏幕上是什么样子</strong>。':
-			`"Every word you type lands on someone else's screen."<br> A first-person desktop-simulation narrative game about cyberbullying: you sit at one computer, gather clues, post comments — and with the ←/→ keys you switch to the devices of the victim, the harassers, and the bystanders, <strong>watching exactly how every sentence you send lands on someone else's screen</strong>.`,
+		'涟漪<br>RIPPLE': `Ripple<br>RIPPLE`,
+		'"Every word you type lands on someone else\'s screen."<br>网络暴力题材第一人称桌面模拟叙事游戏：玩家面对一台电脑搜集线索、发表言论，用 ←/→ 键切换到被网暴者 / 施暴者 / 中立者的设备——<strong>亲眼看到你的每一句话，落在别人屏幕上是什么样子</strong>。':
+			`"Every word you type lands on someone else's screen."<br>A first-person desktop-simulation narrative game about cyberbullying: you sit at one computer, gather clues, post comments — and with the ←/→ keys you switch to the devices of the victim, the harassers, and the bystanders, <strong>watching exactly how every sentence you send lands on someone else's screen</strong>.`,
 		'设计概念': `Design concept`,
 		'网暴的道德重量来自「发言者看不到受害者的屏幕」。传统叙事游戏（Orwell、全网公敌）让玩家当监控者或旁观者；《涟漪》把这种信息不对称直接翻转成交互机制——<strong>玩家必须是参与者</strong>。每一次发言都是博弈：热度、立场、证据、措辞，全部会被对面的屏幕如实接收。':
 			`The moral weight of online harassment comes from the speaker never seeing the victim's screen. Traditional narrative games (Orwell, Do Not Feed the Monkeys-like watchers) cast the player as a monitor or bystander; Ripple flips that information asymmetry directly into its core interaction — <strong>the player must be a participant</strong>. Every post is a gamble: heat, stance, evidence, wording — all of it is faithfully received by the screen on the other side.`,
@@ -264,7 +286,7 @@
 
 		/* ---------- Good Kid goodkid.html ---------- */
 		'Unity 2022 · VR · XR Interaction Toolkit · 恐怖叙事': `Unity 2022 · VR · XR Interaction Toolkit · Horror narrative`,
-		'Good Kid<br> VR 弃屋探险': `Good Kid<br> VR Abandoned-House Adventure`,
+		'Good Kid<br>VR 弃屋探险': `Good Kid<br>VR Abandoned-House Adventure`,
 		'VR 第一人称恐怖叙事：玩家在废弃房屋中探索，操作门、抽屉、灯具与日常物品，在看似平常的家庭规则下度过一晚又一晚——<strong>有些规则是假的</strong>。':
 			`A first-person VR horror narrative: explore an abandoned house, operate doors, drawers, lamps, and everyday objects — and live through night after night under seemingly ordinary family rules. <strong>Some of those rules are lies.</strong>`,
 		'恐怖不来自 Jump Scare 的堆砌，而来自<strong>「家庭规则的错位感」</strong>：童年房间的日常物件——门、抽屉、时钟、糖果、垃圾桶——承载一套看似合理的行为规则。玩家以孩子的身份执行这些规则，逐渐察觉规则本身的异常。':
@@ -320,7 +342,7 @@
 
 		/* ---------- 贪婪 greed.html ---------- */
 		'UE 5.8 · 第一人称丧尸生存射击 · 关卡设计': `UE 5.8 · First-person zombie survival shooter · Level design`,
-		'贪婪<br> GREED': `Greed<br> GREED`,
+		'贪婪<br>GREED': `Greed<br>GREED`,
 		'末日因人类对永生的贪婪而起——「永生药剂」临床失控引发尸变。玩家是末日拾荒者，核心机制<strong>「贪婪负担」</strong>：搜集的物资越多，移速与射速的负面效果越重；而最终 BOSS，会对高贪婪的玩家索取额外伤害。':
 			`The apocalypse began with humanity's greed for eternal life — a "elixir of immortality" that failed catastrophically and triggered the outbreak. You are a post-apocalypse scavenger. The core mechanic is the <strong>Greed Burden</strong>: the more supplies you collect, the heavier your movement and fire-rate penalties — and the final BOSS exacts extra damage from high-greed players.`,
 		'机制与主题互证': `Mechanics proving the theme`,
@@ -381,7 +403,7 @@
 
 		/* ---------- 刀歌 daoge.html ---------- */
 		'Unity 2022 · 2D 像素 · 经营 + 战斗 + 探索': `Unity 2022 · 2D Pixel · Management + Combat + Exploration`,
-		'刀歌<br> MANAGE &amp; FIGHT': `Blade Song<br> MANAGE &amp; FIGHT`,
+		'刀歌<br>MANAGE &amp; FIGHT': `Blade Song<br>MANAGE &amp; FIGHT`,
 		'铁匠铺经营 × 回合制战斗 × 地图探索三合一——白天在铺子里打铁卖武器，攒够装备出门讨伐。玩家扮演铁匠，在<strong>锻造、售卖、冒险</strong>三条线之间循环推进。':
 			`Blacksmith management × turn-based combat × map exploration. By day you forge and sell weapons in your shop; once stocked up, you head out to hunt. Playing the blacksmith, you cycle through three interwoven lines: <strong>forging, selling, adventuring</strong>.`,
 		'游戏循环': `The game loop`,
@@ -438,7 +460,7 @@
 
 		/* ---------- 2D RPG rpg.html ---------- */
 		'Unity 6 · 2D 横板动作 · 叙事驱动': `Unity 6 · 2D side-scrolling action · Narrative-driven`,
-		'2D 像素 RPG<br> 暂定名': `2D Pixel RPG<br> untitled`,
+		'2D 像素 RPG<br>暂定名': `2D Pixel RPG<br>untitled`,
 		'立意「偏见」：印象中的好人不一定是好人，坏人也不一定是坏人，不要以貌取人。受神赐福的勇者开局碾压魔物，中途<strong>视角反转成魔物求生</strong>，最终揭露神才是幕后黑手。':
 			`Theme: prejudice. The good people you picture are not always good, nor the bad ones bad — never judge by appearances. A hero blessed by god stomps monsters, until <strong>the perspective flips and you survive as the monster</strong>, uncovering god as the true villain.`,
 		'立意与叙事架构': `Theme & narrative architecture`,
@@ -534,13 +556,27 @@
 	};
 
 	function norm(s) {
-		return s.replace(/\s+/g, ' ').trim();
+		return s
+			.replace(/\s+/g, ' ')
+			.replace(/<br\s*\/?>/gi, '<br>')
+			.replace(/<br>\s+/gi, '<br>')
+			.trim();
 	}
+
+	/* 反向覆盖：HTML 源码里刻意写英文的装饰性元素，在中文模式下显示中文 */
+	var DICT_ZH = {
+		'SCROLL': '下滑浏览',
+		'SELECTED WORKS · 2024–2026': '精选作品 · 2024–2026',
+		'DESIGNED &amp; BUILT BY MYSELF': '设计与开发 · 均为本人',
+		'DESIGNED & BUILT BY MYSELF': '设计与开发 · 均为本人',
+		'PORTFOLIO · 五个独立项目': '作品集 · 五个独立项目'
+	};
 
 	var SELECTOR = [
 		'#nav ul.links li a', '.nav-links li a:not(.button)',
 		'.hero-kicker', '.hero h1', '.hero-sub',
-		'.hero-cta a.button', '.badge-avail',
+		'.hero-cta a.button', '.badge-avail', '.hero-meta span', '.hero-scroll', '.gateway .button', '#main .stat .num, #main .stat .lbl',
+		'.skip-link', '#main .timeline .when',
 		'#main h1', '#main h2', '#main h3',
 		'#main p', '#main ul li', '#main blockquote',
 		'#main table th', '#main table td',
@@ -586,12 +622,18 @@
 		for (var i = 0; i < nodes.length; i++) {
 			var el = nodes[i];
 			if (el.id === 'langToggle') continue;
-			var key = norm(el.innerHTML);
 			if (en) {
 				if (!saved.has(el)) saved.set(el, el.innerHTML);
+				var key = norm(el.innerHTML);
 				if (Object.prototype.hasOwnProperty.call(DICT, key)) el.innerHTML = DICT[key];
-			} else if (saved.has(el)) {
-				el.innerHTML = saved.get(el);
+			} else {
+				// 先还原英文原文，再套用中文反向覆盖
+				if (saved.has(el)) el.innerHTML = saved.get(el);
+				var k2 = norm(el.innerHTML);
+				if (Object.prototype.hasOwnProperty.call(DICT_ZH, k2)) {
+					if (!saved.has(el)) saved.set(el, el.innerHTML);
+					el.innerHTML = DICT_ZH[k2];
+				}
 			}
 		}
 		var tKey = '__title__' + (en && savedTitle !== null ? savedTitle : document.title);
