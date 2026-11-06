@@ -22,10 +22,18 @@
 		'ADR 决策留档': `ADR decisions logged`,
 		'<span class="idx">01</span>作品集': `<span class="idx">01</span>Portfolio`,
 		'<span class="idx">02</span>关于我': `<span class="idx">02</span>About`,
-		'<span class="idx">03</span>经历': `<span class="idx">03</span>Experience`,
-		'<span class="idx">04</span>工作流': `<span class="idx">04</span>Process`,
-		'<span class="idx">05</span>技能栈': `<span class="idx">05</span>Skills`,
-		'<span class="idx">06</span>联系': `<span class="idx">06</span>Contact`,
+		'<span class="idx">03</span>比赛': `<span class="idx">03</span>Competitions`,
+		'<span class="idx">04</span>实习': `<span class="idx">04</span>Internship`,
+				'比赛': `Competitions`,
+		'参赛与获奖。': `Competitions & awards.`,
+		'参加过的比赛与对应的参赛项目，奖项与名次随赛程更新。': `Competitions I've entered, with the projects I submitted — awards and placements updated as results come in.`,
+		'比赛名称待补充': `Competition name TBA`,
+		'奖项待补充': `Award TBA`,
+		'参赛项目：明朝断案录 · 断案评分引擎': `Entry: Ming Dynasty Case Records · case-scoring engine`,
+		'实习经历。': `Internships.`,: `<span class="idx">03</span>Experience`,
+		'<span class="idx">05</span>工作流': `<span class="idx">04</span>Process`,
+		'<span class="idx">06</span>技能栈': `<span class="idx">05</span>Skills`,
+		'<span class="idx">07</span>联系': `<span class="idx">06</span>Contact`,
 		'五个世界，<br>每一份决策都可追溯。': `Five worlds,<br>every decision traceable.`,
 		'从 VR 恐怖叙事到 UE5 桌面模拟——五个独立完成的游戏项目，每一个都附完整设计文档与开发留档。':
 			`From VR horror narrative to a UE5 desktop simulation — five complete, independently built game projects, each with a full design document and a development paper trail.`,
@@ -65,8 +73,8 @@
 		'工具箱。': `Toolbox.`,
 		'URP 渲染管线': `URP render pipeline`,
 		'来聊聊游戏。': `Let's talk games.`,
-		'正在寻找研究生阶段继续深耕游戏设计与开发的机会。如果我的作品让你感兴趣，欢迎来信。':
-			`I'm looking for a graduate program to keep deepening my work in game design and development. If my work resonates, drop me a line.`,
+		'游戏设计与开发相关的工作机会、项目合作与交流邀约，欢迎来信。':
+			`Open to roles, collaborations, and project inquiries in game design & development. If my work resonates, drop me a line.`,
 		'© 2026 YANNIS · 游戏开发作品集': `© 2026 YANNIS · Game development portfolio`,
 		'返回首页 →': `Back to home →`,
 		'返回作品集 →': `Back to portfolio →`,
@@ -220,8 +228,6 @@
 		'系统与数值设计': `Systems & numerical design`,
 		'自动化回归测试（PIE 验收）': `Automated regression testing (PIE acceptance)`,
 		'关于': `About`,
-		'正在寻找研究生阶段继续深耕游戏设计与开发的机会。<br>如果我的作品让你感兴趣，欢迎联系。':
-			`I am looking for a graduate program to keep deepening my work in game design and development.<br>If my work interests you, please get in touch.`,
 		'邮箱': `Email`,
 		'社交': `Social`,
 
