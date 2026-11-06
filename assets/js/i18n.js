@@ -57,7 +57,7 @@
 		'哔哩哔哩': `Bilibili`,
 		'抖音': `Douyin`,
 		'X / Twitter': `X / Twitter`,
-		'游戏进展 → 开发类账号 · 工具与教程 → 分享类账号': `Game progress → dev accounts · tools & tutorials → share accounts`,
+		'玩家向账号 · 游戏进展与实机演示在各平台同步更新': `Player-facing accounts · game progress & gameplay demos, synced across platforms`,
 		'跳到主要内容': `Skip to content`,
 		'每一份决策<br>都有档案。': `Every decision<br>has a paper trail.`,
 		'区别于「想到哪做到哪」，我的每个项目都跑在一条完整的工程化流程上——这也是设计可以被检阅的原因。':
@@ -125,7 +125,7 @@
 		'实习经历': `Internships`,
 		'<strong>明朝断案录 · 断案评分引擎</strong>（比赛名称 / 奖项待补充）':
 			`<strong>Ming Dynasty Case Records · case-scoring engine</strong> (competition & award TBA)`,
-		'面向明代断案游戏的通用判词评分引擎：玩家阅读案件、提交判词，引擎完成断言提取与确定性评分，返回稳定 JSON——一次 LLM 应用工程化与安全设计的完整实践。':
+		'面向明代断案游戏的通用判词评分引擎——玩家阅读案件、提交判词，引擎完成断言提取与确定性评分，返回稳定 JSON；一次 LLM 应用工程化与安全设计的完整实践。':
 			`A universal verdict-scoring engine for a Ming-dynasty detective game: players read a case and submit a verdict; the engine extracts claims, scores them deterministically, and returns stable JSON — a complete exercise in LLM engineering and security design.`,
 		'防泄题设计：真相与评分细则永不回传；AI 只提取 claims 不决定总分，quote 子串校验防幻觉':
 			`Anti-leak design: ground truth and rubrics never leave the server; the AI only extracts claims and never decides the score, with quote-substring validation against hallucination`,
