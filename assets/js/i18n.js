@@ -16,7 +16,6 @@
 		'我是 Yannis——Unity / Unreal Engine 双引擎独立开发者，相信机制本身即叙事。作品聚焦网络暴力、偏见与贪婪的游戏化表达。':
 			`I'm Yannis — an indie developer working across Unity and Unreal Engine, with the belief that mechanics themselves can be narrative. My work turns online harassment, prejudice, and greed into playable form.`,
 		'查看作品集 <span class="arr">→</span>': `View portfolio <span class="arr">→</span>`,
-		'<span class="dot"></span>可参与 2027 春季入学': `<span class="dot"></span>Available for Spring 2027 intake`,
 		'独立游戏项目': `Indie projects`,
 		'主流引擎': `Engines`,
 		'完整可玩章节': `Playable chapter`,
