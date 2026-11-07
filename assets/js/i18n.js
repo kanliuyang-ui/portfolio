@@ -11,7 +11,7 @@
 	var DICT = {
 
 		/* ---------- V3 定制设计系统：英雄区 / 数据带 / 板块 ---------- */
-		'独立游戏开发者 · PORTFOLIO 2026': `Indie game developer · PORTFOLIO 2026`,
+		'独立游戏开发者 · 2024–2026': `Indie game developer · 2024–2026`,
 		'用游戏探讨<br>严肃议题': `Games that take on<br>serious topics`,
 		'我是 Yannis——Unity / Unreal Engine 双引擎独立开发者，相信机制本身即叙事。作品聚焦网络暴力、偏见与贪婪的游戏化表达。':
 			`I'm Yannis — an indie developer working across Unity and Unreal Engine, with the belief that mechanics themselves can be narrative. My work turns online harassment, prejudice, and greed into playable form.`,
