@@ -1,5 +1,5 @@
 /*
-	作品集中英双语切换
+	项目中英双语切换
 	- 中文为默认语言（页面 DOM 本身即中文）
 	- 英文通过字典（键 = 归一化后的中文 innerHTML）整体替换
 	- 选择持久化到 localStorage，全站 6 页生效
@@ -15,12 +15,14 @@
 		'用游戏探讨<br>严肃议题': `Games that take on<br>serious topics`,
 		'我是 Yannis——Unity / Unreal Engine 双引擎独立开发者，相信机制本身即叙事。作品聚焦网络暴力、偏见与贪婪的游戏化表达。':
 			`I'm Yannis — an indie developer working across Unity and Unreal Engine, with the belief that mechanics themselves can be narrative. My work turns online harassment, prejudice, and greed into playable form.`,
-		'查看作品集 <span class="arr">→</span>': `View portfolio <span class="arr">→</span>`,
+		'查看项目 <span class="arr">→</span>': `View projects <span class="arr">→</span>`,
 		'项目总量 · 游戏/工具/视频': `Total projects · games/tools/videos`,
 		'参赛经历 · 持续更新': `Competitions · more underway`,
+		'我做的项目<br>GAMES': `My projects<br>GAMES`,
+		'时间待补充': `Dates TBA`,
 		'全平台内容发布': `Platforms published`,
 		'ADR 决策留档': `ADR decisions logged`,
-		'<span class="idx">01</span>作品集': `<span class="idx">01</span>Portfolio`,
+		'<span class="idx">01</span>项目': `<span class="idx">01</span>Portfolio`,
 		'<span class="idx">02</span>关于我': `<span class="idx">02</span>About`,
 		'<span class="idx">03</span>比赛': `<span class="idx">03</span>Competitions`,
 		'<span class="idx">04</span>实习': `<span class="idx">04</span>Internship`,
@@ -30,14 +32,16 @@
 		'比赛名称待补充': `Competition name TBA`,
 		'奖项待补充': `Award TBA`,
 		'参赛项目：明朝断案录 · 断案评分引擎': `Entry: Ming Dynasty Case Records · case-scoring engine`,
-		'实习经历。': `Internships.`,: `<span class="idx">03</span>Experience`,
-		'<span class="idx">05</span>工作流': `<span class="idx">04</span>Process`,
-		'<span class="idx">06</span>技能栈': `<span class="idx">05</span>Skills`,
-		'<span class="idx">07</span>联系': `<span class="idx">06</span>Contact`,
+		'实习经历。': `Internships.`,
+		'<span class="idx">03</span>比赛': `<span class="idx">03</span>Competitions`,
+		'<span class="idx">04</span>实习': `<span class="idx">04</span>Internship`,
+		'<span class="idx">05</span>工作流': `<span class="idx">05</span>Process`,
+		'<span class="idx">06</span>技能栈': `<span class="idx">06</span>Skills`,
+		'<span class="idx">07</span>联系': `<span class="idx">07</span>Contact`,
 		'五个世界，<br>每一份决策都可追溯。': `Five worlds,<br>every decision traceable.`,
-		'从 VR 恐怖叙事到 UE5 桌面模拟——五个独立完成的游戏项目，每一个都附完整设计文档与开发留档。':
-			`From VR horror narrative to a UE5 desktop simulation — five complete, independently built game projects, each with a full design document and a development paper trail.`,
-		'进入作品集 <span class="arr">→</span>': `Enter portfolio <span class="arr">→</span>`,
+		'从 VR 恐怖叙事到 UE5 桌面模拟——全部独立完成。《涟漪》已上架 Steam，其余项目均发布于 itch.io。':
+			`From VR horror narrative to a UE5 desktop simulation — all built solo. Ripple is live on Steam; the rest are published on itch.io.`,
+		'查看全部项目 <span class="arr">→</span>': `View all projects <span class="arr">→</span>`,
 		'机制即叙事。': `Mechanics as narrative.`,
 		'叙事驱动的设计与文案': `Narrative-driven design & writing`,
 		'Unity / UE5 双引擎开发': `Unity / UE5 dual-engine development`,
@@ -75,11 +79,14 @@
 		'来聊聊游戏。': `Let's talk games.`,
 		'游戏设计与开发相关的工作机会、项目合作与交流邀约，欢迎来信。':
 			`Open to roles, collaborations, and project inquiries in game design & development. If my work resonates, drop me a line.`,
-		'© 2026 YANNIS · 游戏开发作品集': `© 2026 YANNIS · Game development portfolio`,
+		'© 2026 YANNIS · 独立游戏开发者': `© 2026 YANNIS · Indie game developer`,
 		'返回首页 →': `Back to home →`,
-		'返回作品集 →': `Back to portfolio →`,
-		'返回作品集 <span class="arr">→</span>': `Back to portfolio <span class="arr">→</span>`,
 		'全部': `All`,
+		'更多项目 <span class="arr">→</span>': `More projects <span class="arr">→</span>`,
+		'更多项目 →': `More projects →`,
+		'STEAM · 商店页': `STEAM · Store page`,
+		'itch.io': `itch.io`,
+		'Windows': `Windows`,
 		'<a href="ripple.html">涟漪<span class="en">RIPPLE</span></a>': `<a href="ripple.html">Ripple<span class="en">RIPPLE</span></a>`,
 		'<a href="goodkid.html">Good Kid<span class="en">VR 弃屋探险</span></a>': `<a href="goodkid.html">Good Kid<span class="en">VR abandoned-house adventure</span></a>`,
 		'<a href="greed.html">贪婪<span class="en">GREED</span></a>': `<a href="greed.html">Greed<span class="en">GREED</span></a>`,
@@ -87,7 +94,7 @@
 		'<a href="rpg.html">2D 像素 RPG<span class="en">暂定名</span></a>': `<a href="rpg.html">2D Pixel RPG<span class="en">untitled</span></a>`,
 		'查看设计文档 <span class="arr">→</span>': `Design doc <span class="arr">→</span>`,
 		'查看详情 <span class="arr">→</span>': `Details <span class="arr">→</span>`,
-		'查看作品集': `View portfolio`,
+		'查看项目': `View projects`,
 		/* 能力清单（含编号前缀） */
 		'<span class="no">01</span>叙事驱动的设计与文案': `<span class="no">01</span>Narrative-driven design & writing`,
 		'<span class="no">02</span>Unity / UE5 双引擎开发': `<span class="no">02</span>Unity / UE5 dual-engine development`,
@@ -107,10 +114,10 @@
 		/* 涟漪详情引言 */
 		'网络暴力题材第一人称桌面模拟叙事游戏：玩家面对一台电脑搜集线索、发表言论，用 ←/→ 键切换到被网暴者 / 施暴者 / 中立者的设备——<strong>亲眼看到你的每一句话，落在别人屏幕上是什么样子</strong>。':
 			`A first-person desktop-simulation narrative game about cyberbullying: you sit at one computer, gather clues, post comments — and with the ←/→ keys you switch to the devices of the victim, the harassers, and the bystanders, <strong>watching exactly how every sentence you send lands on someone else's screen</strong>.`,
-		'进入作品集': `Enter portfolio`,
+		'查看项目': `View projects`,
 
 		/* ---------- 全站导航 / 页脚 ---------- */
-		'作品集': `Portfolio`,
+		'项目': `Projects`,
 		'涟漪': `Ripple`,
 		'贪婪': `Greed`,
 		'刀歌': `Blade Song`,
@@ -136,15 +143,11 @@
 		'时间段（待补充）': `Period (TBA)`,
 		'参与的项目与职责（待补充）': `Projects involved & responsibilities (TBA)`,
 		'主要产出与成果（待补充）': `Deliverables & achievements (TBA)`,
-		'作品集 · 5 个游戏项目': `Portfolio · 5 game projects`,
-		'<a href="projects.html">作品集<br>PORTFOLIO</a>': `<a href="projects.html">Portfolio<br>SELECTED WORKS</a>`,
 		'从 VR 恐怖叙事到 UE5 桌面模拟，五个独立完成的完整游戏项目——每个项目均附完整设计文档。':
 			`From VR horror narrative to a UE5 desktop simulation — five complete, independently built game projects, each with a full design document.`,
-		'<a href="projects.html" class="button large">进入作品集</a>': `<a href="projects.html" class="button large">View portfolio</a>`,
-		'PORTFOLIO · 五个独立项目': `PORTFOLIO · five independent projects`,
-		'作品集<br>PORTFOLIO': `Portfolio<br>SELECTED WORKS`,
-		'五个独立完成的游戏项目——从叙事驱动到系统驱动，覆盖 VR、2D、3D 与桌面模拟。每个项目均可查看完整设计文档。':
-			`Five complete, independently built game projects — from narrative-driven to systems-driven, spanning VR, 2D, 3D, and desktop simulation. Every project opens with a full design document.`,
+		'GAMES · 独立开发 · itch.io &amp; STEAM': `GAMES · solo dev · itch.io & STEAM`,
+		'全部独立完成。《涟漪》已上架 Steam，其余项目均发布于 itch.io——点击卡片查看每个游戏的设计文档。':
+			`Everything here was built solo. Ripple is live on Steam; the rest are published on itch.io — open any card for its full design document.`,
 		'技能': `Skills`,
 		'联系': `Contact`,
 		'你好，<br>我是 Yannis': `Hi, I'm<br>Yannis`,
@@ -556,13 +559,13 @@
 		'ADR-012 结局体系与赐福对赌': `ADR-012 The ending system and the blessing wager`,
 
 		/* ---------- 页面标题 ---------- */
-		'__title__Yannis · 游戏开发作品集': `Yannis · Game Development Portfolio`,
-		'__title__Yannis · 作品集 PORTFOLIO': `Yannis · Portfolio`,
-		'__title__涟漪 RIPPLE · 设计文档 — Yannis 作品集': `Ripple RIPPLE · Design Document — Yannis Portfolio`,
-		'__title__Good Kid · VR 弃屋探险 — Yannis 作品集': `Good Kid · VR Adventure — Yannis Portfolio`,
-		'__title__贪婪 GREED · 关卡设计 — Yannis 作品集': `Greed GREED · Level Design — Yannis Portfolio`,
-		'__title__刀歌 MANAGE & FIGHT · 系统设计 — Yannis 作品集': `Blade Song MANAGE & FIGHT · System Design — Yannis Portfolio`,
-		'__title__2D 像素 RPG · 叙事与结局设计 — Yannis 作品集': `2D Pixel RPG · Narrative & Ending Design — Yannis Portfolio`
+		'__title__Yannis · 独立游戏开发者': `Yannis · Indie game developer`,
+		'__title__Yannis · 项目 GAMES': `Yannis · Projects & Games`,
+		'__title__涟漪 RIPPLE · 设计文档 — Yannis': `Ripple RIPPLE · Design Document — Yannis Portfolio`,
+		'__title__Good Kid · VR 弃屋探险 — Yannis': `Good Kid · VR Adventure — Yannis Portfolio`,
+		'__title__贪婪 GREED · 关卡设计 — Yannis': `Greed GREED · Level Design — Yannis Portfolio`,
+		'__title__刀歌 MANAGE & FIGHT · 系统设计 — Yannis': `Blade Song MANAGE & FIGHT · System Design — Yannis Portfolio`,
+		'__title__2D 像素 RPG · 叙事与结局设计 — Yannis': `2D Pixel RPG · Narrative & Ending Design — Yannis Portfolio`
 	};
 
 	function norm(s) {
@@ -578,8 +581,7 @@
 		'SCROLL': '下滑浏览',
 		'SELECTED WORKS · 2024–2026': '精选作品 · 2024–2026',
 		'DESIGNED &amp; BUILT BY MYSELF': '设计与开发 · 均为本人',
-		'DESIGNED & BUILT BY MYSELF': '设计与开发 · 均为本人',
-		'PORTFOLIO · 五个独立项目': '作品集 · 五个独立项目'
+		'DESIGNED & BUILT BY MYSELF': '设计与开发 · 均为本人'
 	};
 
 	var SELECTOR = [

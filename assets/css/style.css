@@ -1349,3 +1349,37 @@ article { scroll-margin-top: calc(var(--nav-h) + 24px); }
 				left: 0;
 				color: var(--accent-line);
 			}
+
+/* ==========================================================================
+   项目卡商店条（Steam / itch.io）
+   ========================================================================== */
+.store-row {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	flex-wrap: wrap;
+	margin-bottom: 18px;
+}
+
+	.store-chip {
+		display: inline-flex;
+		align-items: center;
+		gap: 7px;
+		font-size: 11px;
+		font-weight: 700;
+		letter-spacing: 0.12em;
+		color: var(--muted);
+		border: 1px solid var(--line-strong);
+		border-radius: 4px;
+		padding: 5px 12px;
+	}
+
+		.store-chip .icon { font-size: 13px; }
+
+		.store-chip.steam {
+			color: var(--text);
+			border-color: var(--accent-line);
+			background: var(--accent-dim);
+		}
+
+			.store-chip.steam .icon { color: var(--accent); }
