@@ -13,13 +13,31 @@
 		/* ---------- V3 定制设计系统：英雄区 / 数据带 / 板块 ---------- */
 		'独立游戏开发者 · 2024–2026': `Indie game developer · 2024–2026`,
 		'用游戏探讨<br>严肃议题': `Games that take on<br>serious topics`,
-		'我是 Yannis——Unity / Unreal Engine 双引擎独立开发者，相信机制本身即叙事。作品聚焦网络暴力、偏见与贪婪的游戏化表达。':
-			`I'm Yannis — an indie developer working across Unity and Unreal Engine, with the belief that mechanics themselves can be narrative. My work turns online harassment, prejudice, and greed into playable form.`,
+		'我是阚刘洋（Yannis）——Unity / Unreal Engine 双引擎独立开发者，相信机制本身即叙事。作品聚焦网络暴力、偏见与贪婪的游戏化表达。':
+			`I'm Kan Liuyang (Yannis) — an indie developer working across Unity and Unreal Engine, with the belief that mechanics themselves can be narrative. My work turns online harassment, prejudice, and greed into playable form.`,
 		'查看项目 <span class="arr">→</span>': `View projects <span class="arr">→</span>`,
 		'项目总量 · 游戏/工具/视频': `Total projects · games/tools/videos`,
 		'参赛经历 · 持续更新': `Competitions · more underway`,
 		'我做的项目<br>GAMES': `My projects<br>GAMES`,
-		'时间待补充': `Dates TBA`,
+				'上海元游网络有限公司 <span class="tag">游戏策划（实习）</span>': `Shanghai Yuanyou Network <span class="tag">Game Designer Intern</span>`,
+		'2025.06 – 2025.08': `2025.06 – 2025.08`,
+		'参与两款商业小游戏的研发，负责策划与程序、美术团队之间的文档对接，编写系统文档与策划案。':
+			`Contributed to two commercial mini-games, owning documentation between design, engineering, and art.`,
+		'抖音小游戏《我要上巅峰》：协助完成核心玩法的策划与系统搭建':
+			`Douyin mini-game "Wo Yao Shang Dian Feng": core gameplay design & system building`,
+		'快手游戏《西游降妖》：独立设计宝箱二次抽奖系统并上线':
+			`Kuaishou game "Xi You Jiang Yao": independently designed the chest re-draw system and shipped it`,
+		'<span class="idx">05</span>学历': `<span class="idx">05</span>Education`,
+		'教育与实践。': `Education & practice.`,
+		'澳门科技大学 <span class="tag">软件工程 · 本科 · 2027 届</span>': `Macau University of Science and Technology <span class="tag">Software Engineering · B.Eng · Class of 2027</span>`,
+		'GPA 2.83；主修课程：软件工程、算法设计与分析、软件项目管理。':
+			`GPA 2.83. Core courses: Software Engineering, Algorithm Design & Analysis, Software Project Management.`,
+		'2023.10 – 2026.01 校学生会财务部干事、部长：负责活动预算与财务汇报，2024、2025 连续获评优秀干事':
+			`2023.10 – 2026.01 Student Union Finance officer & head — event budgets and financial reporting; Outstanding Officer 2024 & 2025`,
+		'Worcester College AI 证书项目 <span class="tag">Deep Learning · 两周全日制</span>':
+			`Worcester College AI certificate program <span class="tag">Deep Learning · 2-week full-time</span>`,
+		'完成八个深度学习实践项目：糖尿病风险预测模型在验证集取得 AUC 0.83，另完成图像分类与时序预测练习。':
+			`Eight hands-on deep learning projects — a diabetes risk prediction model reaching AUC 0.83 on the validation set, plus image-classification and time-series exercises.`,
 		'全平台内容发布': `Platforms published`,
 		'ADR 决策留档': `ADR decisions logged`,
 		'<span class="idx">01</span>项目': `<span class="idx">01</span>Portfolio`,
@@ -91,7 +109,7 @@
 		'<a href="goodkid.html">Good Kid<span class="en">VR 弃屋探险</span></a>': `<a href="goodkid.html">Good Kid<span class="en">VR abandoned-house adventure</span></a>`,
 		'<a href="greed.html">贪婪<span class="en">GREED</span></a>': `<a href="greed.html">Greed<span class="en">GREED</span></a>`,
 		'<a href="daoge.html">刀歌<span class="en">MANAGE &amp; FIGHT</span></a>': `<a href="daoge.html">Blade Song<span class="en">MANAGE &amp; FIGHT</span></a>`,
-		'<a href="rpg.html">2D 像素 RPG<span class="en">暂定名</span></a>': `<a href="rpg.html">2D Pixel RPG<span class="en">untitled</span></a>`,
+		'<a href="rpg.html">赐福<span class="en">THE BLESSING</span></a>': `<a href="rpg.html">The Blessing<span class="en">THE BLESSING</span></a>`,
 		'查看设计文档 <span class="arr">→</span>': `Design doc <span class="arr">→</span>`,
 		'查看详情 <span class="arr">→</span>': `Details <span class="arr">→</span>`,
 		'查看项目': `View projects`,
@@ -110,7 +128,7 @@
 		'Good Kid<br>VR 弃屋探险': `Good Kid<br>VR abandoned-house adventure`,
 		'贪婪<br>GREED': `Greed<br>GREED`,
 		'刀歌<br>MANAGE &amp; FIGHT': `Blade Song<br>MANAGE &amp; FIGHT`,
-		'2D 像素 RPG<br>暂定名': `2D Pixel RPG<br>untitled`,
+		'赐福<span class="en">THE BLESSING</span>': `The Blessing<span class="en">THE BLESSING</span>`,
 		/* 涟漪详情引言 */
 		'网络暴力题材第一人称桌面模拟叙事游戏：玩家面对一台电脑搜集线索、发表言论，用 ←/→ 键切换到被网暴者 / 施暴者 / 中立者的设备——<strong>亲眼看到你的每一句话，落在别人屏幕上是什么样子</strong>。':
 			`A first-person desktop-simulation narrative game about cyberbullying: you sit at one computer, gather clues, post comments — and with the ←/→ keys you switch to the devices of the victim, the harassers, and the bystanders, <strong>watching exactly how every sentence you send lands on someone else's screen</strong>.`,
@@ -171,12 +189,11 @@
 			`Art direction: a "toy theatre" low-poly style generated with Tripo AI and hand-retouched. Scenes, blueprints, UI, and the data pipeline were all built by myself, with ADR decision records and automated regression testing governing quality throughout development.`,
 		'<a href="ripple.html" class="button">查看详情</a>': `<a href="ripple.html" class="button">Details</a>`,
 		'Unity 2022 · 2D 像素': `Unity 2022 · 2D Pixel`,
-		'Unity 6 · 2D 横板': `Unity 6 · 2D Side-scroller`,
+		'Unity 6 · 2D 横板 · 已上线 itch.io': `Unity 6 · 2D side-scroller · Live on itch.io`,
 		'<a href="goodkid.html">Good Kid<br>VR 弃屋探险</a>': `<a href="goodkid.html">Good Kid<br>VR Abandoned-House Adventure</a>`,
 		'<a href="greed.html">贪婪<br>GREED</a>': `<a href="greed.html">Greed<br>GREED</a>`,
 		'<a href="daoge.html">刀歌<br>MANAGE &amp; FIGHT</a>': `<a href="daoge.html">Blade Song<br>MANAGE &amp; FIGHT</a>`,
-		'<a href="rpg.html">2D 像素 RPG<br>暂定名</a>': `<a href="rpg.html">2D Pixel RPG<br>untitled</a>`,
-		'第一人称 VR 恐怖叙事：在废弃房屋中探索，操作门、抽屉、灯具与日常物品，在看似平常的家庭规则下度过一晚又一晚 —— 有些规则是假的。':
+				'第一人称 VR 恐怖叙事：在废弃房屋中探索，操作门、抽屉、灯具与日常物品，在看似平常的家庭规则下度过一晚又一晚 —— 有些规则是假的。':
 			`First-person VR horror narrative: explore an abandoned house, operating doors, drawers, lamps, and everyday objects — and live through night after night under seemingly ordinary family rules. Some of those rules are lies.`,
 		'规则违规系统：4 条家庭规则中混有 1 条假规则，违规触发灯闪、黑雾演出': `Rule-violation system: 4 family rules with 1 fake mixed in; violations trigger flickering lights and fog events`,
 		'敲门事件与怪物追捕：限时躲藏失败即被追捕，抓到重置当天': `Knock-at-the-door events and monster pursuit: fail to hide in time and you are hunted; getting caught resets the day`,
@@ -197,9 +214,9 @@
 		'7×7 地图探索：时间制移动、事件 / 战斗 / 村庄地块、固定种子跨天继承':
 			`7×7 map exploration: time-based movement, event / battle / village tiles, fixed-seed persistence across days`,
 		'<a href="daoge.html" class="button">查看详情</a>': `<a href="daoge.html" class="button">Details</a>`,
-		'立意「偏见」：受神赐福的勇者开局碾压魔物，中途视角反转成魔物求生，最终揭露神才是幕后黑手。':
-			`Theme: prejudice. A hero blessed by god stomps monsters — until the perspective flips and you survive as the monster, uncovering god as the true villain.`,
-		'血条即叙事：魔物「不配显示血条」，魔王「血条打不死」—— 同一手法，相反含义':
+		'立意「偏见」：受神赐福的勇者开局碾压魔物，中途视角反转成魔物求生，最终揭露神才是幕后黑手。已用中英文界面在 itch.io 上线。':
+			`Theme: prejudice. A hero blessed by god stomps monsters — until the perspective flips and you survive as the monster, uncovering god as the true villain. Live on itch.io with both Chinese and English interfaces.`,
+		'赐福即伤害：普通攻击无法削减敌方生命，「赐福」是唯一有效伤害来源——重写勇者战魔王的战斗决策':
 			`Health bars as narrative: monsters get no bar ("not worth measuring") while the demon king's bar never drops — the same device, opposite meanings`,
 		'双旗标 × 4 结局体系：神像与隐藏房间决定 奖励 / 上坟 / 轮回 / 世界和平':
 			`Two flags × 4 endings: the god statue and the hidden room decide Reward / Grave / Rebirth / Peace`,
@@ -208,7 +225,7 @@
 		'<a href="rpg.html" class="button">查看详情</a>': `<a href="rpg.html" class="button">Details</a>`,
 		'关于我': `About me`,
 		'机制即叙事<br>DESIGN PHILOSOPHY': `Mechanics as Narrative<br>DESIGN PHILOSOPHY`,
-		'我是一名专注于<strong>叙事与机制设计</strong>的独立游戏开发者。独立完成多个 Unity 与 Unreal Engine 项目，覆盖 VR 探险、2D 像素 RPG、第一人称 3D 与桌面模拟叙事；作品聚焦严肃议题的游戏化表达——网络暴力、偏见、贪婪——相信机制本身就可以是叙事。':
+		'我是阚刘洋（Yannis），一名专注于<strong>叙事与机制设计</strong>的独立游戏开发者。独立完成多个 Unity 与 Unreal Engine 项目，覆盖 VR 探险、2D 像素 RPG、第一人称 3D 与桌面模拟叙事；作品聚焦严肃议题的游戏化表达——网络暴力、偏见、贪婪——相信机制本身就可以是叙事。':
 			`I am an indie game developer focused on <strong>narrative and mechanics design</strong>. I have independently built multiple Unity and Unreal Engine projects spanning VR adventure, 2D pixel RPG, first-person 3D, and desktop-simulation narrative; my work turns serious topics — online harassment, prejudice, greed — into playable form, out of the belief that mechanics themselves can be narrative.`,
 		'同时深度实践 AI 协作开发工作流：以「需求 → ADR 决策记录 → 实现 → 自动化回归验证」的流程与 AI 结对开发，并使用 ComfyUI 与 Tripo 构建 AI 美术管线。所有项目的设计文档、决策记录与开发日志全程留档、可追溯。':
 			`I also work deeply with AI-assisted development: pairing with AI through a "requirements → ADR decision record → implementation → automated regression" workflow, and building AI art pipelines with ComfyUI and Tripo. Every project keeps its design documents, decision records, and dev logs on file — fully traceable.`,
@@ -226,6 +243,8 @@
 		'ComfyUI 图像工作流': `ComfyUI image workflows`,
 		'Tripo 3D 生成与人工修型': `Tripo 3D generation with hand retouching`,
 		'AI 结对开发（需求 → ADR → 实现 → 回归）': `AI pair development (requirements → ADR → implementation → regression)`,
+		'机器学习：TensorFlow / Keras / scikit-learn': `ML: TensorFlow / Keras / scikit-learn`,
+		'制作管线：Blender / Remotion / FFmpeg': `Production: Blender / Remotion / FFmpeg`,
 		'叙事与文案设计': `Narrative & writing`,
 		'关卡设计（LDD / 灰盒 / 光照节奏）': `Level design (LDD / grey-box / lighting rhythm)`,
 		'系统与数值设计': `Systems & numerical design`,
@@ -473,7 +492,7 @@
 
 		/* ---------- 2D RPG rpg.html ---------- */
 		'Unity 6 · 2D 横板动作 · 叙事驱动': `Unity 6 · 2D side-scrolling action · Narrative-driven`,
-		'2D 像素 RPG<br>暂定名': `2D Pixel RPG<br>untitled`,
+		'赐福<br>THE BLESSING': `The Blessing<br>THE BLESSING`,
 		'立意「偏见」：印象中的好人不一定是好人，坏人也不一定是坏人，不要以貌取人。受神赐福的勇者开局碾压魔物，中途<strong>视角反转成魔物求生</strong>，最终揭露神才是幕后黑手。':
 			`Theme: prejudice. The good people you picture are not always good, nor the bad ones bad — never judge by appearances. A hero blessed by god stomps monsters, until <strong>the perspective flips and you survive as the monster</strong>, uncovering god as the true villain.`,
 		'立意与叙事架构': `Theme & narrative architecture`,
