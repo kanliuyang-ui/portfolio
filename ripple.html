@@ -1,144 +1,218 @@
-<!DOCTYPE HTML>
-<!--
-	Yannis · 涟漪 详情页 — 定制设计系统 V3
--->
+<!DOCTYPE html>
+
 <html lang="zh-CN">
-	<head>
-		<title>涟漪 RIPPLE · 设计文档 — Yannis</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="《涟漪》：网络暴力题材第一人称桌面模拟叙事游戏——设计文档、核心机制、章节结构与实现验证。" />
-		<meta name="theme-color" content="#0b0c0f" />
-		<meta name="color-scheme" content="dark" />
-		<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0c0f'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23c8a96a'/%3E%3C/svg%3E" />
-		<link rel="stylesheet" href="assets/css/style.css?v=6" />
-	</head>
-	<body>
-
-		<a class="skip-link" href="#main">跳到主要内容</a>
-
-		<nav id="nav">
-			<div class="nav-inner">
-				<a class="logo" href="index.html">YANNIS<span class="accent">_</span>DEV</a>
-				<ul class="nav-links mono">
-				<li><a href="projects.html">项目</a></li>
-					<li class="active"><a href="ripple.html">涟漪</a></li>
-					<li class="hide-m"><a href="goodkid.html">Good Kid</a></li>
-					<li class="hide-m"><a href="greed.html">贪婪</a></li>
-					<li class="hide-m"><a href="daoge.html">刀歌</a></li>
-					<li class="hide-m"><a href="rpg.html">2D RPG</a></li>
-				</ul>
-			</div>
-		</nav>
-
-<div id="main">
-
-				<article class="post featured">
-					<header class="major">
-						<span class="date">旗舰项目 · UE 5.8 全蓝图 · 桌面模拟叙事</span>
-						<h1>涟漪<br />
-						RIPPLE</h1>
-						<p>"Every word you type lands on someone else's screen."<br />
-						网络暴力题材第一人称桌面模拟叙事游戏：玩家面对一台电脑搜集线索、发表言论，用 ←/→ 键切换到被网暴者 / 施暴者 / 中立者的设备——<strong>亲眼看到你的每一句话，落在别人屏幕上是什么样子</strong>。</p>
-					</header>
-					<a class="image main"><img src="images/ripple-feed.jpg" alt="《涟漪》实机画面：玩家电脑上的社交应用「泡泡」与热榜"  width="735" height="510" /></a>
-				</article>
-
-				<article class="post">
-
-					<h2>设计概念</h2>
-					<p>网暴的道德重量来自「发言者看不到受害者的屏幕」。传统叙事游戏（Orwell、全网公敌）让玩家当监控者或旁观者；《涟漪》把这种信息不对称直接翻转成交互机制——<strong>玩家必须是参与者</strong>。每一次发言都是博弈：热度、立场、证据、措辞，全部会被对面的屏幕如实接收。</p>
-					<p>由此闭环出本作的核心循环：</p>
-					<blockquote>侦查（搜集证据）→ 发言（唯一武器）→ 切屏看涟漪（←/→ 切换设备）→ 世界更新（旧发言继续发酵）</blockquote>
-
-					<h2>设计支柱</h2>
-					<ul>
-						<li><strong>每个字都有重量</strong>——发言是唯一的武器，也是唯一的责任来源</li>
-						<li><strong>屏幕即人物</strong>——全作无角色立绘，壁纸 / 图标 / 通知音就是人物侧写</li>
-						<li><strong>无人是纯粹的恶人</strong>——施暴者也在自己的生活里，立场由处境而非标签决定</li>
-						<li><strong>不可撤回</strong>——删评无效，截图早已扩散；互联网没有橡皮擦</li>
-						<li><strong>不适但克制</strong>——语义施压写法，无脏话、无真实人脸，用不适感而非猎奇</li>
-					</ul>
-
-					<h2>核心机制：设备切换</h2>
-					<p>设备切换是核心机制而非装饰。5 台设备按章节阶梯解锁——玩家笔记本 → 被网暴者晓雨的手机 → 施暴者刀哥的电脑 → 旁观者陈同学的手机 → 方女士的平板，5 个平台级 App（泡泡 / 微语 / 聚点+知料 / 云屉 / Maila）内容互通。</p>
-					<ul>
-						<li>解锁条件绑定玩家行为：发出第一条评论才解锁晓雨的屏幕，溯源追查才解锁刀哥的电脑——<strong>新视角是你动作的直接后果</strong></li>
-						<li>第 4 章网暴反噬直接落在玩家自己的笔记本上：玩家只有一块屏幕，反噬来临时无处可躲——封闭感即压迫感</li>
-					</ul>
-					<a class="image main"><img src="images/ripple-victim.jpg" alt="《涟漪》：切换到被网暴者晓雨的手机屏幕"  width="735" height="510" loading="lazy" /></a>
-
-					<h2>叙事结构：章节钉子</h2>
-					<p>6 章 × 3 波次的两级结构：章内波次是软触发（热度阈值释放内容），章节钉子是硬触发——每章一个「必然发生、不可跳过」的世界状态改变（停职 / 完整截图流出 / 回应视频 / 被扒 / 热度归零）。</p>
-					<ul>
-						<li>玩家行为不决定钉子是否发生，只决定其形态（A / B / C）——节奏可控，选择仍有重量</li>
-						<li>沉默也是一种被记录的形态</li>
-						<li>玩家全部历史发言跨章继承，旧发言在后续章节继续变形发酵</li>
-						<li>立场定调采用确定性分级：「未知全貌不予置评」做底色，「沉默即共谋」降级为特例——只有握证不发才被审判</li>
-					</ul>
-
-					<h2>伦理红线（设计硬约束）</h2>
-					<ul>
-						<li>不复刻真实仇恨话术；不做说教</li>
-						<li>无真实人脸；贴图零烘焙文字，词库集中在可替换的数据表中</li>
-						<li>第 4 章（玩家被扒）可跳过；结尾提供真实求助资源</li>
-					</ul>
-
-					<h2>实现与验证</h2>
-					<p> Unreal Engine 5.8 全蓝图实现（零 C++），已达成：</p>
-					<ul>
-						<li><strong>第一章完整可玩</strong>：正式节奏 30–35 分钟——开场、三波次推进、附图选择与逐条打码、发言四维度结算（证据门槛 / 打码 / 对人 / 真实热度）、强制阅读演出、数字结算全部落地</li>
-						<li><strong>32 项 PIE 自动化回归通过</strong>，另有章节跳转 16 项、主菜单与设置 37 项回归；每次改动跑脚本验收、截图留档</li>
-						<li><strong>数据管线</strong>：章节文案 JSON → GameInstance Map 键值，运行时 504+ 键；策划数据与蓝图逻辑解耦</li>
-						<li><strong>AI 美术管线</strong>：Tripo 生成 + 人工修型的「玩具剧场」低模风格，47 条可复制提示词库 + 设备比例锁规范</li>
-						<li>主菜单 / 设置（音量 / 分辨率 / 窗口模式持久化）与第 1–6 章跳转框架完成，后续章节内容开发中</li>
-					</ul>
-					<a class="image main"><img src="images/ripple-suspension.jpg" alt="《涟漪》：停职通知的强制阅读演出"  width="735" height="510" loading="lazy" /></a>
-
-					<h2>关键设计决策（ADR 节选）</h2>
-					<p>项目全程用 Architecture Decision Record 留档，共 27+ 篇，摘录：</p>
-					<ul>
-						<li>ADR-001 左右键切换设备的多视角叙事架构——核心机制地位的确立与「偷窥式」方案的否决</li>
-						<li>ADR-003 立场定调：确定性分级——从「沉默即共谋」到「未知全貌不予置评」的修订</li>
-						<li>ADR-004 章节钉子结构——拒绝把叙事游戏降级成 checklist 的任务驱动</li>
-						<li>ADR-006 美术方向：玩具剧场与 Tripo 管线</li>
-						<li>ADR-010 数据层 Map 键值与全脚本蓝图生成</li>
-						<li>ADR-020 世界内文本规范与「去上帝视角」修订——48 处文案修正</li>
-						<li>ADR-022 发言四维度生效与按帖措辞</li>
-					</ul>
-
-					<ul class="actions special">
-								<li><a href="projects.html" class="button large">更多项目 <span class="arr">→</span></a></li>
-							</ul>
-				</article>
-
-			</div>
-
-		</div>
-
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-		<script src="assets/js/i18n.js?v=4"></script>
-
-	</body>
-</html>
-
-		</div>
-
-		<div class="foot-bar">
-			<div class="container foot-bar-inner">
-				<p>© 2026 YANNIS · 独立游戏开发者</p>
-				<p><a href="projects.html">更多项目 →</a></p>
-			</div>
-		</div>
-
-		<script src="assets/js/site.js?v=1"></script>
-		<script src="assets/js/i18n.js?v=12"></script>
-
-	</body>
+<head>
+<meta charset="utf-8" /><title data-en="Ripple · Game &amp; Design — Yannis">涟漪 · 项目与设计 — Yannis</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="在模拟社区、聊天、邮件与文件之间追查信息，再切到当事人的设备，观察一条言论如何改变别人的日常。《涟漪》把网络暴力中的信息差，变成玩家亲自面对的选择。" />
+<meta name="theme-color" content="#0b0c0f" />
+<meta name="color-scheme" content="dark" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0c0f'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23c8a96a'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="assets/css/style.css?v=9" />
+</head>
+<body>
+<a data-en="Skip to content" class="skip-link" href="#main">跳到主要内容</a>
+<nav id="nav" aria-label="主导航" data-en-aria-label="Main navigation">
+  <div class="nav-inner">
+    <a class="logo" href="index.html" aria-label="Yannis 首页" data-en-aria-label="Yannis home">YANNIS<span class="accent">_</span>DEV</a>
+    <div class="nav-primary">
+      <a href="index.html" data-nav="home" data-en="Home">首页</a>
+      <a href="projects.html" data-nav="projects" data-en="Projects">项目</a>
+    </div>
+    <ul id="site-nav-links" class="nav-links mono">
+      <li><a href="index.html#about" data-nav="about" data-en="About">关于我</a></li>
+      <li><a href="index.html#competitions" data-nav="competitions" data-en="Competition projects">比赛项目</a></li>
+      <li><a href="index.html#skills" data-nav="skills" data-en="Skills">技能</a></li>
+      <li><a href="index.html#contact" data-nav="contact" data-en="Contact">联系</a></li>
+    </ul>
+    <div class="nav-tools">
+      <div id="nav-language"></div>
+      <button type="button" class="nav-menu-toggle" aria-controls="site-nav-links" aria-expanded="false" aria-label="打开或关闭导航菜单" data-en-aria-label="Toggle navigation menu">
+        <span class="menu-label" data-en="Menu">菜单</span>
+        <svg class="menu-icon" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+<main id="main" class="project-page">
+<header class="article-hero">
+<div class="container"><a data-en="← Back to projects" class="back-link mono" href="projects.html">← 返回项目列表</a>
+<p data-en="Desktop simulation · Multiple perspectives" class="kicker">桌面模拟 · 多视角叙事
+</p>
+<h1 data-en="Ripple&lt;span class=&quot;project-subtitle&quot;&gt;Desktop simulation · Multiple perspectives&lt;/span&gt;">涟漪<span class="project-subtitle">RIPPLE</span>
+</h1>
+<p data-en="Every word you post lands on someone else’s screen." class="project-pitch">你发出的每一句话，都会落到别人的屏幕上。
+</p>
+<p data-en="Investigate simulated communities, messages, emails and files, then switch to another person’s device to see the consequences of a post. Ripple makes incomplete information and online harassment part of the player’s decisions." class="lede">在模拟社区、聊天、邮件与文件之间追查信息，再切到当事人的设备，观察一条言论如何改变别人的日常。《涟漪》把网络暴力中的信息差，变成玩家亲自面对的选择。
+</p>
+<div class="project-actions"><a data-en="Explore the design ↓" class="button solid" href="#design">查看设计 ↓</a>
+</div>
+</div>
+</header>
+<div class="container">
+<figure class="project-figure project-figure-hero"><a class="media-frame" href="images/projects/ripple-device.webp" target="_blank" rel="noopener"><svg class="project-visual" role="img" aria-label="R6 开发版本 · 设备场景实机视口" data-en-aria-label="R6 development build · In-game device viewport" viewBox="30 136 1128 635"><image href="images/projects/ripple-device.webp" width="1536" height="834" /></svg></a>
+<figcaption data-en="R6 development build · In-game device viewport">R6 开发版本 · 设备场景实机视口
+</figcaption>
+</figure>
+<dl class="project-facts">
+<div>
+<dt data-en="Engine">引擎
+</dt>
+<dd data-en="Unreal Engine 5.8">Unreal Engine 5.8
+</dd>
+</div>
+<div>
+<dt data-en="Genre">类型
+</dt>
+<dd data-en="Desktop simulation / Narrative">桌面模拟 / 叙事
+</dd>
+</div>
+<div>
+<dt data-en="Platform &amp; stage">平台与阶段
+</dt>
+<dd data-en="Windows · In development">Windows · 开发中
+</dd>
+</div>
+<div>
+<dt data-en="Design &amp; development focus">设计与开发重点
+</dt>
+<dd data-en="Narrative systems, Blueprint / UMG, information and UI design">叙事系统、Blueprint / UMG、信息与界面设计
+</dd>
+</div>
+</dl>
+<div class="project-content">
+<section class="project-section" id="experience">
+<p data-en="01 / PLAYER EXPERIENCE" class="kicker">01 / 玩家体验
+</p>
+<h2 data-en="How it plays, and why.">怎么玩，为什么这样玩。
+</h2>
+<p data-en="Six chapters across 18 game days. Investigate, speak or stay silent while the world continues to change." class="section-lead">六章、18 个游戏日。主动调查、自愿发言，也可以保持沉默；世界仍会继续变化。
+</p>
+<ol class="play-loop">
+<li data-en="Read &amp; search">浏览与检索
+</li>
+<li data-en="Verify evidence">核验证据
+</li>
+<li data-en="Speak or stay silent">发言或沉默
+</li>
+<li data-en="Switch perspectives">切屏看后果
+</li>
+</ol>
+</section>
+<section class="project-section" id="design">
+<p data-en="02 / DESIGN FOCUS" class="kicker">02 / 设计重点
+</p>
+<h2 data-en="Design through mechanics.">把主题做进机制里。
+</h2>
+<div class="design-grid">
+<div class="design-item"><span class="mono design-index">01</span>
+<h3 data-en="Five devices, five situations">五台设备，五种处境
+</h3>
+<p data-en="A laptop, phones, a creator’s computer and a tablet place public posts beside private context. Switching devices changes what you know about the same event, rather than simply changing the interface.">玩家电脑、受害者手机、传播者电脑、旁观者手机和平板，各自保存公共动态与私人材料。切换设备不只是换 UI，而是重新理解同一件事中的信息边界。
+</p>
+</div>
+<div class="design-item"><span class="mono design-index">02</span>
+<h3 data-en="Eighteen days at your own pace">18 天，自由决定何时结束
+</h3>
+<p data-en="Each of six chapters contains three days. Reading quotas and mandatory comments no longer gate progress. Investigating, publishing evidence and choosing silence are recorded separately, giving the player choices beyond completing a checklist.">六章各含三个游戏日，不用读完指定帖子或发够评论才允许推进。调查、公开材料和保持沉默分别被记录，让玩家的选择有区别，而非把阅读变成任务清单。
+</p>
+</div>
+<div class="design-item"><span class="mono design-index">03</span>
+<h3 data-en="Consequences follow what you say">后果跟随具体言论
+</h3>
+<p data-en="The system tracks a statement’s meaning, target and disclosed material, distinguishing criticism from harassment. Earlier posts resurface through later reports, conversations and drafts without rewriting the past.">系统记录句义、指向对象和公开材料的范围，区分正当批评与骚扰。旧发言通过后续报道、聊天和草稿继续发酵，不倒改已经发生的过去。
+</p>
+</div>
+<div class="design-item"><span class="mono design-index">04</span>
+<h3 data-en="Search beyond the feed">推荐入口之外，自己寻找线索
+</h3>
+<p data-en="Recommendations provide leads rather than every answer. Some older posts require a keyword search. The investigation board supports linking and unlinking cards, while private histories stay outside the public information pool.">推荐流只提供入口，部分旧帖需要发现关键词后主动检索。调查板支持选卡、连线与取消关联；私人历史不会因为切换设备就自动变成公共信息。
+</p>
+</div>
+</div>
+</section>
+<section class="project-section" id="gallery">
+<p data-en="03 / PROJECT IMAGES" class="kicker">03 / 项目画面
+</p>
+<h2 data-en="See the design in context.">画面与设计相互对照。
+</h2>
+<div class="project-gallery">
+<figure class="project-figure"><a class="media-frame" href="images/projects/ripple-feed.webp" target="_blank" rel="noopener"><img src="images/projects/ripple-feed.webp" alt="英文原生界面渲染 · 热榜与信息层级" data-en-alt="Native English UI render · Trending feed and information hierarchy" width="1200" height="800" loading=lazy decoding="async" /></a>
+<figcaption data-en="Native English UI render · Trending feed and information hierarchy">英文原生界面渲染 · 热榜与信息层级
+</figcaption>
+</figure>
+<figure class="project-figure"><a class="media-frame" href="images/projects/ripple-board.webp" target="_blank" rel="noopener"><svg class="project-visual" role="img" aria-label="开发版本 · 便签与调查材料管理" data-en-aria-label="Development build · Notes and investigation material" viewBox="2 32 1916 986"><image href="images/projects/ripple-board.webp" width="1920" height="1020" /></svg></a>
+<figcaption data-en="Development build · Notes and investigation material">开发版本 · 便签与调查材料管理
+</figcaption>
+</figure>
+</div>
+</section>
+<section class="project-section" id="iteration">
+<p data-en="04 / DESIGN ITERATION" class="kicker">04 / 真实迭代
+</p>
+<h2 data-en="From a problem to a concrete change.">从问题，到具体改变。
+</h2>
+<div class="iteration-list">
+<article class="iteration-item">
+<h3 data-en="From a checklist to voluntary investigation">从推进清单，到自主探索
+</h3>
+<div class="iteration-copy">
+<div>
+<p data-en="THE PROBLEM" class="iteration-label mono">发现的问题
+</p>
+<p data-en="Earlier chapter gates depended on reading and commenting, turning choices into completion tasks.">早期版本用阅读与评论条件驱动章节，容易把表达主题的选择变成过关任务。
+</p>
+</div>
+<div>
+<p data-en="THE CHANGE" class="iteration-label mono">做出的调整
+</p>
+<p data-en="R6 lets players end the day freely and separates unread, privately read, investigated and published information. Consequences now carry the theme.">R6 改为自由结束当天，并区分未查看、看过未公开、调查与实际公开。主题由选择的后果表达。
+</p>
+</div>
+</div>
+</article>
+<article class="iteration-item">
+<h3 data-en="From corrective replies to believable crowd pressure">从理性劝阻，到可信的围观人群
+</h3>
+<div class="iteration-copy">
+<div>
+<p data-en="THE PROBLEM" class="iteration-label mono">发现的问题
+</p>
+<p data-en="Consistently rational replies to extreme posts weakened crowd pressure and exposed the author’s stance.">激烈发言总收到理性劝阻，削弱了群体压力，也暴露了作者的立场。
+</p>
+</div>
+<div>
+<p data-en="THE CHANGE" class="iteration-label mono">做出的调整
+</p>
+<p data-en="Replies were rewritten per post, with roughly nine in ten siding with the available information and one questioning it, giving the crowd a situated bias.">按帖子手写反馈，整体约九成随当时信息站队、一成提出质疑，让评论区具有处境和偏向。
+</p>
+</div>
+</div>
+</article>
+</div>
+</section>
+<section class="project-section availability">
+<p data-en="05 / CURRENT VERSION" class="kicker">05 / 当前版本
+</p>
+<h2 data-en="Windows test build">Windows 测试版本
+</h2>
+<p data-en="Presented as a Windows development build, focusing on six chapters, voluntary investigation and multiple devices. Images distinguish game viewports from native UI renders.">目前以 Windows 开发测试版本展示，重点是六章内容、自由调查与多设备体验。页面图片分别标注实机视口与原生界面渲染。
+</p>
+</section>
+</div>
+<div class="project-next"><a data-en="← Back to all projects" href="projects.html">← 返回全部项目</a><a data-en="Next: Greed →" href="greed.html">下一个项目：贪婪 →</a>
+</div>
+</div>
+</main>
+<footer class="foot-bar">
+<div class="container foot-bar-inner">
+<p data-en="© 2026 YANNIS · Indie game developer">© 2026 YANNIS · 独立游戏开发者
+</p><a data-en="All projects →" href="projects.html">全部项目 →</a>
+</div>
+</footer>
+<script src="assets/js/site.js?v=3">
+</script>
+<script src="assets/js/i18n.js?v=15">
+</script>
+</body>
 </html>

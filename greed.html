@@ -1,147 +1,224 @@
-<!DOCTYPE HTML>
-<!--
-	Yannis · 贪婪 详情页 — 定制设计系统 V3
--->
+<!DOCTYPE html>
+
 <html lang="zh-CN">
-	<head>
-		<title>贪婪 GREED · 关卡设计 — Yannis</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="《贪婪》：UE5 第一人称丧尸生存射击——灰烬高塔关卡设计：贪婪负担机制、单向门禁动线、光照反转与 BOSS 房设计。" />
-		<meta name="theme-color" content="#0b0c0f" />
-		<meta name="color-scheme" content="dark" />
-		<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0c0f'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23c8a96a'/%3E%3C/svg%3E" />
-		<link rel="stylesheet" href="assets/css/style.css?v=6" />
-	</head>
-	<body>
-
-		<a class="skip-link" href="#main">跳到主要内容</a>
-
-		<nav id="nav">
-			<div class="nav-inner">
-				<a class="logo" href="index.html">YANNIS<span class="accent">_</span>DEV</a>
-				<ul class="nav-links mono">
-				<li><a href="projects.html">项目</a></li>
-					<li class="hide-m"><a href="ripple.html">涟漪</a></li>
-					<li class="hide-m"><a href="goodkid.html">Good Kid</a></li>
-					<li class="active"><a href="greed.html">贪婪</a></li>
-					<li class="hide-m"><a href="daoge.html">刀歌</a></li>
-					<li class="hide-m"><a href="rpg.html">2D RPG</a></li>
-				</ul>
-			</div>
-		</nav>
-
-<div id="main">
-
-				<article class="post featured">
-					<header class="major">
-						<span class="date">UE 5.8 · 第一人称丧尸生存射击 · 关卡设计</span>
-						<h1>贪婪<br />
-						GREED</h1>
-						<p>末日因人类对永生的贪婪而起——「永生药剂」临床失控引发尸变。玩家是末日拾荒者，核心机制<strong>「贪婪负担」</strong>：搜集的物资越多，移速与射速的负面效果越重；而最终 BOSS，会对高贪婪的玩家索取额外伤害。</p>
-					</header>
-					<a class="image main"><img src="images/greed.jpg" alt="《贪婪》灰烬高塔实验室概念图"  width="1672" height="941" /></a>
-				</article>
-
-				<article class="post">
-
-					<h2>机制与主题互证</h2>
-					<p>「贪婪」不是贴在世界观上的标签，而是写进每一次按键的机制：<strong>拿，还是不拿</strong>——每件物资都立刻变成移速与机动的代价，而 BOSS 的「贪婪索取」技能让这笔账在关卡终点一次性清算。玩家在关卡里的每一步，都在为进 BOSS 房时的自己做出选择。</p>
-					<ul>
-						<li>轻装速通流：满机动风筝走位，放弃收益换生存</li>
-						<li>贪婪搜刮流：高收益低机动，用走位压力换装备优势</li>
-					</ul>
-
-					<h2>关卡设计：灰烬高塔</h2>
-					<p>当前关卡「灰烬高塔」是一座三层实验室 + 地下 BOSS 房的全封闭室内关卡，我独立完成从 LDD 设计文档、灰盒搭建到动线验证的全流程。</p>
-
-					<h3>动线结构（全区域串联）</h3>
-					<blockquote>2F 出生区 → 主廊 → 房间1 → 楼梯↓ 1F 房间2 → 精英房①「肿胀巨尸」→ 电梯↑ → 3F 房间3 + 三侧屋 → 走廊桥 → 精英房②「腐蚀喷吐者」（掉落「电梯电源核心」）→ 大电梯↓ 26m → BOSS「守库巨兽」→ 金库撤离</blockquote>
-					<ul>
-						<li>所有命名区域都在主路径上，不做支线化——关卡的每一米都被玩家走过</li>
-						<li>BOSS 房唯一入口是大型货运电梯：击败 3F 精英拿到电源核心才能启动，下降 26 米的 12 秒是一段刻意为之的压迫段落</li>
-					</ul>
-
-					<h3>单向门禁：让空间自己引导玩家</h3>
-					<ul>
-						<li>出生点旁通往 1F 的电梯门、通往 3F 的东侧楼梯门均不可从 2F 侧打开——玩家被迫走完整个垂直循环，无法跳关</li>
-						<li>东侧楼梯仅 3F 侧可开，构成 3F→2F 的单向撤回捷径</li>
-						<li>设计意图：<strong>把「必须走完全程」从人为限制变成空间叙事</strong>——出生点被锁死本身就是关卡引导</li>
-					</ul>
-
-					<h3>贪婪值锚点</h3>
-					<p>贪婪机制绑定在 6 个具体拾取点上，让抽象数值变成一次次可感知的赌博：</p>
-					<ul>
-						<li>A 初始装备 = 第一笔贪婪值入门</li>
-						<li>E 房间2 物资堆 = 第一次真正的抉择</li>
-						<li>F 战后 AKM 必拿，但立刻加重负担</li>
-						<li>I 侧屋 = 贪婪值暴涨的诱惑点</li>
-						<li>J 走廊桥 = 高贪婪直接兑换成风险（移速慢、无掩体暴露）</li>
-						<li>M 落地前电梯口 = 最后的卸货权衡</li>
-					</ul>
-
-					<h3>光照反转：最深处最亮</h3>
-					<ul>
-						<li>2F 冷白均匀 → 走廊半明半暗 → BOSS 房过曝纯白——刻意打破「越深越暗」的恐怖关卡惯式</li>
-						<li>压抑感来自无菌般的纯净（药企「纯化舱」意象），而非黑暗</li>
-						<li>电梯门开启的瞬间 = 光照与空间的双重反转，是整座塔的 Hook 时刻</li>
-						<li>BOSS 房空旷无掩体：风筝走位是唯一「掩体」，战斗压力直接由玩家此前的搜刮决策决定</li>
-					</ul>
-
-					<h2>实现状态</h2>
-					<ul>
-						<li>239 件建造件全封闭灰盒：1m 网格稠密审计 + 射线复验全部 HIT，白名单外的洞口为零</li>
-						<li>三座折返楼梯 + 两部电梯（G 电梯轿厢 + 滑门传送蓝图；L 大电梯 10 段折返坡道）立体动线全部可通行</li>
-						<li>丧尸 AI 行为树（随机移动 / 发现玩家 / 追击至最后位置）、武器（AKM / SCAR）与拾取系统就绪</li>
-						<li>36+ 盏动态点灯全 Movable，配合 Lumen 不烘焙</li>
-					</ul>
-
-					<h2>开发过程：文档驱动的关卡管线</h2>
-					<ul>
-						<li><strong>LDD 设计文档先行</strong>：9 页成品（总览图 / 剖面图 / 流程图 / Note / Flow 表 / Hooks），美学、节奏、机制锚点全部成文后才动工</li>
-						<li><strong>数据驱动重建</strong>：权威建造清单（build_all.json：205 件建造件的名称 / 位置 / 尺寸 / 俯仰 / 材质）——场景损坏时可按清单精确重建，关卡即数据</li>
-						<li><strong>灰盒验证优先</strong>：封闭性 / 连通性 / 灯光节奏先于美术资产验证，几何确认后才进入道具与布光阶段</li>
-					</ul>
-
-					<h2>关键设计决策（ADR 节选）</h2>
-					<ul>
-						<li>ADR-001 LDD 文档生产管线</li>
-						<li>ADR-002 灰烬高塔关卡核心结构与贪婪机制绑定</li>
-						<li>ADR-003 Tripo 会员资产管线</li>
-					</ul>
-
-					<ul class="actions special">
-								<li><a href="projects.html" class="button large">更多项目 <span class="arr">→</span></a></li>
-							</ul>
-				</article>
-
-			</div>
-
-		</div>
-
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-		<script src="assets/js/i18n.js?v=4"></script>
-
-	</body>
-</html>
-
-		</div>
-
-		<div class="foot-bar">
-			<div class="container foot-bar-inner">
-				<p>© 2026 YANNIS · 独立游戏开发者</p>
-				<p><a href="projects.html">更多项目 →</a></p>
-			</div>
-		</div>
-
-		<script src="assets/js/site.js?v=1"></script>
-		<script src="assets/js/i18n.js?v=12"></script>
-
-	</body>
+<head>
+<meta charset="utf-8" /><title data-en="Greed · Game &amp; Design — Yannis">贪婪 · 项目与设计 — Yannis</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="作为奉命回收永生实验成果的特工，进入失控的封闭研究所。搜索家具、整理背包、对抗实验体；你带走的补给越多，下一场战斗中的行动代价也越高。" />
+<meta name="theme-color" content="#0b0c0f" />
+<meta name="color-scheme" content="dark" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0c0f'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23c8a96a'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="assets/css/style.css?v=9" />
+</head>
+<body>
+<a data-en="Skip to content" class="skip-link" href="#main">跳到主要内容</a>
+<nav id="nav" aria-label="主导航" data-en-aria-label="Main navigation">
+  <div class="nav-inner">
+    <a class="logo" href="index.html" aria-label="Yannis 首页" data-en-aria-label="Yannis home">YANNIS<span class="accent">_</span>DEV</a>
+    <div class="nav-primary">
+      <a href="index.html" data-nav="home" data-en="Home">首页</a>
+      <a href="projects.html" data-nav="projects" data-en="Projects">项目</a>
+    </div>
+    <ul id="site-nav-links" class="nav-links mono">
+      <li><a href="index.html#about" data-nav="about" data-en="About">关于我</a></li>
+      <li><a href="index.html#competitions" data-nav="competitions" data-en="Competition projects">比赛项目</a></li>
+      <li><a href="index.html#skills" data-nav="skills" data-en="Skills">技能</a></li>
+      <li><a href="index.html#contact" data-nav="contact" data-en="Contact">联系</a></li>
+    </ul>
+    <div class="nav-tools">
+      <div id="nav-language"></div>
+      <button type="button" class="nav-menu-toggle" aria-controls="site-nav-links" aria-expanded="false" aria-label="打开或关闭导航菜单" data-en-aria-label="Toggle navigation menu">
+        <span class="menu-label" data-en="Menu">菜单</span>
+        <svg class="menu-icon" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+<main id="main" class="project-page">
+<header class="article-hero">
+<div class="container"><a data-en="← Back to projects" class="back-link mono" href="projects.html">← 返回项目列表</a>
+<p data-en="Third-person · Zombie survival shooter" class="kicker">第三人称 · 丧尸生存射击
+</p>
+<h1 data-en="Greed&lt;span class=&quot;project-subtitle&quot;&gt;Third-person · Zombie survival shooter&lt;/span&gt;">贪婪<span class="project-subtitle">GREED</span>
+</h1>
+<p data-en="Every extra supply has a cost." class="project-pitch">多带一件物资，多付一份代价。
+</p>
+<p data-en="Enter a sealed research facility as an operative sent to recover an immortality experiment. Search furniture, manage your backpack and fight its subjects. More supplies bring a greater cost to your mobility in the next encounter." class="lede">作为奉命回收永生实验成果的特工，进入失控的封闭研究所。搜索家具、整理背包、对抗实验体；你带走的补给越多，下一场战斗中的行动代价也越高。
+</p>
+<div class="project-actions"><a data-en="Download for Windows ↗" class="button solid" href="https://yannisgames.itch.io/greed" target="_blank" rel="noopener">下载 Windows 版 ↗</a><a data-en="Watch gameplay ↗" class="button" href="https://youtu.be/Q6w3BSTVeAg" target="_blank" rel="noopener">观看实机演示 ↗</a><a data-en="Explore the design ↓" class="button ghost" href="#design">查看设计 ↓</a>
+</div>
+</div>
+</header>
+<div class="container">
+<figure class="project-figure project-figure-hero"><a class="media-frame" href="images/projects/greed-research.webp" target="_blank" rel="noopener"><img src="images/projects/greed-research.webp" alt="实机画面 · 实验室探索与越肩射击" data-en-alt="Gameplay · Laboratory exploration and over-the-shoulder combat" width="1280" height="720" fetchpriority=high decoding="async" /></a>
+<figcaption data-en="Gameplay · Laboratory exploration and over-the-shoulder combat">实机画面 · 实验室探索与越肩射击
+</figcaption>
+</figure>
+<dl class="project-facts">
+<div>
+<dt data-en="Engine">引擎
+</dt>
+<dd data-en="Unreal Engine 5.8">Unreal Engine 5.8
+</dd>
+</div>
+<div>
+<dt data-en="Genre">类型
+</dt>
+<dd data-en="Third-person shooter / Survival">第三人称射击 / 生存
+</dd>
+</div>
+<div>
+<dt data-en="Platform &amp; stage">平台与阶段
+</dt>
+<dd data-en="Windows">Windows
+</dd>
+</div>
+<div>
+<dt data-en="Design &amp; development focus">设计与开发重点
+</dt>
+<dd data-en="Level design, looting and burden, mission and extraction flow">关卡设计、搜刮与负担机制、任务和撤离流程
+</dd>
+</div>
+</dl>
+<div class="project-content">
+<section class="project-section" id="experience">
+<p data-en="01 / PLAYER EXPERIENCE" class="kicker">01 / 玩家体验
+</p>
+<h2 data-en="How it plays, and why.">怎么玩，为什么这样玩。
+</h2>
+<p data-en="Backpack occupancy affects movement and damage from the final boss, connecting looting, level design and combat through one risk curve." class="section-lead">背包占格同时影响移动速度与最终 Boss 承伤，让搜刮、关卡与战斗共用一条风险曲线。
+</p>
+<ol class="play-loop">
+<li data-en="Explore the facility">探索研究所
+</li>
+<li data-en="Search &amp; organize">搜查与整理
+</li>
+<li data-en="Weigh the burden">权衡负担
+</li>
+<li data-en="Fight &amp; extract">战斗并撤离
+</li>
+</ol>
+</section>
+<section class="project-section" id="design">
+<p data-en="02 / DESIGN FOCUS" class="kicker">02 / 设计重点
+</p>
+<h2 data-en="Design through mechanics.">把主题做进机制里。
+</h2>
+<div class="design-grid">
+<div class="design-item"><span class="mono design-index">01</span>
+<h3 data-en="Your backpack is your risk">背包就是风险
+</h3>
+<p data-en="Ammunition, grenades and medicine compete for finite grid space. Consumable occupancy can reduce movement by up to 40% and increase final-boss damage taken by up to 75%. Using or dropping supplies lightens the load; story notes add no burden.">弹药、手雷与药品占据有限网格。按实际消耗品占格增加负担，移动减速最高 40%，最终 Boss 造成的伤害最高增加 75%。消耗或丢弃会立即减轻负担，故事纸条不计入。
+</p>
+</div>
+<div class="design-item"><span class="mono design-index">02</span>
+<h3 data-en="A detour first, a shortcut later">第一次绕行，第二次抄近路
+</h3>
+<p data-en="Stairs, corridors and elevators connect the vertical route. Some doors cannot be opened from the starting side; reaching the opposite side unlocks a permanent two-way shortcut saved with campaign progress.">楼梯、走廊与电梯串联垂直空间。出生侧无法直接打开的门，需要先从反侧抵达；首次开启后变成永久双向捷径，并随战役存档保留。
+</p>
+</div>
+<div class="design-item"><span class="mono design-index">03</span>
+<h3 data-en="Make furniture part of discovery">让家具成为探索奖励
+</h3>
+<p data-en="Search desks, cabinets and containers, choosing between useful supplies and limited space. Radio orders advance the recovery mission while notes placed in specific furniture uncover another account of the experiment.">搜查台面、柜子与容器，在补给和空间之间做选择。无线电推进回收任务，固定放在对应家具中的故事纸条则逐步揭露实验内幕。
+</p>
+</div>
+<div class="design-item"><span class="mono design-index">04</span>
+<h3 data-en="The mission continues after the kill">击杀之后，仍要亲自完成回收
+</h3>
+<p data-en="Defeating the boss does not immediately end the game. Search its body for the damaged immortality serum and carry it to the extraction device to complete the original assignment.">最终战不是自动跳出的胜利界面。玩家还要搜查 Boss 尸体，取得破损永生药剂，再携带它抵达撤离装置，完成最初被交付的任务。
+</p>
+</div>
+</div>
+</section>
+<section class="project-section" id="gallery">
+<p data-en="03 / PROJECT IMAGES" class="kicker">03 / 项目画面
+</p>
+<h2 data-en="See the design in context.">画面与设计相互对照。
+</h2>
+<div class="project-gallery">
+<figure class="project-figure"><a class="media-frame" href="images/projects/greed-inventory.webp" target="_blank" rel="noopener"><img src="images/projects/greed-inventory.webp" alt="实机画面 · 背包网格与可搜索容器" data-en-alt="Gameplay · Inventory grid and searchable container" width="1280" height="720" loading=lazy decoding="async" /></a>
+<figcaption data-en="Gameplay · Inventory grid and searchable container">实机画面 · 背包网格与可搜索容器
+</figcaption>
+</figure>
+<figure class="project-figure"><a class="media-frame" href="images/projects/greed-mutant.webp" target="_blank" rel="noopener"><img src="images/projects/greed-mutant.webp" alt="实机画面 · 实验室敌人与任务通讯" data-en-alt="Gameplay · Laboratory threats and radio orders" width="1280" height="720" loading=lazy decoding="async" /></a>
+<figcaption data-en="Gameplay · Laboratory threats and radio orders">实机画面 · 实验室敌人与任务通讯
+</figcaption>
+</figure>
+<figure class="project-figure"><a class="media-frame" href="images/projects/greed-boss.webp" target="_blank" rel="noopener"><img src="images/projects/greed-boss.webp" alt="实机画面 · 最终 Boss 遭遇" data-en-alt="Gameplay · Final boss encounter" width="1280" height="720" loading=lazy decoding="async" /></a>
+<figcaption data-en="Gameplay · Final boss encounter">实机画面 · 最终 Boss 遭遇
+</figcaption>
+</figure>
+</div>
+</section>
+<section class="project-section" id="iteration">
+<p data-en="04 / DESIGN ITERATION" class="kicker">04 / 真实迭代
+</p>
+<h2 data-en="From a problem to a concrete change.">从问题，到具体改变。
+</h2>
+<div class="iteration-list">
+<article class="iteration-item">
+<h3 data-en="Reward the route players actually take">让搜刮覆盖玩家真正走过的路线
+</h3>
+<div class="iteration-copy">
+<div>
+<p data-en="THE PROBLEM" class="iteration-label mono">发现的问题
+</p>
+<p data-en="Some rooms had nothing to search, concentrating rewards away from the exploration route.">部分房间没有可搜物，奖励集中，探索空间与实际回报脱节。
+</p>
+</div>
+<div>
+<p data-en="THE CHANGE" class="iteration-label mono">做出的调整
+</p>
+<p data-en="Nineteen search points were added using existing furniture. Main rooms gained several rewards, smaller rooms retained a discovery, and the boss arena kept its combat space.">优先启用已有家具，补足 19 处搜查点；主要房间安排多处奖励，小隔间保留发现感，同时让 Boss 厅保持战斗空间。
+</p>
+</div>
+</div>
+</article>
+<article class="iteration-item">
+<h3 data-en="Make a warning readable and avoidable">让预警看得清，也有躲避空间
+</h3>
+<div class="iteration-copy">
+<div>
+<p data-en="THE PROBLEM" class="iteration-label mono">发现的问题
+</p>
+<p data-en="The boss warning was too faint and too large to support clear movement decisions.">Boss 红圈过浅、范围过大，玩家难以把视觉预警转换为走位决策。
+</p>
+</div>
+<div>
+<p data-en="THE CHANGE" class="iteration-label mono">做出的调整
+</p>
+<p data-en="The center was darkened with a softer outer fade, and the attack and warning radii were reduced from 12 to 8 meters. Targeted checks confirmed a hit at 7 meters and safety at 9 meters.">加深中心、保留向外渐淡，并把正式攻击半径从 12 米缩至 8 米，同步预警范围；专项检查确认 7 米内命中、9 米外安全。
+</p>
+</div>
+</div>
+</article>
+</div>
+</section>
+<section class="project-section availability">
+<p data-en="05 / CURRENT VERSION" class="kicker">05 / 当前版本
+</p>
+<h2 data-en="itch.io · Public Windows build">itch.io · Windows 公开版
+</h2>
+<p data-en="The Windows build is available on itch.io with keyboard and mouse controls, in English and Simplified Chinese. Download it from the public page or watch the gameplay video.">itch.io 提供 Windows 在研版本，支持键鼠与中英双语。可通过公开页面下载，或观看实际游玩演示。
+</p>
+<div class="project-actions"><a data-en="Download for Windows ↗" class="button solid" href="https://yannisgames.itch.io/greed" target="_blank" rel="noopener">下载 Windows 版 ↗</a><a data-en="Watch gameplay ↗" class="button" href="https://youtu.be/Q6w3BSTVeAg" target="_blank" rel="noopener">观看实机演示 ↗</a>
+</div>
+</section>
+</div>
+<div class="project-next"><a data-en="← Back to all projects" href="projects.html">← 返回全部项目</a><a data-en="Next: The Blessing →" href="rpg.html">下一个项目：赐福 →</a>
+</div>
+</div>
+</main>
+<footer class="foot-bar">
+<div class="container foot-bar-inner">
+<p data-en="© 2026 YANNIS · Indie game developer">© 2026 YANNIS · 独立游戏开发者
+</p><a data-en="All projects →" href="projects.html">全部项目 →</a>
+</div>
+</footer>
+<script src="assets/js/site.js?v=3">
+</script>
+<script src="assets/js/i18n.js?v=15">
+</script>
+</body>
 </html>

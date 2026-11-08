@@ -1,145 +1,218 @@
-<!DOCTYPE HTML>
-<!--
-	Yannis · Good Kid 详情页 — 定制设计系统 V3
--->
+<!DOCTYPE html>
+
 <html lang="zh-CN">
-	<head>
-		<title>Good Kid · VR 弃屋探险 — Yannis</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="《Good Kid》：VR 第一人称恐怖叙事游戏——规则违规系统、日夜循环、敲门追捕事件与全物理交互设计。" />
-		<meta name="theme-color" content="#0b0c0f" />
-		<meta name="color-scheme" content="dark" />
-		<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0c0f'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23c8a96a'/%3E%3C/svg%3E" />
-		<link rel="stylesheet" href="assets/css/style.css?v=6" />
-	</head>
-	<body>
-
-		<a class="skip-link" href="#main">跳到主要内容</a>
-
-		<nav id="nav">
-			<div class="nav-inner">
-				<a class="logo" href="index.html">YANNIS<span class="accent">_</span>DEV</a>
-				<ul class="nav-links mono">
-				<li><a href="projects.html">项目</a></li>
-					<li class="hide-m"><a href="ripple.html">涟漪</a></li>
-					<li class="active"><a href="goodkid.html">Good Kid</a></li>
-					<li class="hide-m"><a href="greed.html">贪婪</a></li>
-					<li class="hide-m"><a href="daoge.html">刀歌</a></li>
-					<li class="hide-m"><a href="rpg.html">2D RPG</a></li>
-				</ul>
-			</div>
-		</nav>
-
-<div id="main">
-
-				<article class="post featured">
-					<header class="major">
-						<span class="date">Unity 2022 · VR · XR Interaction Toolkit · 恐怖叙事</span>
-						<h1>Good Kid<br />
-						VR 弃屋探险</h1>
-						<p>VR 第一人称恐怖叙事：玩家在废弃房屋中探索，操作门、抽屉、灯具与日常物品，在看似平常的家庭规则下度过一晚又一晚——<strong>有些规则是假的</strong>。</p>
-					</header>
-					<a class="image main"><img src="images/goodkid.jpg" alt="《Good Kid》弃屋走廊主视觉"  width="1376" height="768" /></a>
-				</article>
-
-				<article class="post">
-
-					<h2>设计概念</h2>
-					<p>恐怖不来自 Jump Scare 的堆砌，而来自<strong>「家庭规则的错位感」</strong>：童年房间的日常物件——门、抽屉、时钟、糖果、垃圾桶——承载一套看似合理的行为规则。玩家以孩子的身份执行这些规则，逐渐察觉规则本身的异常。</p>
-					<p>规则系统同时是叙事装置：<strong>4 条家庭规则中混有 1 条假规则</strong>（「不要进妈妈的房间」）。当玩家违返假规则时世界毫无反应——规则会撒谎，而发现这一点的瞬间，故事真正开始。</p>
-
-					<h2>核心系统设计</h2>
-
-					<h3>规则违规系统</h3>
-					<ul>
-						<li>RuleID 枚举定义 4 条规则（3 真 1 假），ViolationSystem 统一调度违规反应</li>
-						<li>真规则违规触发递进的演出：灯光闪烁 → 黑雾侵蚀</li>
-						<li>假规则区域（妈妈的房间）特殊处理：进入后零反应——「异常」本身就是叙事信息</li>
-					</ul>
-
-					<h3>日夜循环与节奏</h3>
-					<ul>
-						<li>120 秒倒计时 + 日循环管理器，跨天状态重置（糖果未扔跨天判定违规）</li>
-						<li>床睡眠交互：射线点床 → 黑屏过渡 → 传送至 BedSpawnPoint → 天数 +1</li>
-						<li>21:00 睡眠检查：到点不睡 → 违规判定</li>
-					</ul>
-
-					<h3>敲门事件与追捕</h3>
-					<ul>
-						<li>随机敲门 + 限时躲藏：玩家必须进入躲藏安全区</li>
-						<li>超时未躲 → 怪物出现并追捕（3D 空间音频吼叫定位），抓到即重置当天</li>
-						<li>躲过敲门 → 「什么都没发生」——用日常化的平安夜晚反衬规则的不可知</li>
-					</ul>
-
-					<h3>纸页收集叙事</h3>
-					<ul>
-						<li>9 页纸片散布场景，射线拾起即阅读（世界空间 Canvas，9 页共享）</li>
-						<li>碎片化文本逐页拼出家庭往事，与规则系统互文</li>
-					</ul>
-
-					<h3>全物理交互</h3>
-					<ul>
-						<li>9 扇手动门、抽屉（滑轨约束 + 卡扣 + 音效）、柜门、灯具触摸开关，全部基于 XR Interaction Toolkit 的抓取与射线交互</li>
-						<li>VR 手感细节：射线落点视觉反馈、抓取时停止射线延伸、物理门铰链驱动</li>
-					</ul>
-
-					<h2>场景与氛围</h2>
-					<ul>
-						<li>三个场景：开始菜单（巨幕 + 按钮 + 音乐）→ 主场景弃屋 → 结局演出（纯黑相机 + 巨幕）</li>
-						<li>夜空 HDRI 天空盒 + 邻居剪影街道 + 暗蓝灰草地，构建「从屋里看出去」的封闭视角</li>
-						<li>URP 三套渲染管线（Balanced / HighFidelity / Performant）适配不同 VR 一体机性能档位</li>
-					</ul>
-
-					<h2>技术要点</h2>
-					<ul>
-						<li>XR Interaction Toolkit 2.6 + OpenXR 1.14，New Input System</li>
-						<li>相机高度锁 1.6m（儿童视角）——视角本身是叙事的一部分</li>
-						<li>编辑器内 VR Simulator 工作流（Ctrl+Shift+WASD 模拟移动）支持无头显快速迭代</li>
-						<li>游戏事件总线（GameEventBus）解耦规则判定与演出反应</li>
-					</ul>
-
-					<h2>关键设计决策（ADR 节选）</h2>
-					<ul>
-						<li>ADR-001 门 / 钥匙 / 投掷解锁交互链路</li>
-						<li>ADR-003 / 004 固定相机高度与物理身体的处理</li>
-						<li>ADR-005 结局独立场景架构</li>
-						<li>ADR-006 窗外夜景设计</li>
-						<li>ADR-007 日间室外场景的压暗方案</li>
-					</ul>
-
-					<ul class="actions special">
-								<li><a href="projects.html" class="button large">更多项目 <span class="arr">→</span></a></li>
-							</ul>
-				</article>
-
-			</div>
-
-		</div>
-
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-		<script src="assets/js/i18n.js?v=4"></script>
-
-	</body>
-</html>
-
-		</div>
-
-		<div class="foot-bar">
-			<div class="container foot-bar-inner">
-				<p>© 2026 YANNIS · 独立游戏开发者</p>
-				<p><a href="projects.html">更多项目 →</a></p>
-			</div>
-		</div>
-
-		<script src="assets/js/site.js?v=1"></script>
-		<script src="assets/js/i18n.js?v=12"></script>
-
-	</body>
+<head>
+<meta charset="utf-8" /><title data-en="Good Kid · Game &amp; Design — Yannis">Good Kid · 项目与设计 — Yannis</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="在熟悉又不安的屋内，以身体完成开门、翻找、抓取和投掷。每日家规规定了什么能做，而一条不会带来惩罚的假规则，邀请玩家开始怀疑规则本身。" />
+<meta name="theme-color" content="#0b0c0f" />
+<meta name="color-scheme" content="dark" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0c0f'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23c8a96a'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="assets/css/style.css?v=9" />
+</head>
+<body>
+<a data-en="Skip to content" class="skip-link" href="#main">跳到主要内容</a>
+<nav id="nav" aria-label="主导航" data-en-aria-label="Main navigation">
+  <div class="nav-inner">
+    <a class="logo" href="index.html" aria-label="Yannis 首页" data-en-aria-label="Yannis home">YANNIS<span class="accent">_</span>DEV</a>
+    <div class="nav-primary">
+      <a href="index.html" data-nav="home" data-en="Home">首页</a>
+      <a href="projects.html" data-nav="projects" data-en="Projects">项目</a>
+    </div>
+    <ul id="site-nav-links" class="nav-links mono">
+      <li><a href="index.html#about" data-nav="about" data-en="About">关于我</a></li>
+      <li><a href="index.html#competitions" data-nav="competitions" data-en="Competition projects">比赛项目</a></li>
+      <li><a href="index.html#skills" data-nav="skills" data-en="Skills">技能</a></li>
+      <li><a href="index.html#contact" data-nav="contact" data-en="Contact">联系</a></li>
+    </ul>
+    <div class="nav-tools">
+      <div id="nav-language"></div>
+      <button type="button" class="nav-menu-toggle" aria-controls="site-nav-links" aria-expanded="false" aria-label="打开或关闭导航菜单" data-en-aria-label="Toggle navigation menu">
+        <span class="menu-label" data-en="Menu">菜单</span>
+        <svg class="menu-icon" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+<main id="main" class="project-page">
+<header class="article-hero">
+<div class="container"><a data-en="← Back to projects" class="back-link mono" href="projects.html">← 返回项目列表</a>
+<p data-en="VR · Rules and environmental storytelling" class="kicker">VR · 家规与环境叙事
+</p>
+<h1 data-en="Good Kid&lt;span class=&quot;project-subtitle&quot;&gt;VR · Rules and environmental storytelling&lt;/span&gt;">Good Kid<span class="project-subtitle">VR EXPLORATION</span>
+</h1>
+<p data-en="Some rules are meant to keep you from questioning." class="project-pitch">有些规则，是为了让你不去怀疑。
+</p>
+<p data-en="Open doors, search drawers, grab and throw objects inside a familiar but unsettling house. Daily rules define acceptable behavior, but one false rule carries no punishment, inviting the player to question the rules themselves." class="lede">在熟悉又不安的屋内，以身体完成开门、翻找、抓取和投掷。每日家规规定了什么能做，而一条不会带来惩罚的假规则，邀请玩家开始怀疑规则本身。
+</p>
+<div class="project-actions"><a data-en="Explore the design ↓" class="button solid" href="#design">查看设计 ↓</a>
+</div>
+</div>
+</header>
+<div class="container">
+<figure class="project-figure project-figure-hero"><a class="media-frame" href="images/projects/goodkid-room.webp" target="_blank" rel="noopener"><img src="images/projects/goodkid-room.webp" alt="XR 模拟器画面 · 每日规则板与 CRT 视觉" data-en-alt="XR simulator capture · Daily rules and CRT treatment" width="1280" height="720" fetchpriority=high decoding="async" /></a>
+<figcaption data-en="XR simulator capture · Daily rules and CRT treatment">XR 模拟器画面 · 每日规则板与 CRT 视觉
+</figcaption>
+</figure>
+<dl class="project-facts">
+<div>
+<dt data-en="Engine">引擎
+</dt>
+<dd data-en="Unity 2022 · URP">Unity 2022 · URP
+</dd>
+</div>
+<div>
+<dt data-en="Genre">类型
+</dt>
+<dd data-en="VR interaction / Horror exploration">VR 交互 / 恐怖探索
+</dd>
+</div>
+<div>
+<dt data-en="Platform &amp; stage">平台与阶段
+</dt>
+<dd data-en="OpenXR · Development prototype">OpenXR · 开发原型
+</dd>
+</div>
+<div>
+<dt data-en="Design &amp; development focus">设计与开发重点
+</dt>
+<dd data-en="XR object interaction, rule-based narrative, day cycle and visual iteration">XR 物件交互、规则叙事、日循环与视觉迭代
+</dd>
+</div>
+</dl>
+<div class="project-content">
+<section class="project-section" id="experience">
+<p data-en="01 / PLAYER EXPERIENCE" class="kicker">01 / 玩家体验
+</p>
+<h2 data-en="How it plays, and why.">怎么玩，为什么这样玩。
+</h2>
+<p data-en="A VR horror exploration prototype built around everyday objects, three true rules, one false rule and a changing environment." class="section-lead">以日常物件、三真一假的家规和逐日变化的环境，搭建 VR 恐怖探索原型。
+</p>
+<ol class="play-loop">
+<li data-en="Read the rules">阅读当日规则
+</li>
+<li data-en="Explore &amp; interact">探索与操作
+</li>
+<li data-en="Obey or question">遵守或试探
+</li>
+<li data-en="Sleep into the next day">入睡进入下一天
+</li>
+</ol>
+</section>
+<section class="project-section" id="design">
+<p data-en="02 / DESIGN FOCUS" class="kicker">02 / 设计重点
+</p>
+<h2 data-en="Design through mechanics.">把主题做进机制里。
+</h2>
+<div class="design-grid">
+<div class="design-item"><span class="mono design-index">01</span>
+<h3 data-en="Three true rules, one false rule">三条真规则，一条假规则
+</h3>
+<p data-en="Disposing of candy, sleeping on time and hiding from a knock form the household rules. “Do not enter Mom’s room” carries no punishment. Different reactions let the player discover the inconsistency.">丢弃糖果、按时睡觉、敲门时躲藏构成家规；“不要进入妈妈的房间”则没有惩罚。玩家通过反应差异发现异常，而不是等待一句解释。
+</p>
+</div>
+<div class="design-item"><span class="mono design-index">02</span>
+<h3 data-en="Use the body to interact">用身体完成交互
+</h3>
+<p data-en="Doors, drawers, pages and keys use XR grabbing or ray interaction. Throwing a key against a door unlocks it, while picking up a page opens a world-space reading surface, keeping information tied to physical objects.">门、抽屉、纸页与钥匙采用 XR 抓取或射线操作。钥匙需要被投掷并撞上门才解锁；纸页拿起即进入世界空间阅读，让信息也有物件的触感。
+</p>
+</div>
+<div class="design-item"><span class="mono design-index">03</span>
+<h3 data-en="Let the familiar change over time">把日常逐日变成压迫
+</h3>
+<p data-en="Sleeping advances the day. Rules, clocks, fog and the night sky convey time. The darkening exterior contrasts with familiar indoor objects, using repeated daily routines as narrative rhythm.">睡眠推进日期，规则板、时钟、雾和夜景共同表达时间。逐日变暗的屋外环境与熟悉的室内物件形成反差，把重复生活作为叙事节奏。
+</p>
+</div>
+<div class="design-item"><span class="mono design-index">04</span>
+<h3 data-en="A visual language of surveillance">被监视的画面质感
+</h3>
+<p data-en="A CRT effect adapted from Cyanilux’s open-source work combines low noise, coarse scanlines, fisheye distortion, a soft vignette and chromatic dispersion in URP. Simulator previews guided repeated readability adjustments.">URP 中整合基于 Cyanilux 开源方案的 CRT 效果，用低噪点、粗扫描线、鱼眼、柔黑晕与色散建立被观察的感觉，再通过模拟器反复调整可读性。
+</p>
+</div>
+</div>
+</section>
+<section class="project-section" id="gallery">
+<p data-en="03 / PROJECT IMAGES" class="kicker">03 / 项目画面
+</p>
+<h2 data-en="See the design in context.">画面与设计相互对照。
+</h2>
+<div class="project-gallery">
+<figure class="project-figure"><a class="media-frame" href="images/projects/goodkid-camera.webp" target="_blank" rel="noopener"><img src="images/projects/goodkid-camera.webp" alt="XR 模拟器画面 · 房间中的监视摄像头" data-en-alt="XR simulator capture · A surveillance camera in the room" width="1280" height="720" loading=lazy decoding="async" /></a>
+<figcaption data-en="XR simulator capture · A surveillance camera in the room">XR 模拟器画面 · 房间中的监视摄像头
+</figcaption>
+</figure>
+<figure class="project-figure"><a class="media-frame" href="images/projects/goodkid-room-before.webp" target="_blank" rel="noopener"><img src="images/projects/goodkid-room-before.webp" alt="视觉迭代对照 · 加入最终 CRT 处理前的房间" data-en-alt="Visual iteration · The room before the final CRT treatment" width="1280" height="720" loading=lazy decoding="async" /></a>
+<figcaption data-en="Visual iteration · The room before the final CRT treatment">视觉迭代对照 · 加入最终 CRT 处理前的房间
+</figcaption>
+</figure>
+</div>
+</section>
+<section class="project-section" id="iteration">
+<p data-en="04 / DESIGN ITERATION" class="kicker">04 / 真实迭代
+</p>
+<h2 data-en="From a problem to a concrete change.">从问题，到具体改变。
+</h2>
+<div class="iteration-list">
+<article class="iteration-item">
+<h3 data-en="Fill the ending view without breaking tracking">让结局占满视野，又保留追踪
+</h3>
+<div class="iteration-copy">
+<div>
+<p data-en="THE PROBLEM" class="iteration-label mono">发现的问题
+</p>
+<p data-en="Enlarging the ending canvas still exposed the room when the player moved their head.">把结局画布加大后仍会露出屋内模型，平面演出无法覆盖头部转动。
+</p>
+</div>
+<div>
+<p data-en="THE CHANGE" class="iteration-label mono">做出的调整
+</p>
+<p data-en="The ending moved to a separate black scene, removing room geometry and interrupting events while preserving head tracking.">结局移入独立黑底场景，移除屋内模型、关闭干扰事件，同时保留头部追踪，解决演出和空间的冲突。
+</p>
+</div>
+</div>
+</article>
+<article class="iteration-item">
+<h3 data-en="From a heavy filter to readable unease">从强滤镜，到可读的不安
+</h3>
+<div class="iteration-copy">
+<div>
+<p data-en="THE PROBLEM" class="iteration-label mono">发现的问题
+</p>
+<p data-en="Early noise was excessive, scanlines too fine and the hard black corners visually abrupt.">早期噪点过高、扫描线太细，硬黑角也让画面显得突兀。
+</p>
+</div>
+<div>
+<p data-en="THE CHANGE" class="iteration-label mono">做出的调整
+</p>
+<p data-en="Noise was reduced and scanlines thickened, followed by a softer vignette, bloom and dispersion. The simulator look was accepted; headset experience remains a separate validation.">降低噪点、加粗扫描线，再用柔黑晕和 Bloom／色散收尾。最终模拟器视觉获得认可，头显体验仍另行验证。
+</p>
+</div>
+</div>
+</article>
+</div>
+</section>
+<section class="project-section availability">
+<p data-en="05 / CURRENT VERSION" class="kicker">05 / 当前版本
+</p>
+<h2 data-en="VR development prototype">VR 开发原型
+</h2>
+<p data-en="Currently a development prototype, shown through XR simulator captures. The knocking event is disabled while its pacing is being tuned. Stereo rendering, tracking, comfort and the full seven-day flow still need headset validation. No public download is offered here.">当前为开发原型，图片来自 XR 模拟器。敲门事件目前停用，节奏仍在调试。头显双眼、追踪、舒适度及完整七天流程仍需验证；尚不提供公开下载。
+</p>
+</section>
+</div>
+<div class="project-next"><a data-en="← Back to all projects" href="projects.html">← 返回全部项目</a><a data-en="Next: Manage &amp; Fight →" href="daoge.html">下一个项目：刀歌 →</a>
+</div>
+</div>
+</main>
+<footer class="foot-bar">
+<div class="container foot-bar-inner">
+<p data-en="© 2026 YANNIS · Indie game developer">© 2026 YANNIS · 独立游戏开发者
+</p><a data-en="All projects →" href="projects.html">全部项目 →</a>
+</div>
+</footer>
+<script src="assets/js/site.js?v=3">
+</script>
+<script src="assets/js/i18n.js?v=15">
+</script>
+</body>
 </html>

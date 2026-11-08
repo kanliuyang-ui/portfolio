@@ -620,10 +620,45 @@
 		'#copyright ul li'
 	].join(', ');
 
-	var en = localStorage.getItem('lang') === 'en';
+	// Storage may be unavailable in private/file previews; switching still works.
+	function readLang() {
+		try { return localStorage.getItem('lang'); } catch (e) { return null; }
+	}
+	function saveLang(value) {
+		try { localStorage.setItem('lang', value); } catch (e) { /* Session-only choice. */ }
+	}
+
+	var en = readLang() === 'en';
 	var saved = new Map();
 	var savedTitle = null;
 	var toggle = null;
+	var explicit = new Map();
+	var translatedAttributes = ['title', 'alt', 'aria-label'];
+
+	function captureExplicit() {
+		document.querySelectorAll('[data-en], [data-en-title], [data-en-alt], [data-en-aria-label]').forEach(function (el) {
+			var original = { html: el.hasAttribute('data-en') ? el.innerHTML : null, attributes: {} };
+			translatedAttributes.forEach(function (name) {
+				if (el.hasAttribute('data-en-' + name)) original.attributes[name] = el.getAttribute(name);
+			});
+			explicit.set(el, original);
+		});
+	}
+
+	function applyExplicit() {
+		explicit.forEach(function (original, el) {
+			if (!el.isConnected) return;
+			if (original.html !== null) {
+				var html = en ? el.getAttribute('data-en') : original.html;
+				if (el.innerHTML !== html) el.innerHTML = html;
+			}
+			Object.keys(original.attributes).forEach(function (name) {
+				var value = en ? el.getAttribute('data-en-' + name) : original.attributes[name];
+				if (value === null) el.removeAttribute(name);
+				else if (el.getAttribute(name) !== value) el.setAttribute(name, value);
+			});
+		});
+	}
 
 	function buildSwitcher() {
 		if (document.getElementById('langSwitch')) return;
@@ -634,7 +669,7 @@
 		div.innerHTML =
 			'<button type="button" data-lang="zh" title="切换到中文">中文</button>' +
 			'<button type="button" data-lang="en" title="Switch to English">EN</button>';
-		document.body.appendChild(div);
+		(document.getElementById('nav-language') || document.body).appendChild(div);
 	}
 
 	function syncSwitcher() {
@@ -645,6 +680,7 @@
 			var b = btns[i];
 			var isActive = (b.getAttribute('data-lang') === 'en') === en;
 			b.className = isActive ? 'active' : '';
+			b.setAttribute('aria-pressed', String(isActive));
 		}
 	}
 
@@ -652,7 +688,8 @@
 		var nodes = document.querySelectorAll(SELECTOR);
 		for (var i = 0; i < nodes.length; i++) {
 			var el = nodes[i];
-			if (el.id === 'langToggle') continue;
+			// Explicit translations own their subtree; legacy parent rewrites would detach them.
+			if (el.id === 'langToggle' || el.closest('[data-en]') || el.querySelector('[data-en]')) continue;
 			if (en) {
 				if (!saved.has(el)) saved.set(el, el.innerHTML);
 				var key = norm(el.innerHTML);
@@ -667,15 +704,18 @@
 				}
 			}
 		}
-		var tKey = '__title__' + (en && savedTitle !== null ? savedTitle : document.title);
-		if (!en && savedTitle !== null) { document.title = savedTitle; }
-		else if (en && Object.prototype.hasOwnProperty.call(DICT, tKey)) {
-			if (savedTitle === null) savedTitle = document.title;
-			document.title = DICT[tKey];
+		if (!document.querySelector('title[data-en]')) {
+			var tKey = '__title__' + (en && savedTitle !== null ? savedTitle : document.title);
+			if (!en && savedTitle !== null) { document.title = savedTitle; }
+			else if (en && Object.prototype.hasOwnProperty.call(DICT, tKey)) {
+				if (savedTitle === null) savedTitle = document.title;
+				document.title = DICT[tKey];
+			}
 		}
+		applyExplicit();
 		document.documentElement.lang = en ? 'en' : 'zh-CN';
 		syncSwitcher();
-		localStorage.setItem('lang', en ? 'en' : 'zh');
+		saveLang(en ? 'en' : 'zh');
 	}
 
 	function setLang(isEn) {
@@ -685,11 +725,12 @@
 
 	function init() {
 		// 首次访问：按浏览器语言选择初始语言；之后以用户手选为准
-		if (localStorage.getItem('lang') === null) {
+		if (readLang() === null) {
 			var nav = (navigator.language || navigator.userLanguage || 'zh');
 			en = !/^zh/i.test(nav);
-			localStorage.setItem('lang', en ? 'en' : 'zh');
+			saveLang(en ? 'en' : 'zh');
 		}
+		captureExplicit();
 		buildSwitcher();
 		var box = document.getElementById('langSwitch');
 		if (box) {
